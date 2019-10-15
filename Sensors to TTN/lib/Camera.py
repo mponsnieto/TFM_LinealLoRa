@@ -14,6 +14,12 @@ class Camera:
         else:
             self._cam_i2c = i2c
             self.buf = bytearray(2)
+        #Delete data's contents
+        f = open('data_cam.txt', 'w')
+        f.close()
+        #Delete data's contents
+        f = open('data_cam_images.txt', 'w')
+        f.close()
 
     def gotosleep(self):
         self._cam_i2c.writeto_mem(self.CAM_ADDRESS, self.POWER_MODE, 0x10, addrsize=8)
@@ -107,7 +113,7 @@ class Camera:
         #self.gotosleep()
         return T
 
-    def saveFile(self,T):
+    def saveFile(self,image,T,rtc):
         '''
         Format of the data: 8x8 with sep= ','
         Example:
@@ -122,13 +128,18 @@ class Camera:
         for i in range(8):
             for j in range(8):
                 if (j==0 and i==0):
-                    str1=str1+str(T[i][j])
+                    str1=str1+str(image[i][j])
                 else:
-                    str1=str1+","+str(T[i][j])
-        #Delete data's contents
-        f = open('data.txt', 'w')
-        f.close()
+                    str1=str1+","+str(image[i][j])
+
         #Write the image temp in data.txt
-        f = open('data.txt', 'w')
+        f = open('data_cam_images.txt', 'a')
+        f.write("{}/{}/{} {}:{}:{}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
         f.write(str1)
+        f.write("\n")
+        f.close()
+
+        #Delete data's contents
+        f = open('data_cam.txt', 'a')
+        f.write("{}/{}/{} {}:{}:{} {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],T))
         f.close()

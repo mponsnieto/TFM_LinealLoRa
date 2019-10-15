@@ -16,6 +16,9 @@ i2c = I2C()
 class SensorHumT:
 
     def __init__(self,i2c=None):
+        #Delete data's contents
+        f = open('data_HTU.txt', 'w')
+        f.close()
         pass
 
     def checkcrc(self,msb, lsb, crc):
@@ -75,9 +78,13 @@ class SensorHumT:
             print("Hum (%)",Hum)
             return Hum # La conversió està al TTN per enviar paquets més petits
 
-
-
-    # i2c.readfrom_mem_into(I2C_ADDRESS, HUM_ADDR,a)
-    # i2c.readfrom_mem_into(I2C_ADDRESS, HUM_ADDR,b)
-    # print(t1)
-    # print(th)
+    def saveFile(self,T,rtc):
+        '''
+        Format of the data: date (DD/MM/YYYY HH:MM:SS) Temperature [ºC]
+        Example: 15/10/2019 13:21:31 26.4
+        '''
+        #Write the image temp in data.txt
+        f = open('data_HTU.txt', 'a')
+        f.write("{}/{}/{} {}:{}:{} {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],T))
+        f.close()
+        return

@@ -36,14 +36,14 @@ class BMP085():
             unp('>hhhHHHhhhhh',
                 self._bmp_i2c.readfrom_mem(self.BMP_ADDRESS, 0xAA, 22))
 
-
-
-
-
         #Reference for Altitude
         self._baseline = 1013.25
         # #Oversample can be 0, 1, 2 o 3
         self._oversample = 0 #antes era un 3
+
+        #Delete data's contents
+        f = open('data_bmp.txt', 'w')
+        f.close()
 
     def getCalibParams(self):
         '''
@@ -68,7 +68,6 @@ class BMP085():
 
     @property
     def oversample(self):
-        print("Hi")
         return self._oversample
 
     @oversample.setter
@@ -95,26 +94,17 @@ class BMP085():
         self.B5 = X1 + X2
         return ((self.B5 + 8) >> 4) / 10.0  #Have we to add a -1.5???
 
-    @property
-    def saveFile(self,T):
-        '''
-        Format of the data: T with sep= ','
-        '''
-        # str1=""
-        # for i in range(8):
-        #     for j in range(8):
-        #         if (j==0 and i==0):
-        #             str1=str1+str(T[i][j])
-        #         else:
-        #             str1=str1+","+str(T[i][j])
-        # #Delete data's contents
-        # f = open('data_bmp.txt', 'w')
-        # f.close()
 
+    def saveFile(self,T,rtc):
+        '''
+        Format of the data: date (DD/MM/YYYY HH:MM:SS) Temperature [ºC]
+        Example: 15/10/2019 13:21:31 26.4
+        '''
         #Write the image temp in data.txt
-        f = open('data_bmp.txt', 'w')
-        f.write(str(T)+"\n")
+        f = open('data_bmp.txt', 'a')
+        f.write("{}/{}/{} {}:{}:{} {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],T))
         f.close()
+        return
 
     @property
     def GetPressure(self):

@@ -32,3 +32,8 @@ bmp.sealevel=1013.25
 id=ubinascii.hexlify(machine.unique_id()).decode('utf-8') #'3c71bf8775d4'
 print("device id: ",id)
 id_aux=ustruct.pack('>Q',int(id,16)) #long long: 8 bytes
+
+## Initialize time
+rtc = machine.RTC()
+#(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
+rtc.init((2019, 10, 15, 13, 13))

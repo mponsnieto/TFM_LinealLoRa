@@ -1,5 +1,5 @@
-com.JoinLoraWan()
-periode=120  #2min
+#com.JoinLoraWan()
+periode=0.5*60  #2min
 print("Start")
 while True:
     #Sensor PT BMP085
@@ -8,7 +8,7 @@ while True:
     # packet_tbmp = ustruct.pack('f',temp)
     # dataBMP="Temp: %0.2f *C" % (temp)
     # print(dataBMP)
-    bmp.saveFile(temp)
+    bmp.saveFile(temp,rtc)
     time.sleep(0.3)
 
     # #Sensor T MCP
@@ -17,6 +17,7 @@ while True:
     #packet_tempC = ustruct.pack('f',tempC)
     #dataMCP='Temperature: {} C '.format(tempC)
     #print(dataMCP)
+    mcp.saveFile(tempC,rtc)
     time.sleep(0.3)
 
     #Sensor HS
@@ -39,10 +40,12 @@ while True:
     T=cam.readPixels
     # print("Image readen pixel by pixel in *C")
     # for i in range(8): print(T[i])
+    cam.saveFile(T,Temp,rtc)
     time.sleep(0.3)
 
     #Sensor HT
     T=SensorHT.readTemperature()
+    SensorHT.saveFile(T,rtc)
     time.sleep(0.3)
     H=SensorHT.readHumidity()
     time.sleep(0.3)
@@ -56,6 +59,6 @@ while True:
     # com.EnviarGateway(str(T))
     # com.EnviarGateway(str(H))
     print("Sending to GTW...")
-    com.EnviarGateway(packet_dust+packet_tempC+packet_Tht+packet_Hht+packet_tbmp+packet_val+packet_dhi+packet_T_cam+id_aux)
+    #com.EnviarGateway(packet_dust+packet_tempC+packet_Tht+packet_Hht+packet_tbmp+packet_val+packet_dhi+packet_T_cam+id_aux)
     time.sleep(periode)
     print("Time sleep finished")
