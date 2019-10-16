@@ -1,4 +1,4 @@
-#com.JoinLoraWan()
+com.JoinLoraWan()
 periode=0.5*60  #2min
 print("Start")
 while True:
@@ -59,6 +59,6 @@ while True:
     # com.EnviarGateway(str(T))
     # com.EnviarGateway(str(H))
     print("Sending to GTW...")
-    #com.EnviarGateway(packet_dust+packet_tempC+packet_Tht+packet_Hht+packet_tbmp+packet_val+packet_dhi+packet_T_cam+id_aux)
+    com.EnviarGateway(packet_dust+packet_tempC+packet_Tht+packet_Hht+packet_tbmp+packet_val+packet_dhi+packet_T_cam+id_aux)
     time.sleep(periode)
     print("Time sleep finished")

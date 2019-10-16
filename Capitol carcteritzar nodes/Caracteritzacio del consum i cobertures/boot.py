@@ -36,4 +36,4 @@ id_aux=ustruct.pack('>Q',int(id,16)) #long long: 8 bytes
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2019, 10, 15, 13, 13))
+rtc.init((2019, 10, 16, 9, 22))
