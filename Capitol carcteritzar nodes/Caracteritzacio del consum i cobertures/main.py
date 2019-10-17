@@ -1,7 +1,8 @@
 com.JoinLoraWan()
 periode=5*60  #min
 print("Start")
-while True:
+i=0
+for i in range(600):
     p_out.value(1)
     time.sleep(0.5)
     p_out.value(0)
@@ -66,6 +67,8 @@ while True:
 
     print("Sending to GTW...")
     com.EnviarGateway(packet_dust+packet_tempC+packet_Tht+packet_Hht+packet_tbmp+packet_val+packet_dhi+packet_T_cam+id_aux)
+    print("Total number of msg: ",counter)
+    counter=counter+1
     p_out.value(1)
     time.sleep(0.3)
     p_out.value(0)
