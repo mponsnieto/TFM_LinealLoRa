@@ -37,3 +37,6 @@ id_aux=ustruct.pack('>Q',int(id,16)) #long long: 8 bytes
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
 rtc.init((2019, 10, 16, 9, 22))
+
+# initialize `P9` in gpio mode and make it an output
+p_out = Pin('P7', mode=Pin.OUT)

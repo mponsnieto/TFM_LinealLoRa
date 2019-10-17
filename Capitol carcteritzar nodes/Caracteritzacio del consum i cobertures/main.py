@@ -1,37 +1,46 @@
 com.JoinLoraWan()
-periode=0.5*60  #2min
+periode=5*60  #min
 print("Start")
 while True:
+    p_out.value(1)
+    time.sleep(0.5)
+    p_out.value(0)
     #Sensor PT BMP085
     temp = bmp.GetTemperature
     packet_tbmp= ustruct.pack('H',int(temp))
-    # packet_tbmp = ustruct.pack('f',temp)
     # dataBMP="Temp: %0.2f *C" % (temp)
     # print(dataBMP)
-    bmp.saveFile(temp,rtc)
+    #bmp.saveFile(temp,rtc)
+    p_out.value(1)
     time.sleep(0.3)
+    p_out.value(0)
 
     # #Sensor T MCP
     tempC = mcp.GetTemperature
     packet_tempC= ustruct.pack('H',int(tempC))
-    #packet_tempC = ustruct.pack('f',tempC)
     #dataMCP='Temperature: {} C '.format(tempC)
     #print(dataMCP)
-    mcp.saveFile(tempC,rtc)
+    #mcp.saveFile(tempC,rtc)
+    p_out.value(1)
     time.sleep(0.3)
+    p_out.value(0)
 
     #Sensor HS
     val,dry,humid,inWater=sensorHSol.CalcularHumitat()
     dhi=dry+humid*2+inWater*3
     packet_val= ustruct.pack('H',int(val))
     packet_dhi= ustruct.pack('B',int(dhi))
+    p_out.value(1)
     time.sleep(0.3)
+    p_out.value(0)
 
     #Sensor QAire
     dustDensity=sensorQAire.CalculateDust()
-    time.sleep(0.3)
-    #print("DustDensity: ",dustDensity," ug/m3")
     packet_dust= ustruct.pack('H',int(dustDensity))
+    #print("DustDensity: ",dustDensity," ug/m3")
+    p_out.value(1)
+    time.sleep(0.3)
+    p_out.value(0)
 
     #Càmera
     Temp=cam.readTemp
@@ -40,25 +49,25 @@ while True:
     T=cam.readPixels
     # print("Image readen pixel by pixel in *C")
     # for i in range(8): print(T[i])
-    cam.saveFile(T,Temp,rtc)
+    #cam.saveFile(T,Temp,rtc)
+    p_out.value(1)
     time.sleep(0.3)
+    p_out.value(0)
 
     #Sensor HT
     T=SensorHT.readTemperature()
-    SensorHT.saveFile(T,rtc)
-    time.sleep(0.3)
+    #SensorHT.saveFile(T,rtc)
     H=SensorHT.readHumidity()
-    time.sleep(0.3)
     packet_Tht= ustruct.pack('H',int(T))
     packet_Hht= ustruct.pack('B',round(int(H)))
+    p_out.value(1)
+    time.sleep(0.9)
+    p_out.value(0)
 
-    # com.EnviarGateway(dataHS)
-    # com.EnviarGateway(dataBMP)
-    # com.EnviarGateway(dataMCP)
-    # com.EnviarGateway(str(dustDensity))
-    # com.EnviarGateway(str(T))
-    # com.EnviarGateway(str(H))
     print("Sending to GTW...")
     com.EnviarGateway(packet_dust+packet_tempC+packet_Tht+packet_Hht+packet_tbmp+packet_val+packet_dhi+packet_T_cam+id_aux)
+    p_out.value(1)
+    time.sleep(0.3)
+    p_out.value(0)
     time.sleep(periode)
     print("Time sleep finished")
