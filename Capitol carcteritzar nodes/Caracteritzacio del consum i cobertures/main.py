@@ -1,3 +1,4 @@
+com=com.Comunication()
 com.JoinLoraWan()
 periode=5*60  #min
 print("Start")

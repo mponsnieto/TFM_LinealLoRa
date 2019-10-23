@@ -26,10 +26,10 @@ class Comunication:
         self.lora = LoRa(mode=LoRa.LORAWAN,region=LoRa.EU868)
 
         # create an OTA authentication params
-        app_eui = ubinascii.unhexlify(app_eui_radial)
-        dev_eui = ubinascii.unhexlify(dev_eui_R_Caterina) # these settings can be found from TTN
+        app_eui = ubinascii.unhexlify('70B3D57ED001C55E')
+        dev_eui = ubinascii.unhexlify('0058A97F44896904') # these settings can be found from TTN
         #app_eui = ubinascii.unhexlify('70B3D57ED0019255') # these settings can be found from TTN
-        app_key = ubinascii.unhexlify(app_key_R_Caterina) # these settings can be found from TTN
+        app_key = ubinascii.unhexlify('AEAFACB81C594C7B7BE3466241CD38EF') # these settings can be found from TTN
 
         # set the 3 default channels to the same frequency (must be before sending the OTAA join request)
         self.lora.add_channel(0, frequency=868100000, dr_min=0, dr_max=5)
@@ -41,7 +41,7 @@ class Comunication:
 
         # wait until the module has joined the network
         while not self.lora.has_joined():
-            time.sleep(2.5)
+            time.sleep(5)
             print('Not joined yet...')
 
         # remove all the non-default channels

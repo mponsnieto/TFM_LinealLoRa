@@ -25,7 +25,7 @@ SensorHT=sensH.SensorHumT()
 mcp = adafruit_mcp9808.MCP9808(i2c)
 cam = cam.Camera(i2c)
 bmp = BMP085(i2c)
-com=com.Comunication()
+
 bmp.oversample=2
 bmp.sealevel=1013.25
 counter=0
@@ -34,9 +34,9 @@ print("device id: ",id)
 id_aux=ustruct.pack('>Q',int(id,16)) #long long: 8 bytes
 
 ## Initialize time
-rtc = machine.RTC()
+#rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2019, 10, 16, 9, 22))
+#rtc.init((2019, 10, 22, 10, 09))
 
 # initialize `P9` in gpio mode and make it an output
 p_out = Pin('P7', mode=Pin.OUT)
