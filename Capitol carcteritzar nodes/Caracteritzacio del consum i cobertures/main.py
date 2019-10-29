@@ -36,9 +36,11 @@ for i in range(600):
     time.sleep(0.3)
     p_out.value(0)
 
-    #Sensor QAire
-    dustDensity=sensorQAire.CalculateDust()
-    packet_dust= ustruct.pack('H',int(dustDensity))
+    #Sensor QAire/ Particules
+    pm10, pm25 = pma.read_particules()
+    # dustDensity=sensorQAire.CalculateDust()
+    # packet_dust= ustruct.pack('H',int(dustDensity))
+    packet_dust= ustruct.pack('H',int(pm10))
     #print("DustDensity: ",dustDensity," ug/m3")
     p_out.value(1)
     time.sleep(0.3)
@@ -68,7 +70,7 @@ for i in range(600):
 
     print("Sending to GTW...")
     com.EnviarGateway(packet_dust+packet_tempC+packet_Tht+packet_Hht+packet_tbmp+packet_val+packet_dhi+packet_T_cam+id_aux)
-    print("Total number of msg: ",counter)
+    print("Counter of msg: ",counter)
     counter=counter+1
     p_out.value(1)
     time.sleep(0.3)
