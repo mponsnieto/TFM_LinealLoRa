@@ -18,16 +18,16 @@ import ustruct
 from crypto import AES
 import crypto
 
-i2c = I2C()
-sensorQAire=QA.QAire('P20','P21')
-sensorHSol=HS.HumitatSol('P19')
-SensorHT=sensH.SensorHumT()
-mcp = adafruit_mcp9808.MCP9808(i2c)
-cam = cam.Camera(i2c)
-bmp = BMP085(i2c)
-
-bmp.oversample=2
-bmp.sealevel=1013.25
+# i2c = I2C()
+# sensorQAire=QA.QAire('P20','P21')
+# sensorHSol=HS.HumitatSol('P19')
+# SensorHT=sensH.SensorHumT()
+# mcp = adafruit_mcp9808.MCP9808(i2c)
+# cam = cam.Camera(i2c)
+# bmp = BMP085(i2c)
+#
+# bmp.oversample=2
+# bmp.sealevel=1013.25
 counter=0
 id=ubinascii.hexlify(machine.unique_id()).decode('utf-8') #'3c71bf8775d4'
 print("device id: ",id)
