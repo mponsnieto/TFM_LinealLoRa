@@ -14,6 +14,11 @@ import HPMA115S0 as pma
 import ubinascii
 import ustruct
 
+com=com.Comunication()
+com.start_LoraRaw()
+
+# initialize `P9` in gpio mode and make it an output
+p_out = Pin('P12', mode=Pin.OUT)
 
 i2c = I2C()
 sensorQAire=QA.QAire('P20','P21')
@@ -24,17 +29,7 @@ cam = cam.Camera(i2c)
 bmp = BMP085(i2c)
 pma=pma.HPMA1150S0()
 
-bmp.oversample=2
-bmp.sealevel=1013.25
-counter=0
-id=ubinascii.hexlify(machine.unique_id()).decode('utf-8') #'3c71bf8775d4'
-print("device id: ",id)
-id_aux=ustruct.pack('>Q',int(id,16)) #long long: 8 bytes
-
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2019, 11, 27, 15,26))
-
-# initialize `P9` in gpio mode and make it an output
-p_out = Pin('P12', mode=Pin.OUT)
+rtc.init((2020, 02, 28, 11,01))

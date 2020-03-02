@@ -19,9 +19,8 @@ def saveFileParticulas(rtc,sensorQAire,sensorHPMA10,sensorHPMA25):
         f.close()
         return
 
-com=com.Comunication()
-com.JoinLoraWan()
-periode=10*60  #min
+
+periode=0.5*60  #min
 print("Start")
 i=0
 for i in range(300):
@@ -90,11 +89,11 @@ for i in range(300):
     time.sleep(0.9)
     p_out.value(0)
 
-    print("Sending to GTW...")
-    com.EnviarGateway(packet_dust+packet_tempC+packet_Tht+packet_Hht+packet_tbmp+packet_val+packet_dhi+packet_T_cam+id_aux+ustruct.pack('H',counter))
-    saveFileMsgs(str(pm10)+" "+str(tempC)+" "+str(T_ht)+" "+str(H_ht)+" "+str(tbmp)+" "+str(val)+" "+str(dhi)+" "+str(T_cam)+" "+str(id),counter,rtc)
-    print("Counter of msg: ",counter)
-    counter=counter+1
+    print("Sending to node...")
+    com.sendData(str(pm10+tempC+T_ht+H_ht+tbmp+val+dhi+T_cam))
+    saveFileMsgs(str(pm10)+" "+str(tempC)+" "+str(T_ht)+" "+str(H_ht)+" "+str(tbmp)+" "+str(val)+" "+str(dhi)+" "+str(T_cam)+" "+str(id),"1",rtc)
+    #print("Counter of msg: ",counter)
+    #counter=counter+1
     p_out.value(1)
     time.sleep(0.3)
     p_out.value(0)
