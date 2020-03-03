@@ -48,9 +48,16 @@ info_ack=True
 info_passed=False
 readen=False #borrar
 msg=" "
-msg_alarm=" "
+
 msg_listen=" "
-msg_alarm_ok=" "
+
 neighbours=[[],[]]
 neighbours_aux=[[],[]]
 intent=1
+
+
+counter=1
+## Initialize time
+rtc = machine.RTC()
+#(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
+rtc.init((2020, 03, 03, 15,26))

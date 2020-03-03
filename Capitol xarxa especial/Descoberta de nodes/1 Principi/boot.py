@@ -38,15 +38,14 @@ neighbours_aux=[[],[]]
 msg="Config 2"
 node_list=""
 msg_alarm_ok=" "
-timer_to_send_GTW=Timer.Chrono()
-timer_to_send_alarm=Timer.Chrono()
-timer_token_ack=Timer.Chrono()
+
 timer_discover_end=Timer.Chrono()
 button = machine.Pin(Pin.exp_board.G17, mode=Pin.IN, pull=Pin.PULL_UP)
 
 Hello_received=False
 
+counter=1
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2019, 11, 27, 15,26))
+rtc.init((2020, 03, 03, 15,26))
