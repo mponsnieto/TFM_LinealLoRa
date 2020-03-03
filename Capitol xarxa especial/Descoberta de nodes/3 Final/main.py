@@ -1,25 +1,21 @@
 
-def save_parameters():
-    """
-    Save parameters to nv_ram before the deepsleep
-    """
-    global node_list,neighbours
-    for l in range(len(node_list)):
-        print(l)
-        name="node"+str(l)
-        print(name,node_list[l])
-        pycom.nvs_set(name,node_list[l])
-        leng=l
-    pycom.nvs_set("len_node",leng+1)
-    for l in range(len(neighbours[1])):
-        name="neighbour"+str(l)
-        name2="power"+str(l)
-        pycom.nvs_set(name,neighbours[0][l])
-        pycom.nvs_set(name2,neighbours[1][l])
-        leng=l
-    pycom.nvs_set("len_neighbours",leng+1)
-    com.savestate()
-    return
+def saveFileMsgs(neighbours,counter,rtc):
+        '''
+        Format of the data: date (DD/MM/YYYY HH:MM:SS) counter(int) table([id][tx_power])
+        Output: 2 files
+        Example: 15/10/2019 13:21:31 5
+                 id2 min_pow, id3 max_pow
+        '''
+        f = open('dates_middle.txt', 'a')
+        f.write("{}/{}/{} {}:{}:{} counter {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter))
+        f.close()
+
+        f = open('neighbours_middle.txt', 'a')
+        for i in range(neighbours[0]):
+            f.write("id {} pow{}, ".format(neighbours[0][i],neighbours[1][i]))
+        f.write("\n")
+        f.close()
+        return
 
 def get_neighbour_power(pos):
     """
@@ -31,25 +27,6 @@ def get_neighbour_power(pos):
     else: #If the power isn't saved during the DISCOVER, return max power
         return 12
 
-def get_first_token():
-    """
-    It starts from the middle and goes to the first position
-    """
-    if len(node_list)%2==0:
-        token=node_list[int(len(node_list)/2)]
-    else:
-        token=node_list[round(len(node_list)/2)]
-    return token
-def get_next_token(token):
-    """
-    Decide which node will send the sensor info to the gateway
-    It starts from the middle and goes down
-    """
-    if (node_list.index(token)+1)<node_list.index(id):
-        token=node_list[node_list.index(token)+1]
-    else:
-        token=get_first_token()
-    return token
 
 def discover(id):
     global Hello_received,End_discover
@@ -103,11 +80,7 @@ def interrupt(lora):
 
     aux=com.reciveData()
     if aux!="error":
-        if "Alarm" in aux:
-            rcv_data=True
-            mode=ALARM_MODE
-            timer_to_send_alarm.start()
-            return
+
 
         if mode==LISTEN_MODE:
             rcv_data=True
@@ -136,14 +109,6 @@ def interrupt(lora):
             rcv_data=True
             mode=CONFIG_MODE
             msg=aux
-        if mode==NORMAL_MODE and ("Info" in aux or "Token" in aux):
-            #msg=msg_aux
-            rcv_data=True
-            if type(aux)==bytes:
-                aux=bytes.decode(aux)
-            splitmsg_aux=aux.split()
-            if "Info" in aux and splitmsg_aux[2]==id:
-                timer_to_send_GTW.reset()
     else:
         print("Receiving error")
 
@@ -162,80 +127,19 @@ reset_cause=machine.reset_cause()
 if reset_cause==machine.DEEPSLEEP_RESET:
     com.lora = LoRa(mode=LoRa.LORAWAN,region=LoRa.EU868)
     com.lora.nvram_restore()
-    if com.lora.has_joined()==False:
-        com.JoinLoraWan()
-    # com.JoinLoraWan()
-    time.sleep(2)
-    com.Switch_to_LoraRaw()
-    # com.start_LoraRaw()
-    len_node=pycom.nvs_get("len_node")
-    len_neighbours=pycom.nvs_get("len_neighbours")
+    com.start_LoraRaw()
     node_list=[]
     neighbours=[[],[]]
-    for l in range(len_node):
-        name="node"+str(l)
-        node=pycom.nvs_get(name)
-        node_list.append(node)
-    for l in range(len_neighbours):
-        name="neighbour"+str(l)
-        name2="power"+str(l)
-        ids=pycom.nvs_get(name)
-        powers=pycom.nvs_get(name2)
-        neighbours[0].append(ids)
-        neighbours[1].append(powers)
-    mode=NORMAL_MODE
-    #Prepare the normal mode start
-    token=get_first_token()
-    com.change_txpower(get_neighbour_power(node_list.index(id)-1))
-    msg_send="Token "+str(token)+" "+str(id)+" "+str(node_list[node_list.index(id)-1])
-    com.sendData(msg_send)
-    token_ack=False
-    timer_token_ack.start()
-    intent=1
+    mode=LISTEN_MODE
     print("Good morning!")
 
 else:
-    com.JoinLoraWan()
-    time.sleep(2)
-    com.Switch_to_LoraRaw()
     com.start_LoraRaw()
 
 com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
 com.lora = LoRa(mode=LoRa.LORA, region=LoRa.EU868,tx_power=power)
 
 while True:
-    if mode==ALARM_MODE:
-        if rcv_data:
-            print("Alarm")
-            rcv_data=False
-            msg_alarm=aux[:]
-            if "Alarm" in aux and "ok" not in aux:
-                splitmsg_alarm=msg_alarm.split( )
-                msg_alarm_ok="Alarm ok "+str(id)+" "+str(splitmsg_alarm[1]) #Alarm ok from:id to:id
-                com.sendData(msg_alarm_ok)
-                #if timer_to_send_alarm.read()>=30:
-                com.Switch_to_LoraWan()
-                print("Sending alarm to GTW")
-                com.EnviarGateway(com.ApplyFormat(msg_alarm.split( )))
-                timer_to_send_alarm.reset()
-                timer_to_send_alarm.start()
-                com.Switch_to_LoraRaw()
-            if "Alarm ok" in aux:
-                mode=NORMAL_MODE
-                token=get_first_token()
-                com.change_txpower(get_neighbour_power(node_list.index(id)-1))
-                msg_send="Token"+" "+str(token)+" "+str(id)+" "+str(node_list[node_list.index(id)-1])
-                com.sendData(msg_send)
-                token_ack=False
-                print("Sending token: ",msg_send)
-                timer_token_ack.reset()
-                timer_token_ack.start()
-                intent=1
-        else:
-            print("Sending: ",msg_alarm_ok)
-            com.sendData(msg_alarm_ok)
-            time.sleep(2)
-
     if mode==CONFIG_MODE:
         if rcv_data and error==False:
             print("Part 1 ",id not in msg, config_start)
@@ -331,78 +235,8 @@ while True:
                 com.sendData("Hello "+ str(pow) + " "+ str(id))
                 neighbours_aux=com.update_neighbours(pow,id_n,neighbours_aux)
             elif "Discover end" in msg and isMyTurn(int(msg[-1])): #All discovers are finished
-                print("mode = normal")
-                #Init normal_mode
-                print("mode normal")
-                mode=NORMAL_MODE
                 neighbours=com.neighbours_min(neighbours,neighbours_aux,id)
                 rcv_data=False
-                token=get_first_token()
-                com.change_txpower(get_neighbour_power(node_list.index(id)-1))
-                msg_send="Token "+str(token)+" "+str(id)+" "+str(node_list[node_list.index(id)-1])
-                com.sendData(msg_send)
-                print("He enviat token", msg)
-                token_ack=False
-                timer_token_ack.start()
-                intent=1
-
-    elif mode==NORMAL_MODE:
-        if rcv_data==True:
-            msg=aux
-            rcv_data=False
-            print("MODE NORMAL msg= ", msg)
-            if type(msg)==bytes:
-                msg=bytes.decode(msg)
-            splitmsg=msg.split()
-            if "Info" in msg and splitmsg[2]==id:
-                com.change_txpower(14) #This msg's important, so it's send to the max_power
-                com.sendData("Info ok "+str(id))
-                data=com.ApplyFormat(splitmsg)
-                token=splitmsg[1]
-                print(data)
-                timer_to_send_GTW.start()
-                token_ack=True
-            elif "Token" in msg and splitmsg[1]==token:
-                token_ack=True
-                EnviatGateway=False
-                timer_token_ack.reset()
-                timer_token_ack.stop()
-                intent=1
-
-
-        if timer_to_send_GTW.read()>=300: #5min
-            com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=None)
-            #time.sleep(2)
-            com.Switch_to_LoraWan()
-            com.EnviarGateway(data)
-            print("Enviar a gateway")
-            timer_to_send_GTW.reset()
-            timer_to_send_GTW.stop()
-            com.Switch_to_LoraRaw()
-            com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
-            print("LoraRaw Ok")
-            EnviatGateway=True
-            token=get_next_token(token)
-            msg_send="Token "+str(token)+" "+str(id)+" "+str(node_list[node_list.index(id)-1])
-            token_ack=False
-            timer_token_ack.reset()
-            timer_token_ack.start()
-            if token==get_first_token():
-                #Enviar la info dels meus sensors, dormir i tornar a començar
-                End_normal=True
-                print("Finished")
-                #save_parameters()
-                com.Switch_to_LoraWan()
-                com.savestate()
-                #machine.deepsleep(500)
-
-        if timer_token_ack.read()>=5 and token_ack==False:
-            print("Estic enviant Token",msg_send)
-            com.sendData(msg_send)
-            timer_token_ack.reset()
-            intent=intent+1
-            if intent==10:
-                print("he fet més de 10 intents")
-                com.change_txpower(get_neighbour_power(node_list.index(id)-2))
-                msg_send="Token "+str(token)+" "+str(id)+" "+str(node_list[node_list.index(id)-2])
-                intent=1
+                saveFileMsgs(neighbours,counter,rtc)
+                counter=counter+1
+                machine.deepsleep(5*60*1000) #5min, machine.deepsleep([time_ms])

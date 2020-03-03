@@ -105,7 +105,7 @@ def discover(id):
     msg_retry='Discover next %i %s'%(power,node_list.index(id)-1)
         #Wait for ACK
     while end_discover==False:
-        com.change_txpower(get_neighbour_power(node_list.index(id)-1))# envia amb la potencia a la que ha guardat el neighbour al que envia el missatge
+        com.change_txpower(get_neighbour_power(node_list.index(id)-1))
         com.sendData(str(msg_retry))
         print("he enviat", msg_retry)
         time.sleep(5)
@@ -178,26 +178,9 @@ com.lora = LoRa(mode=LoRa.LORA, region=LoRa.EU868,tx_power=power)
 com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
 reset_cause=machine.reset_cause()
 if reset_cause==machine.DEEPSLEEP_RESET:
-    len_node=pycom.nvs_get("len_node")
-    len_neighbours=pycom.nvs_get("len_neighbours")
     node_list=[]
     neighbours=[[],[]]
-    for l in range(len_node):
-        name="node"+str(l)
-        node=pycom.nvs_get(name)
-        node_list.append(node)
-        print(node_list[l])
-    for l in range(len_neighbours):
-        name="neighbour"+str(l)
-        name2="power"+str(l)
-        ids=pycom.nvs_get(name)
-        powers=pycom.nvs_get(name2)
-        neighbours[0].append(ids)
-        neighbours[1].append(powers)
-    print(neighbours)
-    mode=NORMAL_MODE
-    timer_read_sensors.reset()
-    timer_read_sensors.start()
+    mode=LISTEN_MODE
     print("Good morning!")
 
 while True:
@@ -316,7 +299,7 @@ while True:
                 neighbours=com.neighbours_min(neighbours,neighbours_aux)
                 saveFileMsgs(neighbours,counter,rtc)
                 counter=counter+1
-                machine.deepsleep(5.3*60*1000) #5.3min, machine.deepsleep([time_ms])
+                machine.deepsleep(5.2*60*1000) #5.2min, machine.deepsleep([time_ms])
 
         if discover_end_ack==False and timer_Disc_end.read()>5:
             #Resend the msg to ask again an ACK

@@ -20,8 +20,6 @@ timer2=Timer.Chrono()
 timer3=Timer.Chrono()
 timer_Disc_end=Timer.Chrono()
 timer_Disc_end.reset()
-timer_read_sensors=Timer.Chrono()
-timer_read_sensors.reset()
 discover_end_ack=False
 timer2.reset()
 missatge=False

@@ -18,11 +18,6 @@ NORMAL_MODE=3
 ALARM_MODE=4
 stop_config=False
 
-# com=comu.Comunication()
-# com.JoinLoraWan()
-# time.sleep(2)
-# com.Switch_to_LoraRaw()
-# com.start_LoraRaw()
 
 id=ubinascii.hexlify(machine.unique_id()).decode('utf-8')#'3c71bf8775d4'
 print("id del dispositiu: ",id)
@@ -43,9 +38,11 @@ Hello_received=False
 End_discover=False
 info_passed=False
 timer=Timer.Chrono()
-timer_to_send_GTW=Timer.Chrono()
-timer_token_ack=Timer.Chrono()
-timer_to_send_alarm=Timer.Chrono()
-
 
 pycom.wifi_on_boot(False)
+
+counter=1
+## Initialize time
+rtc = machine.RTC()
+#(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
+rtc.init((2020, 03, 03, 15,26))

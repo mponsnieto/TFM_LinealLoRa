@@ -126,10 +126,16 @@ def interrupt(lora):
 
 reset_cause=machine.reset_cause()
 com=comu.Comunication()
-com.JoinLoraWan()
 button.callback(trigger=Pin.IRQ_FALLING, handler=handler_button)
 
 if reset_cause==machine.DEEPSLEEP_RESET:
+    com.lora = LoRa(mode=LoRa.LORAWAN,region=LoRa.EU868)
+    com.lora.nvram_restore()
+    if com.lora.has_joined()==False:
+        com.JoinLoraWan()
+    time.sleep(2)
+    com.Switch_to_LoraRaw()
+    
     node_list=[]
     neighbours=[[],[]]
     com.Switch_to_LoraRaw()
@@ -140,7 +146,7 @@ if reset_cause==machine.DEEPSLEEP_RESET:
 
 else:
     rcv_data=True
-    #com.JoinLoraWan()
+    com.JoinLoraWan()
     time.sleep(2)
     com.Switch_to_LoraRaw()
     com.start_LoraRaw()
