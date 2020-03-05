@@ -18,8 +18,8 @@ pycom.wifi_on_boot(False)
 com=comu.Comunication()
 com.JoinLoraWan()
 time.sleep(2)
-com.Switch_to_LoraRaw()
 com.start_LoraRaw()
+#com.Switch_to_LoraRaw()
 
 id=ubinascii.hexlify(machine.unique_id()).decode('utf-8')#'3c71bf8775d4'
 print("id del dispositiu: ",id)
@@ -36,6 +36,8 @@ EnviatGateway=False
 neighbours=[[],[]]
 neighbours_aux=[[],[]]
 msg="Config 2"
+msg_aux="Config 2"
+rcv_data=False
 node_list=""
 msg_alarm_ok=" "
 
@@ -48,4 +50,4 @@ counter=1
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2020, 03, 03, 15,26))
+rtc.init((2020, 03, 05, 0,0))

@@ -59,9 +59,11 @@ def discover(id):
     return
 
 def handler_button(button):
-    print(p_in.value())
+    print("The config is going to start")
     global mode
+    global rcv_data
     mode=CONFIG_MODE
+    rcv_data=True
 
 def interrupt(lora):
     print("Interrupcio")
@@ -125,17 +127,17 @@ def interrupt(lora):
 ###############################################################################
 
 reset_cause=machine.reset_cause()
-com=comu.Comunication()
 button.callback(trigger=Pin.IRQ_FALLING, handler=handler_button)
 
 if reset_cause==machine.DEEPSLEEP_RESET:
+    com=Comunication()
     com.lora = LoRa(mode=LoRa.LORAWAN,region=LoRa.EU868)
     com.lora.nvram_restore()
     if com.lora.has_joined()==False:
         com.JoinLoraWan()
     time.sleep(2)
     com.Switch_to_LoraRaw()
-    
+
     node_list=[]
     neighbours=[[],[]]
     com.Switch_to_LoraRaw()
@@ -146,103 +148,103 @@ if reset_cause==machine.DEEPSLEEP_RESET:
 
 else:
     rcv_data=True
-    com.JoinLoraWan()
-    time.sleep(2)
-    com.Switch_to_LoraRaw()
-    com.start_LoraRaw()
+    # com.JoinLoraWan()
+    # time.sleep(2)
+    # com.Switch_to_LoraRaw()
+    #com.start_LoraRaw()
 
+while(True):
+    if mode==CONFIG_MODE:
+        if rcv_data:
+            config_start=True
+            #print("He rebut: ",msg)
+            print("Part 1 ",id not in msg)
+            if id not in msg:
+                rcv_data=False
+                splitmsg=msg.split( )
+                id_n=splitmsg[-1]
+                pow=int(splitmsg[1])
+                com.change_txpower(pow)
+                com.sendData(msg+" "+str(id))
+                print("Enviare: ",msg+" "+str(id))
+                #update_neighbours(pow,id_n)
 
-if mode==CONFIG_MODE:
-    if rcv_data:
-        config_start=True
-        #print("He rebut: ",msg)
-        print("Part 1 ",id not in msg)
-        if id not in msg:
+        print("Part 2 ",msg,rcv_data,id in msg)
+        if (rcv_data==True) and (id in msg) and (config_ACK==False):
             rcv_data=False
-            splitmsg=msg.split( )
-            id_n=splitmsg[-1]
-            pow=int(splitmsg[1])
-            com.change_txpower(pow)
-            com.sendData(msg+" "+str(id))
-            print("Enviare: ",msg+" "+str(id))
-            #update_neighbours(pow,id_n)
+            if "Config" in msg:
+                config_ACK=True
+                print("He rebut ACK")
+                splitmsg=msg.split( )
+                id_n=splitmsg[-1]
+                pow=int(splitmsg[1])
+                #update_neighbours(pow,id_n)
+                mode=LISTEN_MODE
 
-    print("Part 2 ",msg,rcv_data,id in msg)
-    if (rcv_data==True) and (id in msg) and (config_ACK==False):
-        rcv_data=False
-        if "Config" in msg:
-            config_ACK=True
-            print("He rebut ACK")
-            splitmsg=msg.split( )
-            id_n=splitmsg[-1]
-            pow=int(splitmsg[1])
-            #update_neighbours(pow,id_n)
-            mode=LISTEN_MODE
+        print("Part 3 ",config_ACK, config_start)
+        if config_ACK==False and config_start==True:
+            if intent<3:
+                com.sendData(msg+" "+str(id))
+                time.sleep(2+machine.rng()%1)
+                print("Enviare %s intent: "%(intent),msg+" "+str(id))
+                intent=intent+1
+            elif power<14: #Max power=14
+                intent=1
+                power=power+1
+                if type(msg)==bytes:
+                    msg=bytes.decode(msg)
+                splitmsg=msg.split( )
+                splitmsg[1]=str(power)
+                msg=" ".join(splitmsg)
+                com.change_txpower(power)
+            else:
+                power=2
+                intent=1
+                com.change_txpower(power)
 
-    print("Part 3 ",config_ACK, config_start)
-    if config_ACK==False and config_start==True:
-        if intent<3:
-            com.sendData(msg+" "+str(id))
-            time.sleep(2+machine.rng()%1)
-            print("Enviare %s intent: "%(intent),msg+" "+str(id))
-            intent=intent+1
-        elif power<14: #Max power=14
-            intent=1
-            power=power+1
-            if type(msg)==bytes:
-                msg=bytes.decode(msg)
-            splitmsg=msg.split( )
-            splitmsg[1]=str(power)
-            msg=" ".join(splitmsg)
-            com.change_txpower(power)
-        else:
-            power=2
-            intent=1
-            com.change_txpower(power)
+    if mode==LISTEN_MODE:
 
-if mode==LISTEN_MODE:
+        if (rcv_data==True):
+            msg=msg_aux
 
-    if (rcv_data==True):
-        msg=msg_aux
+            if type(msg_aux)==bytes:
+                msg=bytes.decode(msg_aux)
+            splitmsg=msg.split()
 
-        if type(msg_aux)==bytes:
-            msg=bytes.decode(msg_aux)
-        splitmsg=msg.split()
-
-        rcv_data=False
-        missatge=True
-
-        if "Discover normal" in msg and missatge==True:
-            missatge=False
-            id_n=splitmsg[-1]
-            pow=int(splitmsg[2])
-            com.change_txpower(pow)
-            print("Enviare", "Hello ",pow , " ", id )
-            time.sleep(machine.rng()%2)
-            com.sendData("Hello "+ str(pow) + " "+ str(id))
-            neighbours_aux=com.update_neighbours(pow,id_n,neighbours_aux)
             rcv_data=False
-        elif "Discover next" in msg:
-            if isMyTurn(int(msg[-1]))==True:
-                mode=DISCOVER_MODE
+            missatge=True
 
-elif mode==DISCOVER_MODE:
-    discover(id)
-    print("He acabat discover", neighbours)
-    timer_discover_end.start()
-    timer_discover_end.reset()
-    while (timer_discover_end.read()<4):
-        time.sleep(2)
-    timer_discover_end.stop()
-    rcv_data=False
-    print("Enviar a gateway")
-    com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=None)
-    com.Switch_to_LoraWan()
-    com.EnviarGateway(str(neighbours[0][0])+" "+str(neighbours[1][0])+" "+str(neighbours[0][1])+" "+str(neighbours[1][1])+" "+str(neighbours[0][2])+" "+str(neighbours[1][2]))
-    com.Switch_to_LoraRaw()
-    com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
-    print("LoraRaw Ok")
-    EnviatGateway=True
-    saveFileMsgs(neighbours,counter,rtc)
-    counter=counter+1
-    machine.deepsleep(5.3*60*1000) #5.3min, machine.deepsleep([time_ms])
+            if "Discover normal" in msg and missatge==True:
+                missatge=False
+                id_n=splitmsg[-1]
+                pow=int(splitmsg[2])
+                com.change_txpower(pow)
+                print("Enviare", "Hello ",pow , " ", id )
+                time.sleep(machine.rng()%2)
+                com.sendData("Hello "+ str(pow) + " "+ str(id))
+                neighbours_aux=com.update_neighbours(pow,id_n,neighbours_aux)
+                rcv_data=False
+            elif "Discover next" in msg:
+                if isMyTurn(int(msg[-1]))==True:
+                    mode=DISCOVER_MODE
+
+    elif mode==DISCOVER_MODE:
+        discover(id)
+        print("He acabat discover", neighbours)
+        timer_discover_end.start()
+        timer_discover_end.reset()
+        while (timer_discover_end.read()<4):
+            time.sleep(2)
+        timer_discover_end.stop()
+        rcv_data=False
+        print("Enviar a gateway")
+        com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=None)
+        com.Switch_to_LoraWan()
+        com.EnviarGateway(str(neighbours[0][0])+" "+str(neighbours[1][0])+" "+str(neighbours[0][1])+" "+str(neighbours[1][1])+" "+str(neighbours[0][2])+" "+str(neighbours[1][2]))
+        com.Switch_to_LoraRaw()
+        com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
+        print("LoraRaw Ok")
+        EnviatGateway=True
+        saveFileMsgs(neighbours,counter,rtc)
+        counter=counter+1
+        machine.deepsleep(5.3*60*1000) #5.3min, machine.deepsleep([time_ms])

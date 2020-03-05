@@ -52,6 +52,8 @@ class Comunication:
         # make the socket non-blocking
         self.s.setblocking(False)
 
+        self.lora.nvram_save()
+
         time.sleep(5)
 
     """ Your own code can be written below! """
