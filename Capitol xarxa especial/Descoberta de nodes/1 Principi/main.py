@@ -247,7 +247,7 @@ while(True):
         print("Enviar a gateway")
         com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=None)
         com.Switch_to_LoraWan()
-        if len(neighbours[0]==1):
+        if len(neighbours[0])==1:
             com.EnviarGateway(str(neighbours[0][0])+" "+str(neighbours[1][0]))
         else:
             com.EnviarGateway(str(neighbours[0][0])+" "+str(neighbours[1][0])+" "+str(neighbours[0][1])+" "+str(neighbours[1][1]))
@@ -258,4 +258,4 @@ while(True):
         saveFileMsgs(neighbours,counter,rtc)
         counter=counter+1
         print("DeepSleep ",counter)
-        machine.deepsleep(5.3*60*1000) #5.3min, machine.deepsleep([time_ms])
+        machine.deepsleep((5*60*1000)+300) #5.3min, machine.deepsleep([time_ms])
