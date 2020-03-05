@@ -10,7 +10,7 @@ def saveFileMsgs(neighbours,counter,rtc):
         f.close()
 
         f = open('neighbours_first.txt', 'a')
-        for i in range(neighbours[0]):
+        for i in range(len(neighbours[0])):
             f.write("id {} pow{}, ".format(neighbours[0][i],neighbours[1][i]))
         f.write("\n")
         f.close()
