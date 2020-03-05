@@ -16,6 +16,11 @@ def saveFileMsgs(neighbours,counter,rtc):
         f.close()
         return
 
+def isMyTurn(token):
+    return node_list.index(id)==token
+
+def isMyACK(token):
+    return node_list.index(id)<token
 
 def discover(id):
     print("Discovering")
@@ -23,7 +28,7 @@ def discover(id):
     com.change_txpower(power)
     global Hello_received,msg
     global neighbours, End_discover
-    while ((len(neighbours[0])<3) & (power<14)): #Potencia max =14
+    while ((len(neighbours[0])<2) & (power<14)): #Potencia max =14
         print("I'm in")
         #Enviar missatge inici de descoberta
         msg_tx='Discover normal %i %s'%(power,id)
@@ -148,6 +153,7 @@ if reset_cause==machine.DEEPSLEEP_RESET:
 
 else:
     rcv_data=True
+    com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
     # com.JoinLoraWan()
     # time.sleep(2)
     # com.Switch_to_LoraRaw()
@@ -237,14 +243,19 @@ while(True):
             time.sleep(2)
         timer_discover_end.stop()
         rcv_data=False
+
         print("Enviar a gateway")
         com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=None)
         com.Switch_to_LoraWan()
-        com.EnviarGateway(str(neighbours[0][0])+" "+str(neighbours[1][0])+" "+str(neighbours[0][1])+" "+str(neighbours[1][1])+" "+str(neighbours[0][2])+" "+str(neighbours[1][2]))
+        if len(neighbours[0]==1):
+            com.EnviarGateway(str(neighbours[0][0])+" "+str(neighbours[1][0]))
+        else:
+            com.EnviarGateway(str(neighbours[0][0])+" "+str(neighbours[1][0])+" "+str(neighbours[0][1])+" "+str(neighbours[1][1]))
         com.Switch_to_LoraRaw()
         com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
         print("LoraRaw Ok")
         EnviatGateway=True
         saveFileMsgs(neighbours,counter,rtc)
         counter=counter+1
+        print("DeepSleep ",counter)
         machine.deepsleep(5.3*60*1000) #5.3min, machine.deepsleep([time_ms])
