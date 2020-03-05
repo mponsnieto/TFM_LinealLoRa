@@ -11,7 +11,7 @@ def saveFileMsgs(neighbours,counter,rtc):
         f.close()
 
         f = open('neighbours_middle.txt', 'a')
-        for i in range(neighbours[0]):
+        for i in range(len(neighbours[0])):
             f.write("id {} pow{}, ".format(neighbours[0][i],neighbours[1][i]))
         f.write("\n")
         f.close()
@@ -76,7 +76,7 @@ def discover(id):
     power=2 #min
     com.lora = LoRa(mode=LoRa.LORA, region=LoRa.EU868,tx_power=power)
     global neighbours
-    while ((len(neighbours[0])<3) & (power<14)): #Potencia max =14
+    while ((len(neighbours[0])<2) & (power<14)): #Potencia max =14
         #Enviar missatge inici de descoberta
         msg_tx='Discover normal %i %s'%(power,id)
         for i in range(4):
@@ -226,7 +226,7 @@ while True:
                 print("Stop finished")
                 stop_ACK=True
                 mode=LISTEN_MODE
-                timer_read_sensors.start()
+
         if (config_ACK==False and config_start==True) or (stop_start==True and stop_ACK==False):
             if intent<3:
                 #msg stop es el missatge normal de config o el de stop
@@ -287,6 +287,7 @@ while True:
                 msg_send=" ".join(splitmsg_send)
                 com.sendData(str(msg_send))
                 print("Sending: ",msg_send)
+                timer_Disc_end.start()
                 time.sleep(1)
                 msg_listen=" "
 
@@ -299,11 +300,13 @@ while True:
                 neighbours=com.neighbours_min(neighbours,neighbours_aux)
                 saveFileMsgs(neighbours,counter,rtc)
                 counter=counter+1
-                machine.deepsleep(5.2*60*1000) #5.2min, machine.deepsleep([time_ms])
+                print("DeepSleep ",counter)
+                machine.deepsleep((5*60*1000)+200) #5.2min, machine.deepsleep([time_ms])
 
         if discover_end_ack==False and timer_Disc_end.read()>5:
             #Resend the msg to ask again an ACK
             com.sendData(str(msg_send))
+            print("Sending again Discover end")
             timer_Disc_end.reset()
 
     if mode==DISCOVER_MODE:

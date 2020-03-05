@@ -58,4 +58,4 @@ counter=1
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2020, 03, 03, 15,26))
+rtc.init((2020, 03, 05, 0,0))

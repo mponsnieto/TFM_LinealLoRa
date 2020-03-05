@@ -11,8 +11,8 @@ def saveFileMsgs(neighbours,counter,rtc):
         f.close()
 
         f = open('neighbours_middle.txt', 'a')
-        for i in range(neighbours[0]):
-            f.write("id {} pow{}, ".format(neighbours[0][i],neighbours[1][i]))
+        for i in range(len(neighbours[0])):
+            f.write("id {} pow {} , ".format(neighbours[0][i],neighbours[1][i]))
         f.write("\n")
         f.close()
         return
@@ -35,7 +35,7 @@ def discover(id):
     power=2 #min
     com.change_txpower(power)
 
-    while ((len(neighbours[0])<3) & (power<14)): #Potencia max =14
+    while ((len(neighbours[0])<2) & (power<14)): #Potencia max =14
         print("I'm in")
         #Enviar missatge inici de descoberta
         msg_tx='Discover normal %i %s'%(power,str(id))
@@ -150,8 +150,9 @@ while True:
                 power=int(splitmsg[1])
                 print("power1:",power)
                 com.change_txpower(power)
-                com.sendData(msg+" "+str(id))
-                print("Enviare: ",msg+" "+str(id))
+                msg=msg+" "+str(id)
+                com.sendData(msg)
+                print("Enviare: ",msg)
                 config_start=False
                 if type(msg)==bytes:
                     msg=bytes.decode(msg)
@@ -162,6 +163,7 @@ while True:
                 timer.start()
                 while timer.read()<6:
                     if rcv_data==True and id not in msg:
+                        msg=msg+" "+str(id)
                         if type(msg)==bytes:
                             msg=bytes.decode(msg)
                         splitmsg=msg.split( )
@@ -169,9 +171,7 @@ while True:
                         if node_list2!=node_list:
                             timer.reset()
 
-                node_list.append(str(id))
                 com.get_node_list(node_list)
-                msg=" ".join(splitmsg)
                 msg="stop "+str(power)+" "+str(" ".join(node_list))+" "+str(node_list.index(id))
                 com.sendData(msg)
                 msg_retry=msg
@@ -180,13 +180,14 @@ while True:
                 #time.sleep(5)
 
         #print("Part 2 ",msg,rcv_data,id in msg)
-        if (rcv_data==True) and (id in msg) and ("stop" in msg) and int(msg.split()[-1])<node_list.index(id) and error==False:
-            rcv_data=False
-            config_ACK=True
-            print("He rebut ACK")
-            mode=DISCOVER_MODE
-            config_start=False
-            print("He acabat el config")
+        if (rcv_data==True) and (id in msg) and ("stop" in msg) and (error==False):
+            if int(msg.split()[-1])<node_list.index(id):
+                rcv_data=False
+                config_ACK=True
+                print("He rebut ACK")
+                mode=DISCOVER_MODE
+                config_start=False
+                print("He acabat el config")
 
 
         #print("Part 3 ",config_ACK, config_start)
@@ -226,17 +227,33 @@ while True:
             except Exception as e:
                  print(e)
                  msg="error"
-            if ("Discover normal") in msg: #Other node is discovering
-                id_n=splitmsg[-1]
-                pow=int(splitmsg[2])
-                com.change_txpower(pow)
-                print("Enviare", "Hello ",pow , " ", id )
-                time.sleep(machine.rng()%1)
-                com.sendData("Hello "+ str(pow) + " "+ str(id))
-                neighbours_aux=com.update_neighbours(pow,id_n,neighbours_aux)
-            elif "Discover end" in msg and isMyTurn(int(msg[-1])): #All discovers are finished
-                neighbours=com.neighbours_min(neighbours,neighbours_aux,id)
-                rcv_data=False
-                saveFileMsgs(neighbours,counter,rtc)
-                counter=counter+1
-                machine.deepsleep(5*60*1000) #5min, machine.deepsleep([time_ms])
+            if len(node_list)>0:
+                if ("Discover normal") in msg: #Other node is discovering
+                    id_n=splitmsg[-1]
+                    pow=int(splitmsg[2])
+                    com.change_txpower(pow)
+                    print("Enviare", "Hello ",pow , " ", id )
+                    time.sleep(machine.rng()%2)
+                    com.sendData("Hello "+ str(pow) + " "+ str(id))
+                    neighbours_aux=com.update_neighbours(pow,id_n,neighbours_aux)
+                elif "Discover end" in msg and isMyTurn(int(msg[-1])): #All discovers finished
+                    neighbours=com.neighbours_min(neighbours,neighbours_aux,id)
+                    rcv_data=False
+                    splitmsg_send=msg.split()
+                    turn=int(splitmsg_send[-1])+1
+                    splitmsg_send[-1]=str(turn)
+                    msg_send=" ".join(splitmsg_send)
+                    com.sendData(str(msg_send))
+                    print("Sending: ",msg_send)
+
+    #------------------------Chapuza per aquesta prova--------------------------
+                    time.sleep(5)
+                    com.sendData(str(msg_send))
+                    time.sleep(5)
+                    com.sendData(str(msg_send))
+    #------------------------Fi de chapuza per aquesta prova--------------------
+
+                    saveFileMsgs(neighbours,counter,rtc)
+                    counter=counter+1
+                    print("DeepSleep ",counter)
+                    machine.deepsleep(5*60*1000) #5min, machine.deepsleep([time_ms])

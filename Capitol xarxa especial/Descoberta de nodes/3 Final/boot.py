@@ -21,7 +21,7 @@ stop_config=False
 
 id=ubinascii.hexlify(machine.unique_id()).decode('utf-8')#'3c71bf8775d4'
 print("id del dispositiu: ",id)
-mode=CONFIG_MODE
+mode=LISTEN_MODE
 config_ACK=False
 config_start=True
 power=2
@@ -45,4 +45,4 @@ counter=1
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2020, 03, 03, 15,26))
+rtc.init((2020, 03, 05, 0,0))
