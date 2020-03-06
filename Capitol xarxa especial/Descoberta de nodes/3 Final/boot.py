@@ -39,10 +39,12 @@ End_discover=False
 info_passed=False
 timer=Timer.Chrono()
 
+period=2
+
 pycom.wifi_on_boot(False)
 
 counter=1
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2020, 03, 05, 0,0))
+rtc.init((2020, 03, 06, 0,0))

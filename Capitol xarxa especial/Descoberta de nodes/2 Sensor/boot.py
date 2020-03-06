@@ -53,9 +53,10 @@ neighbours=[[],[]]
 neighbours_aux=[[],[]]
 intent=1
 
+period=2
 
 counter=1
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2020, 03, 05, 0,0))
+rtc.init((2020, 03, 06, 0,0))

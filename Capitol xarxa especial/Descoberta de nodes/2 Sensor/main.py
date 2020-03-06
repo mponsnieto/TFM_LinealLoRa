@@ -181,6 +181,7 @@ if reset_cause==machine.DEEPSLEEP_RESET:
     node_list=[]
     neighbours=[[],[]]
     mode=LISTEN_MODE
+    counter=pycom.nvs_get("count")
     print("Good morning!")
 
 while True:
@@ -301,7 +302,8 @@ while True:
                 saveFileMsgs(neighbours,counter,rtc)
                 counter=counter+1
                 print("DeepSleep ",counter)
-                machine.deepsleep((5*60*1000)+200) #5.2min, machine.deepsleep([time_ms])
+                pycom.nvs_set("count",counter)
+                machine.deepsleep((period*60*1000)+200) #5.2min, machine.deepsleep([time_ms])
 
         if discover_end_ack==False and timer_Disc_end.read()>5:
             #Resend the msg to ask again an ACK

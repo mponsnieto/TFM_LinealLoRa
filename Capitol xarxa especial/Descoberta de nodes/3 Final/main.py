@@ -6,11 +6,11 @@ def saveFileMsgs(neighbours,counter,rtc):
         Example: 15/10/2019 13:21:31 5
                  id2 min_pow, id3 max_pow
         '''
-        f = open('dates_middle.txt', 'a')
+        f = open('dates_final.txt', 'a')
         f.write("{}/{}/{} {}:{}:{} counter {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter))
         f.close()
 
-        f = open('neighbours_middle.txt', 'a')
+        f = open('neighbours_final.txt', 'a')
         for i in range(len(neighbours[0])):
             f.write("id {} pow {} , ".format(neighbours[0][i],neighbours[1][i]))
         f.write("\n")
@@ -131,6 +131,7 @@ if reset_cause==machine.DEEPSLEEP_RESET:
     node_list=[]
     neighbours=[[],[]]
     mode=LISTEN_MODE
+    counter=pycom.nvs_get("count")
     print("Good morning!")
 
 else:
@@ -159,17 +160,21 @@ while True:
                 if node_list=="":
                     splitmsg=msg.split( )
                     node_list=splitmsg[2:]
-                    com.get_node_list(node_list)
                 timer.start()
                 while timer.read()<6:
                     if rcv_data==True and id not in msg:
                         msg=msg+" "+str(id)
+                        com.sendData(msg)
                         if type(msg)==bytes:
                             msg=bytes.decode(msg)
                         splitmsg=msg.split( )
                         node_list2=splitmsg[2:]
                         if node_list2!=node_list:
                             timer.reset()
+                            timer.start()
+                            if len(node_list2)>len(node_list):
+                                node_list=node_list2
+
 
                 com.get_node_list(node_list)
                 msg="stop "+str(power)+" "+str(" ".join(node_list))+" "+str(node_list.index(id))
@@ -256,4 +261,5 @@ while True:
                     saveFileMsgs(neighbours,counter,rtc)
                     counter=counter+1
                     print("DeepSleep ",counter)
-                    machine.deepsleep(5*60*1000) #5min, machine.deepsleep([time_ms])
+                    pycom.nvs_set("count",counter)
+                    machine.deepsleep(period*60*1000) #5min, machine.deepsleep([time_ms])
