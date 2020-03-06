@@ -135,17 +135,16 @@ reset_cause=machine.reset_cause()
 button.callback(trigger=Pin.IRQ_FALLING, handler=handler_button)
 
 if reset_cause==machine.DEEPSLEEP_RESET:
-    com=Comunication()
-    com.lora = LoRa(mode=LoRa.LORAWAN,region=LoRa.EU868)
-    com.lora.nvram_restore()
+    com=comu.Comunication()
+    com.Switch_to_LoraWan()
     if com.lora.has_joined()==False:
         com.JoinLoraWan()
     time.sleep(2)
     com.Switch_to_LoraRaw()
-
+    com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
+    counter=pycom.nvs_get("count")
     node_list=[]
     neighbours=[[],[]]
-    com.Switch_to_LoraRaw()
     mode=CONFIG_MODE #NORMAL_MODE
     msg="Config 2"
     rcv_data=True
@@ -153,11 +152,13 @@ if reset_cause==machine.DEEPSLEEP_RESET:
 
 else:
     rcv_data=True
+    com=comu.Comunication()
+    com.JoinLoraWan()
+    time.sleep(2)
+    com.Switch_to_LoraRaw()
+    com.start_LoraRaw()
     com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
-    # com.JoinLoraWan()
-    # time.sleep(2)
-    # com.Switch_to_LoraRaw()
-    #com.start_LoraRaw()
+    print("All OK, please press the button")
 
 while(True):
     if mode==CONFIG_MODE:
@@ -247,15 +248,15 @@ while(True):
         print("Enviar a gateway")
         com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=None)
         com.Switch_to_LoraWan()
-        if len(neighbours[0])==1:
-            com.EnviarGateway(str(neighbours[0][0])+" "+str(neighbours[1][0]))
-        else:
-            com.EnviarGateway(str(neighbours[0][0])+" "+str(neighbours[1][0])+" "+str(neighbours[0][1])+" "+str(neighbours[1][1]))
-        com.Switch_to_LoraRaw()
-        com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
-        print("LoraRaw Ok")
+        msg=com.ApplyFormat_NeighboursTable(neighbours,counter)
+        com.EnviarGateway(msg)
+        # com.Switch_to_LoraRaw()
+        # com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
+        # print("LoraRaw Ok")
         EnviatGateway=True
+        com.lora.nvram_save()
         saveFileMsgs(neighbours,counter,rtc)
         counter=counter+1
+        pycom.nvs_set("count",counter)
         print("DeepSleep ",counter)
-        machine.deepsleep((5*60*1000)+300) #5.3min, machine.deepsleep([time_ms])
+        machine.deepsleep((period*60*1000)+300) #5.3min, machine.deepsleep([time_ms])

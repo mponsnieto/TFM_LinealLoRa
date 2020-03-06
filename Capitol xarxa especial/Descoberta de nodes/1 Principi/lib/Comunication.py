@@ -69,6 +69,7 @@ class Comunication:
     def savestate(self):
         self.lora.nvram_save()
 
+
     def change_txpower(self,power):
         self.lora.tx_power(power)
 
@@ -83,9 +84,9 @@ class Comunication:
     def Switch_to_LoraWan(self):
         self.lora = LoRa(mode=LoRa.LORAWAN,region=LoRa.EU868)
         self.lora.nvram_restore()
-        time.sleep(5)
-        #Si no es reinicia el socket el missatge 3 no s'envia
+        #time.sleep(5)
 
+        #Si no es reinicia el socket el missatge 3 no s'envia
         self.s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
         self.s.setsockopt(socket.SOL_LORA, socket.SO_DR, 5)
         self.s.setsockopt(socket.SOL_LORA, socket.SO_CONFIRMED, False)
@@ -103,9 +104,7 @@ class Comunication:
         msg = iv + cipher.encrypt(misg_crc)
         self.s.send(msg)
         self.s.setblocking(False)
-        #print(msg)
-        #print(len(msg))
-        #time.sleep(5)
+
 
     def reciveData(self):
         self.s.setblocking(False)
@@ -154,6 +153,17 @@ class Comunication:
         #id=splitmsg[1].encode('utf-8')
         id_aux=ustruct.pack('>Q',int(splitmsg[1],16)) #long long: 8 bytes
         return(packet_dust+packet_tempC+packet_Tht+packet_Hht+packet_tbmp+packet_val+packet_dhi+id_aux)#+packet_TCam)
+
+    def ApplyFormat_NeighboursTable(self,table,count):
+        msg=b''
+        for i in range(len(table[0])):
+            packet_power= ustruct.pack('b',int(table[1][i]))  #signed char 1 byte
+            packet_id= ustruct.pack('>Q',int(table[0][i],16)) #long long: 8 bytes
+            msg=msg+packet_id+packet_power
+        #id=splitmsg[1].encode('utf-8')
+        #id_aux=ustruct.pack('>Q',int(splitmsg[1],16)) #long long: 8 bytes
+        msg=msg+ustruct.pack('H',count)
+        return(msg)
 
     def neighbours_min(self,id,neighbours,neighbours_aux):
         for id in neighbours[0]:

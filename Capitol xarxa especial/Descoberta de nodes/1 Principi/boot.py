@@ -15,10 +15,10 @@ NORMAL_MODE=3
 ALARM_MODE=4
 pycom.wifi_on_boot(False)
 
-com=comu.Comunication()
-com.JoinLoraWan()
-time.sleep(2)
-com.start_LoraRaw()
+# com=comu.Comunication()
+# com.JoinLoraWan()
+# time.sleep(2)
+# com.start_LoraRaw()
 #com.Switch_to_LoraRaw()
 
 id=ubinascii.hexlify(machine.unique_id()).decode('utf-8')#'3c71bf8775d4'
@@ -45,6 +45,8 @@ timer_discover_end=Timer.Chrono()
 button = machine.Pin(Pin.exp_board.G17, mode=Pin.IN, pull=Pin.PULL_UP)
 
 Hello_received=False
+
+period=2
 
 counter=1
 ## Initialize time
