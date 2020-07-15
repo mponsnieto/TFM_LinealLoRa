@@ -16,12 +16,13 @@ DISCOVER_MODE=1
 LISTEN_MODE=2
 NORMAL_MODE=3
 ALARM_MODE=4
+CHECK=5
 stop_config=False
 
 
 id=ubinascii.hexlify(machine.unique_id()).decode('utf-8')#'3c71bf8775d4'
 print("id del dispositiu: ",id)
-mode=LISTEN_MODE
+mode=CHECK
 config_ACK=False
 config_start=True
 power=2
@@ -47,4 +48,4 @@ counter=1
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2020, 03, 06, 0,0))
+rtc.init((2020, 07, 15, 0,0))

@@ -114,7 +114,7 @@ class Comunication:
                 cipher = AES(self.key, AES.MODE_CFB, msg[:16]) # on the decryption side
                 original = cipher.decrypt(msg[16:])
                 print("original ",original)
-                if "Config" in original or "stop" in original or "Discover" in original or "Hello" in original or "Info" in original or "Token" in original or "Alarm" in original:
+                if "Config" in original or "stop" in original or "Discover" in original or "Hello" in original or "Info" in original or "Token" in original or "Alarm" in original or "Hay" in original:
                     crc_OK,msg=self.check_crc(original)
                     if crc_OK:
                         return(msg)

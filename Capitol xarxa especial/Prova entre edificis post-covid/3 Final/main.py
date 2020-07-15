@@ -80,7 +80,10 @@ def interrupt(lora):
 
     aux=com.reciveData()
     if aux!="error":
-
+        if mode==CHECK and  "Config" in aux and (stop_config==False):
+            rcv_data=True
+            mode=CONFIG_MODE
+            msg=aux
 
         if mode==LISTEN_MODE:
             rcv_data=True
@@ -141,6 +144,10 @@ com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
 com.lora = LoRa(mode=LoRa.LORA, region=LoRa.EU868,tx_power=power)
 
 while True:
+    if mode==CHECK:
+        com.sendData("Hay buena cobertura con el final "+str(i))
+        i=i+1
+        time.sleep(2)
     if mode==CONFIG_MODE:
         if rcv_data and error==False:
             print("Part 1 ",id not in msg, config_start)
