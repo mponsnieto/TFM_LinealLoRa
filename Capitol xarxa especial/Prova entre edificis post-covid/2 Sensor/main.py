@@ -6,13 +6,10 @@ def saveFileMsgs(neighbours,counter,rtc):
         Example: 15/10/2019 13:21:31 5
                  id2 min_pow, id3 max_pow
         '''
-        f = open('dates_middle.txt', 'a')
-        f.write("{}/{}/{} {}:{}:{} counter {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter))
-        f.close()
-
         f = open('neighbours_middle.txt', 'a')
+        f.write("{}/{}/{} {}:{}:{} counter {}".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter))
         for i in range(len(neighbours[0])):
-            f.write("id {} pow{}, ".format(neighbours[0][i],neighbours[1][i]))
+            f.write(" id {} pow{}, ".format(neighbours[0][i],neighbours[1][i]))
         f.write("\n")
         f.close()
         return
@@ -198,6 +195,10 @@ if reset_cause==machine.DEEPSLEEP_RESET:
     print("Good morning!")
 
 while True:
+    if mode==CHECK:
+        com.sendData("Hay buena cobertura de sensor 1 "+str(i))
+        i=i+1
+        time.sleep(2)
     if mode==ALARM_MODE:
         if rcv_data:
             rcv_data=False
@@ -239,7 +240,7 @@ while True:
             com.sendData(msg_alarm)
 
     if mode==CONFIG_MODE:
-        if rcv_data and id not in msg and stop_start==False:
+        if rcv_data and id not in msg and stop_start==False and "stop" not in msg:
             rcv_data=False
             config_start=True
             print("el missatge es: ", msg)
@@ -384,7 +385,7 @@ while True:
         #end_discover=False
         mode=LISTEN_MODE
         timer_read_sensors.start()
-        
+
     if mode==NORMAL_MODE:
         if timer_read_sensors.read()>=5:
             print("Llegir sensors")

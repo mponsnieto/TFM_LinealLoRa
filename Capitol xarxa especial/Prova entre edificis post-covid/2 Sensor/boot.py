@@ -14,12 +14,15 @@ DISCOVER_MODE=1
 LISTEN_MODE=2
 NORMAL_MODE=3
 ALARM_MODE=4
+CHECK=5
 stop_config=False
 pycom.wifi_on_boot(False)
 timer2=Timer.Chrono()
 timer3=Timer.Chrono()
+timer_read_sensors=Timer.Chrono()
 timer_Disc_end=Timer.Chrono()
 timer_Disc_end.reset()
+timer_read_sensors.reset()
 discover_end_ack=False
 timer2.reset()
 missatge=False
@@ -33,7 +36,7 @@ com.start_LoraRaw()
 
 id=ubinascii.hexlify(machine.unique_id()).decode('utf-8')#'3c71bf8775d4'
 print("id del dispositiu: ",id)
-mode=CONFIG_MODE
+mode=CHECK#CONFIG_MODE
 a=False
 config_ACK=False
 token_ack=True
@@ -56,7 +59,10 @@ intent=1
 period=2
 
 counter=1
+i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2020, 03, 06, 0,0))
+rtc.init((2020, 07, 17, 0,0,0))
+f = open('neighbours_middle.txt', 'w')
+f.close()
