@@ -1,29 +1,24 @@
 def saveFileMsgs(neighbours,counter,rtc):
         '''
         Format of the data: date (DD/MM/YYYY HH:MM:SS) counter(int) table([id][tx_power])
-        Output: 2 files
-        Example: 15/10/2019 13:21:31 5
-                 id2 min_pow, id3 max_pow
+        Example: 15/10/2019 13:21:31 5 id2 min_pow, id3 max_pow
         '''
-        f = open('neighbour_dates_first.txt', 'a')
-        f.write("{}/{}/{} {}:{}:{} counter {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter))
-        f.close()
-
-        f = open('neighbours_first.txt', 'a')
+        f = open('neighbour_first.txt', 'a')
+        f.write("{}/{}/{} {}:{}:{} counter {}".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter))
         for i in range(len(neighbours[0])):
-            f.write("id {} pow{}, ".format(neighbours[0][i],neighbours[1][i]))
+            f.write(" id {} pow{}, ".format(neighbours[0][i],neighbours[1][i]))
         f.write("\n")
         f.close()
         return
 
-def saveFileMsgs(msg,counter,rtc):
+def saveFileMsgsReceived(msg,counter,rtc):
         '''
         Format of the data: date (DD/MM/YYYY HH:MM:SS) counter(int) msg()
-        Output: 2 files
+        Output: 1 file
         Example: 15/10/2019 13:21:31 5 msg
         '''
-        f = open('msg_first.txt', 'a')
-        f.write("{}/{}/{} {}:{}:{} counter {} msg {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter,msg))
+        f = open('msgReceived_first.txt', 'a')
+        f.write("{}/{}/{} {}:{}:{} counter {} recibo {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter,msg))
         f.close()
         return
 
@@ -37,7 +32,7 @@ def discover(id):
     print("Discovering")
     power=2 #min
     com.change_txpower(power)
-    global Hello_received,msg
+    global Hello_received,msg,counter
     global neighbours, End_discover
     while ((len(neighbours[0])<2) & (power<14)): #Potencia max =14
         print("I'm in")
@@ -47,7 +42,7 @@ def discover(id):
             msg=msg_aux
             com.sendData(str(msg_tx))
             f = open('msg_sent_first.txt', 'a')
-            f.write("{}/{}/{} {}:{}:{} counter {} msg {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter,msg_tx))
+            f.write("{}/{}/{} {}:{}:{} counter {} sending {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter,msg_tx))
             f.close()
             counter=counter+1
             time.sleep(2.5+ machine.rng()%1)
@@ -58,6 +53,9 @@ def discover(id):
                 pow=int(splitmsg[1])
                 print("Update neighbours")
                 neighbours=com.update_neighbours(pow,id_n,neighbours)
+                f = open('msgReceived_first.txt', 'a')
+                f.write("{}/{}/{} {}:{}:{} counter {} update neighbour, msg received: {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter,msg))
+                f.close()
                 Hello_received=False
         #change power
         power=power+1
@@ -71,7 +69,7 @@ def discover(id):
     while not End_discover:
         com.sendData(str(msg_retry))
         f = open('msg_sent_first.txt', 'a')
-        f.write("{}/{}/{} {}:{}:{} counter {} msg {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter,msg_retry))
+        f.write("{}/{}/{} {}:{}:{} counter {} sending {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter,msg_retry))
         f.close()
         counter=counter+1
         time.sleep(2)
@@ -103,6 +101,7 @@ def interrupt(lora):
     global Error
     global Hello_received,End_discover
     global msg_aux, splitmsg_aux
+    global counter
     lora.power_mode(LoRa.ALWAYS_ON)
 
     msg_aux=com.reciveData()
@@ -123,7 +122,7 @@ def interrupt(lora):
                 msg=" ".join(splitmsg)
                 com.sendData(str(msg))
                 f = open('msg_sent_first.txt', 'a')
-                f.write("{}/{}/{} {}:{}:{} counter {} msg {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter,msg))
+                f.write("{}/{}/{} {}:{}:{} counter {} sending {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter,msg))
                 f.close()
                 counter=counter+1
                 print("he enviat stop")
@@ -146,6 +145,7 @@ def interrupt(lora):
                     End_discover=True
                     msg=msg_aux
                     timer_discover_end.reset()
+                    mode=NORMAL_MODE
                 error=False
             except Exception as e:
                  print(e)
@@ -163,7 +163,14 @@ button.callback(trigger=Pin.IRQ_FALLING, handler=handler_button)
 
 if reset_cause==machine.DEEPSLEEP_RESET:
     com=comu.Comunication()
+    f = open('msg_sent_first.txt', 'a')
+    f.write("{}/{}/{} {}:{}:{} start Join\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+    f.close()
     com.Switch_to_LoraWan()
+    f = open('msg_sent_first.txt', 'a')
+    f.write("{}/{}/{} {}:{}:{} Acaba Join\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+    f.close()
+
     if com.lora.has_joined()==False:
         com.JoinLoraWan()
     time.sleep(2)
@@ -180,7 +187,13 @@ if reset_cause==machine.DEEPSLEEP_RESET:
 else:
     rcv_data=True
     com=comu.Comunication()
+    f = open('msg_sent_first.txt', 'a')
+    f.write("{}/{}/{} {}:{}:{} start Join\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+    f.close()
     com.JoinLoraWan()
+    f = open('msg_sent_first.txt', 'a')
+    f.write("{}/{}/{} {}:{}:{} finish Join\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+    f.close()
     time.sleep(2)
     com.Switch_to_LoraRaw()
     com.start_LoraRaw()
@@ -189,7 +202,7 @@ else:
 
 while(True):
     if mode==CHECK:
-        com.sendData("Hay buena cobertura "+str(i))
+        com.sendData("Hay buena cobertura con mateu orfila"+str(i))
         i=i+1
         time.sleep(4)
     if mode==CONFIG_MODE:
@@ -205,7 +218,7 @@ while(True):
                 com.change_txpower(pow)
                 com.sendData(msg+" "+str(id))
                 f = open('msg_sent_first.txt', 'a')
-                f.write("{}/{}/{} {}:{}:{} empieza config, envio {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter,msg+" "+str(id)))
+                f.write("{}/{}/{} {}:{}:{} config start, sending {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter,msg+" "+str(id)))
                 f.close()
                 counter=counter+1
                 print("Enviare: ",msg+" "+str(id))
@@ -218,7 +231,7 @@ while(True):
                 config_ACK=True
                 print("He rebut ACK")
                 f = open('msg_sent_first.txt', 'a')
-                f.write("{}/{}/{} {}:{}:{} ack config, he recibido {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],msg))
+                f.write("{}/{}/{} {}:{}:{} ack config, msg received {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],msg))
                 f.close()
                 splitmsg=msg.split( )
                 id_n=splitmsg[-1]
@@ -231,7 +244,7 @@ while(True):
             if intent<3:
                 com.sendData(msg+" "+str(id))
                 f = open('msg_sent_first.txt', 'a')
-                f.write("{}/{}/{} {}:{}:{} intento config {} envio: {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],intent,msg+" "+str(id)))
+                f.write("{}/{}/{} {}:{}:{} intent config {}, msg sent: {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter,msg+" "+str(id)))
                 f.close()
                 counter=counter+1
                 time.sleep(2+machine.rng()%1)
@@ -272,7 +285,7 @@ while(True):
                 time.sleep(machine.rng()%2)
                 com.sendData("Hello "+ str(pow) + " "+ str(id))
                 f = open('msg_sent_first.txt', 'a')
-                f.write("{}/{}/{} {}:{}:{} msg {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],"Hello "+ str(pow) + " "+ str(id)))
+                f.write("{}/{}/{} {}:{}:{} sending {}  counter {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],"Hello "+ str(pow) + " "+ str(id),counter))
                 f.close()
                 counter=counter+1
                 neighbours_aux=com.update_neighbours(pow,id_n,neighbours_aux)
@@ -283,14 +296,14 @@ while(True):
 
     elif mode==DISCOVER_MODE:
         f = open('msg_sent_first.txt', 'a')
-        f.write("{}/{}/{} {}:{}:{} empieza discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+        f.write("{}/{}/{} {}:{}:{} start discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
         f.close()
         discover(id)
         f = open('msg_sent_first.txt', 'a')
-        f.write("{}/{}/{} {}:{}:{} acaba discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+        f.write("{}/{}/{} {}:{}:{} finish discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
         f.close()
         print("He acabat discover", neighbours)
-        saveFileMsgs(neighbours,rtc)
+        saveFileMsgs(neighbours,counter,rtc)
         timer_discover_end.start()
         timer_discover_end.reset()
         while (timer_discover_end.read()<4):

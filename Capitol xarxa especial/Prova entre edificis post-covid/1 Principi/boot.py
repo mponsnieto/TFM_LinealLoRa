@@ -55,3 +55,13 @@ i=0
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
 rtc.init((2020, 07, 15, 0,0))
+f = open('msg_sent_first.txt', 'w')
+f.close()
+f = open('msgReceived_first.txt', 'w')
+f.close()
+f = open('neighbour_first.txt', 'w')
+f.close()
+
+f = open('msg_sent_first.txt', 'a')
+f.write("{}/{}/{} {}:{}:{} LoPy ON\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+f.close()
