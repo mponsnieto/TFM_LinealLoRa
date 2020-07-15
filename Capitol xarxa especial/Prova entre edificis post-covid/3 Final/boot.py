@@ -39,6 +39,10 @@ Hello_received=False
 End_discover=False
 info_passed=False
 timer=Timer.Chrono()
+timer_read_sensors=Timer.Chrono()
+timer_Disc_end=Timer.Chrono()
+timer_Disc_end.reset()
+discover_end_ack=False
 
 period=2
 

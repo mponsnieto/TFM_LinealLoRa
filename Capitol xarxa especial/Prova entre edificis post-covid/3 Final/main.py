@@ -17,6 +17,28 @@ def saveFileMsgs(neighbours,counter,rtc):
         f.close()
         return
 
+def save_parameters():
+    """
+    Save parameters to nv_ram before the deepsleep
+    """
+    global node_list,neighbours
+    for l in range(len(node_list)):
+        print(l)
+        name="node"+str(l)
+        print(name,node_list[l])
+        pycom.nvs_set(name,node_list[l])
+        leng=l
+    pycom.nvs_set("len_node",leng+1)
+    for l in range(len(neighbours[1])):
+        name="neighbour"+str(l)
+        name2="power"+str(l)
+        pycom.nvs_set(name,neighbours[0][l])
+        pycom.nvs_set(name2,neighbours[1][l])
+        leng=l
+    pycom.nvs_set("len_neighbours",leng+1)
+    com.savestate()
+    return
+
 def get_neighbour_power(pos):
     """
     Get the tx power of a certain neighbour
@@ -144,10 +166,44 @@ com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
 com.lora = LoRa(mode=LoRa.LORA, region=LoRa.EU868,tx_power=power)
 
 while True:
+
     if mode==CHECK:
         com.sendData("Hay buena cobertura con el final "+str(i))
         i=i+1
         time.sleep(2)
+
+    if mode==ALARM_MODE:
+        if rcv_data:
+            print("Alarm")
+            rcv_data=False
+            msg_alarm=aux[:]
+            if "Alarm" in aux and "ok" not in aux:
+                splitmsg_alarm=msg_alarm.split( )
+                msg_alarm_ok="Alarm ok "+str(id)+" "+str(splitmsg_alarm[1]) #Alarm ok from:id to:id
+                com.sendData(msg_alarm_ok)
+                #if timer_to_send_alarm.read()>=30:
+                com.Switch_to_LoraWan()
+                print("Sending alarm to GTW")
+                com.EnviarGateway(com.ApplyFormat(msg_alarm.split( )))
+                timer_to_send_alarm.reset()
+                timer_to_send_alarm.start()
+                com.Switch_to_LoraRaw()
+            if "Alarm ok" in aux:
+                mode=NORMAL_MODE
+                token=get_first_token()
+                com.change_txpower(get_neighbour_power(node_list.index(id)-1))
+                msg_send="Token"+" "+str(token)+" "+str(id)+" "+str(node_list[node_list.index(id)-1])
+                com.sendData(msg_send)
+                token_ack=False
+                print("Sending token: ",msg_send)
+                timer_token_ack.reset()
+                timer_token_ack.start()
+                intent=1
+        else:
+            print("Sending: ",msg_alarm_ok)
+            com.sendData(msg_alarm_ok)
+            time.sleep(2)
+
     if mode==CONFIG_MODE:
         if rcv_data and error==False:
             print("Part 1 ",id not in msg, config_start)
@@ -229,6 +285,7 @@ while True:
         discover(id)
         mode=LISTEN_MODE
         print("End my discover")
+        timer_read_sensors.start()
     elif mode==LISTEN_MODE:
         if (rcv_data==True):
             rcv_data=False
@@ -257,16 +314,171 @@ while True:
                     msg_send=" ".join(splitmsg_send)
                     com.sendData(str(msg_send))
                     print("Sending: ",msg_send)
-
-    #------------------------Chapuza per aquesta prova--------------------------
-                    time.sleep(5)
-                    com.sendData(str(msg_send))
-                    time.sleep(5)
-                    com.sendData(str(msg_send))
-    #------------------------Fi de chapuza per aquesta prova--------------------
-
+                    timer_Disc_end.start()
+                    time.sleep(1)
+                    msg=" "
+                elif isMyACK(int(splitmsg_listen[-1])):    #node_list.index(id)<int(splitmsg[-1]):
+                    print("Discover Finished")
+                    mode=NORMAL_MODE
+                    timer_Disc_end.reset()
+                    timer_Disc_end.stop()
+                    discover_end_ack=True
+                    neighbours=com.neighbours_min(neighbours,neighbours_aux)
                     saveFileMsgs(neighbours,counter,rtc)
-                    counter=counter+1
-                    print("DeepSleep ",counter)
-                    pycom.nvs_set("count",counter)
-                    machine.deepsleep(period*60*1000) #5min, machine.deepsleep([time_ms])
+
+                elif "Token" in msg and id in msg:
+                    mode=NORMAL_MODE
+                    timer_Disc_end.reset()
+                    timer_Disc_end.stop()
+                    discover_end_ack=True
+                    intent=1
+                    token_ack=False
+                    info_ack=True
+                    info_passed=False
+                    neighbours=com.neighbours_min(neighbours,neighbours_aux)
+                    rcv_data=True#Repasar això
+
+            if discover_end_ack==False and timer_Disc_end.read()>5:
+            #Resend the msg to ask again an ACK
+                com.sendData(str(msg_send))
+                print("Sending again Discover end")
+                timer_Disc_end.reset()
+    # #------------------------Chapuza per aquesta prova--------------------------
+    #                 time.sleep(5)
+    #                 com.sendData(str(msg_send))
+    #                 time.sleep(5)
+    #                 com.sendData(str(msg_send))
+    # #------------------------Fi de chapuza per aquesta prova--------------------
+    #
+    #                 saveFileMsgs(neighbours,counter,rtc)
+    #                 counter=counter+1
+    #                 print("DeepSleep ",counter)
+    #                 pycom.nvs_set("count",counter)
+    #                 machine.deepsleep(period*60*1000) #5min, machine.deepsleep([time_ms])
+    if mode==NORMAL_MODE:
+        if timer_read_sensors.read()>=5:
+            print("Llegir sensors")
+            readen=True
+            T=47+machine.rng()%6
+            temp=47+machine.rng()%6
+            tempC=47+machine.rng()%6
+            H=30-machine.rng()%1
+            dry=True
+            dhi=1
+            alarma=check_alarms2(T,temp,tempC,H,dry)
+            if alarma==True:
+                print("Hi ha alarma")
+                mode=ALARM_MODE
+                msg_alarm="Alarm "+str(id)+" "+str(id)+" 150 "+str(tempC)+" "+str(T)+" "+str(H)+" "+str(temp)+" "+"0"+" "+"1"
+                com.sendData(msg_alarm)
+            timer_read_sensors.reset()
+            if rcv_data==True:
+                rcv_data=False
+                msg=msg_aux
+                print("normal missatge : ",msg)
+                if type(msg)==bytes:
+                    msg=bytes.decode(msg)
+                splitmsg=msg.split()
+            #Per la trama de Info les posicions no són iguals
+                #Trama info= Info, id de qui es la info,id de a qui va el missatge, informació
+                #splitmsg[1]=Node de la info
+                #splitmsg[2]=Node que ho ha de reenviar
+                #splitmsg[3]=info
+                #Quan es reenvia l'info la funció ha de ser alreves!
+            if "Info" in msg:
+                if info_ack==False: #Waiting for info_ack
+                    print("nodes1: ",node_seguent,node_anterior,node_seguent2)
+                    if ("Info ok" in msg) or (splitmsg[1]==id) or (splitmsg[2]==node_seguent2):
+                        info_ack=True
+                        token_ack=True
+                        if info_passed==True:
+                            print("Info enviada")
+                            #save_parameters()
+                            #machine.deepsleep(get_sleeping_time())
+                elif info_ack==True:
+                    if splitmsg[2]==id:
+                        node_anterior,node_seguent,node_seguent2=get_next_node(splitmsg[2],splitmsg[1])
+                        print("Passar info a un altre nodes2: ",node_seguent,node_anterior,node_seguent2)
+                        if splitmsg[1]==node_anterior:
+                            token_ack=True# Si el node que envia la info es el seguent a tu no reenviara el token i l'ack serà info
+
+                        #Trama info= Info, id de qui es la info,id de a qui va el missatge, informació
+                        #token_ack=False
+                        #msg_send=splitmsg
+                        splitmsg[2]=node_list[node_list.index(node_seguent)]
+                        msg=" ".join(splitmsg)
+                        com.change_txpower(get_neighbour_power(node_list.index(node_seguent)))
+                        com.sendData(str(msg))
+                        print("he enviat info de un altre", msg)
+                        #node_seguent2_aux=node_seguent2
+                        msg_retry=msg
+                        info_ack=False
+                        intent=1
+
+            #Trama del token= "Token, node destinatari, node que esta enviant, node a qui ho envia(el node que ho ha de reenviar)"
+            #splitmsg[1]=Node destinatari del token
+            #splitmsg[2]=Node enviant
+            #splitmsg[3]=Node que ho ha de reenviar
+            #Trama info= Info, id de qui es la info,id de a qui va el missatge, informació
+            #splitmsg[1]=Node de la info
+            #splitmsg[2]=Node que ho ha de reenviar
+            #splitmsg[3]=info
+            #(node_destinatari,node_enviant)
+            if "Token" in msg and info_ack==True:
+                node_anterior,node_seguent,node_seguent2=get_next_node(splitmsg[3],splitmsg[2])
+                # print("Token" in msg and splitmsg[2]==node_anterior)
+                # print(msg,splitmsg,node_anterior)
+                if splitmsg[3]==id:
+                    print("Missatge de token per jo")
+                    if splitmsg[1]==id:
+                        if readen: #LLevar quan funcioni llegir
+                            info_passed=True
+                            #llegir els sensors
+
+                            llista="150"+" "+str(tempC)+" "+str(T)+" "+str(H)+" "+str(temp)+" "+"0"+" "+"1"
+                            #llista="150"+" "+"23"+" "+"24"+" "+"40"+" "+"25"+" "+"0"+" "+"1"
+                            #splitmsg[2] és qui t' està enviant i a qui li has de retornar la info
+                            msg_retry="Info"+" "+ str(id)+" "+splitmsg[2]+" "+llista
+                            com.sendData(msg_retry)
+                            print("he enviat info",msg_retry)
+                            timer3.reset()
+                            timer3.start()
+                            info_ack=False
+                            token_ack=True
+                        else: #llegir quan funcioni llegir
+                            print("No he llegit sensors")
+                    else:
+                        print("He de passar es token a un altre")
+                        msg_send=splitmsg[:]
+                        msg_send[2]=str(id)
+                        msg_send[3]=str(node_seguent)
+                        msg_retry=" ".join(msg_send)
+                        com.change_txpower(get_neighbour_power(node_list.index(node_seguent)))
+                        com.sendData(msg_retry)
+                        print("estic enviant", msg_retry)
+                        token_ack=False
+                        timer3.reset()
+                        #msg_retry=msg_send
+                elif splitmsg[1]==node_seguent:
+                    token_ack=True
+
+        if token_ack==False or info_ack==False:
+            if timer3.read()>=3:
+                com.sendData(msg_retry)
+                print("He reenviat ", msg_retry)
+                timer3.reset()
+                intent=intent+1
+                if intent==3 and (node_list.index(id)!=1 or node_list.index(id)!=len(node_list)-2):
+                    com.change_txpower(get_neighbour_power(node_list.index(node_seguent2)))
+                    splitmsg=msg_retry.split( )
+                    if "Info" in msg_retry:
+                        splitmsg[2]=node_list[node_list.index(node_seguent2)]
+                        msg_retry=" ".join(splitmsg)
+                        print("Canvi de node, msg: ",msg_retry)
+                    elif "Token" in msg_retry:
+                        #node_anterior,node_seguent,node_seguent2=get_next_node(splitmsg[2],splitmsg[3])
+                        msg_send[3]=str(node_seguent2)
+                        msg_retry=" ".join(msg_send)
+                        node_seguent=node_seguent2
+                        print("Canvi de node, msg: ",msg_retry)
+                    intent=1
