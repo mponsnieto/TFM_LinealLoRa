@@ -189,8 +189,9 @@ else:
 
 while(True):
     if mode==CHECK:
-        com.sendData("Hay buena cobertura "+i)
+        com.sendData("Hay buena cobertura "+str(i))
         i=i+1
+        time.sleep(4)
     if mode==CONFIG_MODE:
         if rcv_data:
             config_start=True
@@ -204,7 +205,7 @@ while(True):
                 com.change_txpower(pow)
                 com.sendData(msg+" "+str(id))
                 f = open('msg_sent_first.txt', 'a')
-                f.write("{}/{}/{} {}:{}:{} counter {} empieza config\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter))
+                f.write("{}/{}/{} {}:{}:{} empieza config, envio {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter,msg+" "+str(id)))
                 f.close()
                 counter=counter+1
                 print("Enviare: ",msg+" "+str(id))
@@ -217,7 +218,7 @@ while(True):
                 config_ACK=True
                 print("He rebut ACK")
                 f = open('msg_sent_first.txt', 'a')
-                f.write("{}/{}/{} {}:{}:{} counter {} acaba config\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter))
+                f.write("{}/{}/{} {}:{}:{} ack config, he recibido {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],msg))
                 f.close()
                 splitmsg=msg.split( )
                 id_n=splitmsg[-1]
@@ -230,7 +231,7 @@ while(True):
             if intent<3:
                 com.sendData(msg+" "+str(id))
                 f = open('msg_sent_first.txt', 'a')
-                f.write("{}/{}/{} {}:{}:{} intento config {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],intent))
+                f.write("{}/{}/{} {}:{}:{} intento config {} envio: {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],intent,msg+" "+str(id)))
                 f.close()
                 counter=counter+1
                 time.sleep(2+machine.rng()%1)
@@ -282,13 +283,14 @@ while(True):
 
     elif mode==DISCOVER_MODE:
         f = open('msg_sent_first.txt', 'a')
-        f.write("{}/{}/{} {}:{}:{} counter {} empieza discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter))
+        f.write("{}/{}/{} {}:{}:{} empieza discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
         f.close()
         discover(id)
         f = open('msg_sent_first.txt', 'a')
-        f.write("{}/{}/{} {}:{}:{} counter {} acaba discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter))
+        f.write("{}/{}/{} {}:{}:{} acaba discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
         f.close()
         print("He acabat discover", neighbours)
+        saveFileMsgs(neighbours,rtc)
         timer_discover_end.start()
         timer_discover_end.reset()
         while (timer_discover_end.read()<4):
@@ -296,21 +298,21 @@ while(True):
         timer_discover_end.stop()
         rcv_data=False
 
-        print("Enviar a gateway")
-        com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=None)
-        com.Switch_to_LoraWan()
-        msg=com.ApplyFormat_NeighboursTable(neighbours,counter)
-        com.EnviarGateway(msg)
-        # com.Switch_to_LoraRaw()
-        # com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
-        # print("LoraRaw Ok")
-        EnviatGateway=True
-        com.lora.nvram_save()
-        saveFileMsgs(neighbours,counter,rtc)
-        counter=counter+1
-        pycom.nvs_set("count",counter)
-        print("DeepSleep ",counter)
-        machine.deepsleep((period*60*1000)+300) #5.3min, machine.deepsleep([time_ms])
+        # print("Enviar a gateway")
+        # com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=None)
+        # com.Switch_to_LoraWan()
+        # msg=com.ApplyFormat_NeighboursTable(neighbours,counter)
+        # com.EnviarGateway(msg)
+        # # com.Switch_to_LoraRaw()
+        # # com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
+        # # print("LoraRaw Ok")
+        # EnviatGateway=True
+        # com.lora.nvram_save()
+        # saveFileMsgs(neighbours,counter,rtc)
+        # counter=counter+1
+        # pycom.nvs_set("count",counter)
+        # print("DeepSleep ",counter)
+        # machine.deepsleep((period*60*1000)+300) #5.3min, machine.deepsleep([time_ms])
 
 
     elif mode==NORMAL_MODE:

@@ -13,6 +13,7 @@ DISCOVER_MODE=1
 LISTEN_MODE=2
 NORMAL_MODE=3
 ALARM_MODE=4
+CHECK=5
 pycom.wifi_on_boot(False)
 
 # com=comu.Comunication()
@@ -53,4 +54,4 @@ i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2020, 03, 05, 0,0))
+rtc.init((2020, 07, 15, 0,0))
