@@ -45,6 +45,7 @@ period=2
 pycom.wifi_on_boot(False)
 
 counter=1
+i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
