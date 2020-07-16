@@ -426,7 +426,7 @@ while True:
             if "Info" in msg:
                 if info_ack==False: #Waiting for info_ack
                     print("nodes1: ",node_seguent,node_anterior,node_seguent2)
-                    if ("Info ok" in msg) or (splitmsg[1]==id) or (splitmsg[2]==node_seguent2):
+                    if ("Info ok" in msg):# or (splitmsg[1]==id) or (splitmsg[2]==node_seguent2):
                         info_ack=True
                         token_ack=True
                         if info_passed==True:

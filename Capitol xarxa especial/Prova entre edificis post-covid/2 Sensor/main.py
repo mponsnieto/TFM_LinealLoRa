@@ -498,7 +498,7 @@ while True:
                             #missatge=missatge+1
                             #save_parameters()
                             #machine.deepsleep(get_sleeping_time())
-                elif info_ack==True:
+                elif info_ack==False:
                     if splitmsg[2]==id:
                         node_anterior,node_seguent,node_seguent2=get_next_node(splitmsg[2],splitmsg[1])
                         print("Passar info a un altre nodes2: ",node_seguent,node_anterior,node_seguent2)
