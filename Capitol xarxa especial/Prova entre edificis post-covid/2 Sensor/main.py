@@ -422,17 +422,17 @@ while True:
                 #print("DeepSleep ",counter)
                 #pycom.nvs_set("count",counter)
                 #machine.deepsleep((period*60*1000)+200) #5.2min, machine.deepsleep([time_ms])
-            elif "Token" in msg_listen and id in msg_listen:
-                mode=NORMAL_MODE
-                timer_Disc_end.reset()
-                timer_Disc_end.stop()
-                discover_end_ack=True
-                intent=1
-                token_ack=False
-                info_ack=True
-                info_passed=False
-                neighbours=com.neighbours_min(neighbours,neighbours_aux)
-                rcv_data=True#Repasar això
+        elif "Token" in msg_listen and id in msg_listen:
+            mode=NORMAL_MODE
+            timer_Disc_end.reset()
+            timer_Disc_end.stop()
+            discover_end_ack=True
+            intent=1
+            token_ack=False
+            info_ack=True
+            info_passed=False
+            neighbours=com.neighbours_min(neighbours,neighbours_aux)
+            rcv_data=True#Repasar això
 
         if discover_end_ack==False and timer_Disc_end.read()>5:
             #Resend the msg to ask again an ACK
