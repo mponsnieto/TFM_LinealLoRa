@@ -26,7 +26,7 @@ timer_read_sensors.reset()
 discover_end_ack=False
 timer2.reset()
 missatge=False
-periode=500
+period=500
 pycom.wifi_on_boot(False)
 
 com=comu.Comunication()
@@ -56,6 +56,8 @@ neighbours=[[],[]]
 neighbours_aux=[[],[]]
 intent=1
 
+missatge=1
+
 period=2
 
 counter=1
@@ -64,5 +66,8 @@ i=0
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
 rtc.init((2020, 07, 17, 0,0,0))
-f = open('neighbours_middle.txt', 'w')
+f = open('process_middle1.txt', 'w')
+f.write("{}/{}/{} {}:{}:{} Nodo sensor en marcha".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+f.close()
+f=open('msg_received_middle1.txt','w')
 f.close()

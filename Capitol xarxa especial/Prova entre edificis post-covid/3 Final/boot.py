@@ -39,10 +39,13 @@ Hello_received=False
 End_discover=False
 info_passed=False
 timer=Timer.Chrono()
+timer2=Timer.Chrono()
+timer3=Timer.Chrono()
 timer_read_sensors=Timer.Chrono()
 timer_Disc_end=Timer.Chrono()
 timer_Disc_end.reset()
 timer.reset()
+timer2.reset()
 discover_end_ack=False
 
 period=2
@@ -55,3 +58,8 @@ i=0
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
 rtc.init((2020, 07, 15, 0,0))
+f=open('msg_received_final.txt','w')
+f.close()
+f = open('process_final.txt', 'w')
+f.write("{}/{}/{} {}:{}:{} Nodo final en marcha".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+f.close()

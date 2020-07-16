@@ -9,18 +9,15 @@ def check_alarms2(T,temp,tempC,H,dry):
     #Falta qualitat d'aire!!
      return False
 
-def saveFileMsgs(neighbours,counter,rtc):
+def saveFileMsgs(neighbours,rtc):
         '''
         Format of the data: date (DD/MM/YYYY HH:MM:SS) counter(int) table([id][tx_power])
-        Output: 2 files
+        Output: 1 file
         Example: 15/10/2019 13:21:31 5
                  id2 min_pow, id3 max_pow
         '''
-        f = open('dates_final.txt', 'a')
-        f.write("{}/{}/{} {}:{}:{} counter {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter))
-        f.close()
-
         f = open('neighbours_final.txt', 'a')
+        f.write("{}/{}/{} {}:{}:{}".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
         for i in range(len(neighbours[0])):
             f.write("id {} pow {} , ".format(neighbours[0][i],neighbours[1][i]))
         f.write("\n")
@@ -65,17 +62,9 @@ def get_next_node(node_destinatari,node_enviant):
     if node_list.index(node_destinatari)>node_list.index(node_enviant):
         #sentit="up"
         node_anterior=node_list[node_list.index(id)-1]
-        node_seguent=node_list[node_list.index(id)]
-        if node_list.index(id)+2 < len(node_list):
-            node_seguent2=node_list[node_list.index(id)+2]
-        else:
-            node_seguent2=node_seguent
-    elif node_list.index(node_destinatari)<node_list.index(node_enviant):
-        #sentit="down"
-        node_anterior=node_list[node_list.index(id)]
-        node_seguent=node_list[node_list.index(id)-1]
-        if node_list.index(id)-2 >= 0:
-            node_seguent2=node_list[node_list.index(id)-2]
+        node_seguent=node_list[node_list.index(id)-2]
+        if node_list.index(id)-3 < len(node_list):
+            node_seguent2=node_list[node_list.index(id)-3]
         else:
             node_seguent2=node_seguent
     else:
@@ -124,17 +113,23 @@ def discover(id):
 
     End_discover=False
     print("He acabat discover",neighbours)
+    saveFileMsgs(neighbours,rtc)
     return
 
 def interrupt(lora):
     print("Interrupcio")
     global rcv_data
     global msg, aux, error
-    global mode
+    global mode, rtc,f
     global Hello_received, End_discover, stop_config
 
-    aux=com.reciveData()
+    aux=com.reciveData(rtc,f)
     if aux!="error":
+
+        f=open('msg_received_final.txt','a')
+        f.write("{}/{}/{} {}:{}:{} msg {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],aux))
+        f.close()
+
         if mode==LISTEN_MODE:
             rcv_data=True
             msg=aux
@@ -162,6 +157,9 @@ def interrupt(lora):
             rcv_data=True
             mode=CONFIG_MODE
             msg=aux
+            f = open('process_final.txt', 'a')
+            f.write("{}/{}/{} {}:{}:{} Empieza el config".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+            f.close()
 
         if mode==NORMAL_MODE:
             if ("Token" in aux or "Info" in aux):
@@ -257,7 +255,7 @@ while True:
                     splitmsg=msg.split( )
                     node_list=splitmsg[2:]
                 timer.start()
-                while timer.read()<6:
+                while timer.read()<30:
                     if rcv_data==True and id not in msg:
                         msg=msg+" "+str(id)
                         com.sendData(msg)
@@ -269,6 +267,8 @@ while True:
                             timer.reset()
                             timer.start()
                             if len(node_list2)>len(node_list):
+                                node_list=node_list2
+                            if len(node_list2)==len(node_list) and node_list2[-1]==id:
                                 node_list=node_list2
 
 
@@ -286,6 +286,9 @@ while True:
                 rcv_data=False
                 config_ACK=True
                 print("He rebut ACK")
+                f=open('msg_received_final.txt','a')
+                f.write("{}/{}/{} {}:{}:{} Config ack recibido \n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+                f.close()
                 mode=DISCOVER_MODE
                 config_start=False
                 print("He acabat el config")
@@ -315,7 +318,13 @@ while True:
                 com.change_txpower(power)
     elif mode==DISCOVER_MODE:
         time.sleep(5)
+        f = open('process_final.txt', 'a')
+        f.write("{}/{}/{} {}:{}:{} Empieza discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+        f.close()
         discover(id)
+        f = open('process_final.txt', 'a')
+        f.write("{}/{}/{} {}:{}:{} Acaba discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+        f.close()
         mode=LISTEN_MODE
         print("End my discover")
         timer_read_sensors.start()
@@ -389,7 +398,7 @@ while True:
     #                 pycom.nvs_set("count",counter)
     #                 machine.deepsleep(period*60*1000) #5min, machine.deepsleep([time_ms])
     if mode==NORMAL_MODE:
-        if timer_read_sensors.read()>=5:
+        if timer_read_sensors.read()>=60:
             print("Llegir sensors")
             readen=True
             T=47+machine.rng()%6
@@ -405,13 +414,13 @@ while True:
                 msg_alarm="Alarm "+str(id)+" "+str(id)+" 150 "+str(tempC)+" "+str(T)+" "+str(H)+" "+str(temp)+" "+"0"+" "+"1"
                 com.sendData(msg_alarm)
             timer_read_sensors.reset()
-            if rcv_data==True:
-                rcv_data=False
-                msg=aux
-                print("normal missatge : ",msg)
-                if type(msg)==bytes:
-                    msg=bytes.decode(msg)
-                splitmsg=msg.split()
+        if rcv_data==True:
+            rcv_data=False
+            msg=aux
+            print("normal missatge : ",msg)
+            if type(msg)==bytes:
+                msg=bytes.decode(msg)
+            splitmsg=msg.split()
             #Per la trama de Info les posicions no són iguals
                 #Trama info= Info, id de qui es la info,id de a qui va el missatge, informació
                 #splitmsg[1]=Node de la info
@@ -471,7 +480,7 @@ while True:
                             llista="150"+" "+str(tempC)+" "+str(T)+" "+str(H)+" "+str(temp)+" "+"0"+" "+"1"
                             #llista="150"+" "+"23"+" "+"24"+" "+"40"+" "+"25"+" "+"0"+" "+"1"
                             #splitmsg[2] és qui t' està enviant i a qui li has de retornar la info
-                            msg_retry="Info"+" "+ str(id)+" "+splitmsg[2]+" "+llista
+                            msg_retry="Info"+" "+ str(id)+" "+str(node_anterior)+" "+llista
                             com.sendData(msg_retry)
                             print("he enviat info",msg_retry)
                             timer3.reset()
@@ -502,10 +511,10 @@ while True:
                 timer3.reset()
                 intent=intent+1
                 if intent==3 and (node_list.index(id)!=1 or node_list.index(id)!=len(node_list)-2):
-                    com.change_txpower(get_neighbour_power(node_list.index(node_seguent2)))
+                    com.change_txpower(get_neighbour_power(node_list.index(node_seguent)))
                     splitmsg=msg_retry.split( )
                     if "Info" in msg_retry:
-                        splitmsg[2]=node_list[node_list.index(node_seguent2)]
+                        splitmsg[2]=node_list[node_list.index(node_seguent)]
                         msg_retry=" ".join(splitmsg)
                         print("Canvi de node, msg: ",msg_retry)
                     elif "Token" in msg_retry:

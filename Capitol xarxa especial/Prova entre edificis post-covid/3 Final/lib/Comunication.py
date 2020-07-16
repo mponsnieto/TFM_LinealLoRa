@@ -104,7 +104,7 @@ class Comunication:
         #print(len(msg))
         #time.sleep(5)
 
-    def reciveData(self):
+    def reciveData(self,rtc,f):
         self.s.setblocking(False)
         msg=self.s.recv(128)#Get any data recieved
         #If there's any data, decrypt
@@ -117,6 +117,7 @@ class Comunication:
                 if "Config" in original or "stop" in original or "Discover" in original or "Hello" in original or "Info" in original or "Token" in original or "Alarm" in original or "Hay" in original:
                     crc_OK,msg=self.check_crc(original)
                     if crc_OK:
+                        
                         return(msg)
                     else:
                         print("CRC not OK")

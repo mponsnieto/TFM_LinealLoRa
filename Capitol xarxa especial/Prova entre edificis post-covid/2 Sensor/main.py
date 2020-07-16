@@ -9,7 +9,7 @@ def check_alarms2(T,temp,tempC,H,dry):
     #Falta qualitat d'aire!!
      return False
 
-def saveFileMsgs(neighbours,counter,rtc):
+def saveFileMsgs(neighbours,rtc):
         '''
         Format of the data: date (DD/MM/YYYY HH:MM:SS) counter(int) table([id][tx_power])
         Output: 2 files
@@ -17,7 +17,7 @@ def saveFileMsgs(neighbours,counter,rtc):
                  id2 min_pow, id3 max_pow
         '''
         f = open('neighbours_middle.txt', 'a')
-        f.write("{}/{}/{} {}:{}:{} counter {}".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter))
+        f.write("{}/{}/{} {}:{}:{}".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
         for i in range(len(neighbours[0])):
             f.write(" id {} pow{}, ".format(neighbours[0][i],neighbours[1][i]))
         f.write("\n")
@@ -117,20 +117,21 @@ def discover(id):
         print("he enviat", msg_retry)
         time.sleep(5)
     print("Discover finished: ",neighbours)
+    saveFileMsgs(neighbours,rtc)
     end_discover=False
     return
 
 def interrupt(lora):
-    global rcv_data
+    global rcv_data, rtc
     global msg, splitmsg, msg_aux,msg_alarm_ok
-    global mode
+    global mode,f
     global stop_config, config_start, end_discover
     global splitmsg_stop
     global node_list
     print("interrupcio")
     lora.power_mode(LoRa.ALWAYS_ON)
 
-    msg_aux=com.reciveData()
+    msg_aux=com.reciveData(rtc,f)
     if msg_aux!="error":
 
         if "Alarm" in msg_aux:
@@ -147,6 +148,9 @@ def interrupt(lora):
                 splitmsg=msg.split()
                 rcv_data=True
                 mode=CONFIG_MODE
+                f = open('process_middle1.txt', 'a')
+                f.write("{}/{}/{} {}:{}:{} Empieza el config\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+                f.close()
                 return
 
         if mode==NORMAL_MODE:
@@ -243,6 +247,7 @@ while True:
                     timer_read_sensors.start()
                     msg_alarm=" "
                     msg_alarm_ok=" "
+                    machine.deepsleep((period*60*1000)+200) 
 
         if ("Alarm" in msg_alarm):
             #Resend the alarm msg
@@ -280,6 +285,9 @@ while True:
                     time.sleep(2)
             elif "Config" in msg:
                 print("Config ACK received")
+                f = open('process_middle1.txt', 'a')
+                f.write("{}/{}/{} {}:{}:{} Config ACK recibido\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+                f.close()
                 #ack=True
                 config_ACK=True
                 splitmsg=msg.split( )
@@ -291,6 +299,9 @@ while True:
                 print("Stop finished")
                 stop_ACK=True
                 mode=LISTEN_MODE
+                f = open('process_middle1.txt', 'a')
+                f.write("{}/{}/{} {}:{}:{} Stop finished, modo=LISTEN, obtención de la nodelist\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],str()))
+                f.close()
 
         if (config_ACK==False and config_start==True) or (stop_start==True and stop_ACK==False):
             if intent<3:
@@ -365,7 +376,7 @@ while True:
                 timer_Disc_end.stop()
                 discover_end_ack=True
                 neighbours=com.neighbours_min(neighbours,neighbours_aux)
-                saveFileMsgs(neighbours,counter,rtc)
+                saveFileMsgs(neighbours,rtc)
                 #counter=counter+1
                 #print("DeepSleep ",counter)
                 #pycom.nvs_set("count",counter)
@@ -390,14 +401,20 @@ while True:
 
     if mode==DISCOVER_MODE:
         print("Discover")
+        f = open('process_middle1.txt', 'a')
+        f.write("{}/{}/{} {}:{}:{} Empieza discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+        f.close()
         discover(id)
+        f = open('process_middle1.txt', 'a')
+        f.write("{}/{}/{} {}:{}:{} Acaba discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+        f.close()
         missatge=False
         #end_discover=False
         mode=LISTEN_MODE
         timer_read_sensors.start()
 
     if mode==NORMAL_MODE:
-        if timer_read_sensors.read()>=5:
+        if timer_read_sensors.read()>=60:
             print("Llegir sensors")
             readen=True
             T=47+machine.rng()%6
@@ -407,19 +424,22 @@ while True:
             dry=True
             dhi=1
             alarma=check_alarms2(T,temp,tempC,H,dry)
-            if alarma==True:
+            if alarma==True: #or missatge==10
                 print("Hi ha alarma")
                 mode=ALARM_MODE
                 msg_alarm="Alarm "+str(id)+" "+str(id)+" 150 "+str(tempC)+" "+str(T)+" "+str(H)+" "+str(temp)+" "+"0"+" "+"1"
                 com.sendData(msg_alarm)
+                f = open('process_middle1.txt', 'a')
+                f.write("{}/{}/{} {}:{}:{} Empieza alarma\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+                f.close()
             timer_read_sensors.reset()
-            if rcv_data==True:
-                rcv_data=False
-                msg=msg_aux
-                print("normal missatge : ",msg)
-                if type(msg)==bytes:
-                    msg=bytes.decode(msg)
-                splitmsg=msg.split()
+        if rcv_data==True:
+            rcv_data=False
+            msg=msg_aux
+            print("normal missatge : ",msg)
+            if type(msg)==bytes:
+                msg=bytes.decode(msg)
+            splitmsg=msg.split()
             #Per la trama de Info les posicions no són iguals
                 #Trama info= Info, id de qui es la info,id de a qui va el missatge, informació
                 #splitmsg[1]=Node de la info
@@ -434,6 +454,7 @@ while True:
                         token_ack=True
                         if info_passed==True:
                             print("Info enviada")
+                            #missatge=missatge+1
                             #save_parameters()
                             #machine.deepsleep(get_sleeping_time())
                 elif info_ack==True:
@@ -479,7 +500,7 @@ while True:
                             llista="150"+" "+str(tempC)+" "+str(T)+" "+str(H)+" "+str(temp)+" "+"0"+" "+"1"
                             #llista="150"+" "+"23"+" "+"24"+" "+"40"+" "+"25"+" "+"0"+" "+"1"
                             #splitmsg[2] és qui t' està enviant i a qui li has de retornar la info
-                            msg_retry="Info"+" "+ str(id)+" "+splitmsg[2]+" "+llista
+                            msg_retry="Info"+" "+ str(id)+" "+str(splitmsg[2])+" "+llista
                             com.sendData(msg_retry)
                             print("he enviat info",msg_retry)
                             timer3.reset()
