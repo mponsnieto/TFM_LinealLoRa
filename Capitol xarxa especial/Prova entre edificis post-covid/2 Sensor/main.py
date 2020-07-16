@@ -23,7 +23,29 @@ def saveFileMsgs(neighbours,rtc):
         f.write("\n")
         f.close()
         return
-
+def save_parameters():
+    """
+    Save parameters to nv_ram before the deepsleep
+    """
+    global node_list,neighbours,rtc,missatge
+    for l in range(len(node_list)):
+        print(l)
+        name="node"+str(l)
+        print(name)
+        pycom.nvs_set(name,node_list[l])
+        leng=l
+    pycom.nvs_set("len_node",leng+1)
+    for l in range(len(neighbours[1])):
+        name="neighbour"+str(l)
+        name2="power"+str(l)
+        pycom.nvs_set(name,neighbours[0][l])
+        pycom.nvs_set(name2,neighbours[1][l])
+        leng=l
+    pycom.nvs_set("len_neighbours",leng+1)
+    pycom.nvs_set("rtc",rtc)
+    pycom.nvs_set("missatge",missatge)
+    com.savestate()
+    return
 
 def get_neighbour_power(pos):
     """
@@ -202,11 +224,30 @@ com.lora = LoRa(mode=LoRa.LORA, region=LoRa.EU868,tx_power=power)
 com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
 reset_cause=machine.reset_cause()
 if reset_cause==machine.DEEPSLEEP_RESET:
+    len_node=pycom.nvs_get("len_node")
+    len_neighbours=pycom.nvs_get("len_neighbours")
     node_list=[]
     neighbours=[[],[]]
-    mode=LISTEN_MODE
-    counter=1 #pycom.nvs_get("count")
+    for l in range(len_node):
+        name="node"+str(l)
+        node=pycom.nvs_get(name)
+        node_list.append(node)
+        print(node_list[l])
+    for l in range(len_neighbours):
+        name="neighbour"+str(l)
+        name2="power"+str(l)
+        ids=pycom.nvs_get(name)
+        powers=pycom.nvs_get(name2)
+        neighbours[0].append(ids)
+        neighbours[1].append(powers)
+    #print(neighbours)
+    mode=NORMAL_MODE
+    timer_read_sensors.reset()
+    timer_read_sensors.start()
     print("Good morning!")
+    counter=1
+    missatge=pycom.nvs_get("missatge")
+    rtc=pycom.nvs_get("rtc")
 
 while True:
     if mode==CHECK:
@@ -247,7 +288,7 @@ while True:
                     timer_read_sensors.start()
                     msg_alarm=" "
                     msg_alarm_ok=" "
-                    machine.deepsleep((period*60*1000)+200) 
+                    #machine.deepsleep((period*60*1000)+200)
 
         if ("Alarm" in msg_alarm):
             #Resend the alarm msg

@@ -126,10 +126,6 @@ def interrupt(lora):
     aux=com.reciveData(rtc,f)
     if aux!="error":
 
-        f=open('msg_received_final.txt','a')
-        f.write("{}/{}/{} {}:{}:{} msg {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],aux))
-        f.close()
-
         if mode==LISTEN_MODE:
             rcv_data=True
             msg=aux
