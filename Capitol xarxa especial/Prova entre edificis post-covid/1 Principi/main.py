@@ -11,14 +11,14 @@ def saveFileMsgs(neighbours,counter,rtc):
         f.close()
         return
 
-def saveFileMsgsReceived(msg,counter,rtc):
+def saveFileMsgsReceived(msg,rtc):
         '''
         Format of the data: date (DD/MM/YYYY HH:MM:SS) counter(int) msg()
         Output: 1 file
         Example: 15/10/2019 13:21:31 5 msg
         '''
         f = open('msgReceived_first.txt', 'a')
-        f.write("{}/{}/{} {}:{}:{} counter {} recibo {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter,msg))
+        f.write("{}/{}/{} {}:{}:{} recibo {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],msg))
         f.close()
         return
 
@@ -126,7 +126,7 @@ def interrupt(lora):
     global mode
     global config_start
     global node_list
-    global Error
+    global Error, rtc
     global Hello_received,End_discover
     global msg_aux, splitmsg_aux
     global counter
@@ -134,6 +134,9 @@ def interrupt(lora):
 
     msg_aux=com.reciveData()
     if msg_aux!="error":
+
+        saveFileMsgsReceived(msg_aux,rtc)
+
         if "Alarm" in msg_aux:
             rcv_data=True
             mode=ALARM_MODE
@@ -167,6 +170,16 @@ def interrupt(lora):
             rcv_data=True
             mode=CONFIG_MODE
             msg=msg_aux
+
+        if mode==NORMAL_MODE and ("Info" in msg_aux or "Token" in msg_aux):
+            #msg=msg_aux
+            rcv_data=True
+            if type(msg_aux)==bytes:
+                msg_aux=bytes.decode(msg_aux)
+            splitmsg_aux=msg_aux.split()
+            if "Info" in msg_aux and splitmsg_aux[2]==id:
+                timer_to_send_GTW.reset()
+
         if mode==DISCOVER_MODE:
             try:
                 if type(msg_aux)==bytes:
@@ -412,7 +425,8 @@ while(True):
             msg=msg_aux
             splitmsg=msg.split( )
             rcv_data=False
-            if "Info" in msg and splitmsg[2]==id:
+            print("Check info ok ", splitmsg[2]==id)
+            if "Info" in msg and splitmsg[2]==id and splitmsg[1]==token:
                 com.change_txpower(14) #This msg's important, so it's send to the max_power
                 com.sendData("Info ok "+str(id))
                 f = open('msg_sent_first.txt', 'a')
@@ -421,11 +435,11 @@ while(True):
                 counter=counter+1
                 print("he enviat info ok",msg)
                 data=com.ApplyFormat(splitmsg)
-                token=splitmsg[1]
+                #token=splitmsg[1]
                 token_ack=True
                 print(data)
                 timer_to_send_GTW.start()
-            elif "Token" in msg and (splitmsg[1]==token):
+            elif "Token" in msg and (splitmsg[2]==token):
                 token_ack=True
                 EnviatGateway=False
                 timer_token_ack.reset()
@@ -457,7 +471,7 @@ while(True):
                 com.savestate()
                 #machine.deepsleep(500)
 
-        if timer_token_ack.read()>=5 and token_ack==False:
+        if timer_token_ack.read()>=60 and token_ack==False:
             com.sendData(msg_send)
             f = open('msg_sent_first.txt', 'a')
             f.write("{}/{}/{} {}:{}:{} counter {} token_ack {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter,msg_send))
