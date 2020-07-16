@@ -42,6 +42,7 @@ timer=Timer.Chrono()
 timer_read_sensors=Timer.Chrono()
 timer_Disc_end=Timer.Chrono()
 timer_Disc_end.reset()
+timer.reset()
 discover_end_ack=False
 
 period=2

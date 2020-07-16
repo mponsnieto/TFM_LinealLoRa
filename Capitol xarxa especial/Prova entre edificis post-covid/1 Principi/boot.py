@@ -42,8 +42,10 @@ rcv_data=False
 node_list=""
 msg_alarm_ok=" "
 
-timer_discover_end=Timer.Chrono()
 timer_to_send_GTW=Timer.Chrono()
+timer_to_send_alarm=Timer.Chrono()
+timer_token_ack=Timer.Chrono()
+timer_discover_end=Timer.Chrono()
 button = machine.Pin(Pin.exp_board.G17, mode=Pin.IN, pull=Pin.PULL_UP)
 
 Hello_received=False

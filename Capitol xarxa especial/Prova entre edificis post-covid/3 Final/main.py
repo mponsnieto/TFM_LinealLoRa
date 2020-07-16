@@ -1,3 +1,13 @@
+def check_alarms2(T,temp,tempC,H,dry):
+     return False #LLEVAAAAR
+     if (int(T>50)+int(temp>50)+int(tempC>50))>=2:
+         return True
+     if (int(T>30)+int(temp>30)+int(tempC>30))>=2 and H<30 and dry:
+         return True
+     if T>50 or temp>50 or tempC>50:
+        print("Algo malo va a pasar") #mirar els altres :)
+    #Falta qualitat d'aire!!
+     return False
 
 def saveFileMsgs(neighbours,counter,rtc):
         '''
@@ -48,7 +58,30 @@ def get_neighbour_power(pos):
         return power
     else: #If the power isn't saved during the DISCOVER, return max power
         return 12
-
+def get_next_node(node_destinatari,node_enviant):
+    """
+    Find 2 nodes to send some msg taking into account the sense of the path
+    """
+    if node_list.index(node_destinatari)>node_list.index(node_enviant):
+        #sentit="up"
+        node_anterior=node_list[node_list.index(id)-1]
+        node_seguent=node_list[node_list.index(id)]
+        if node_list.index(id)+2 < len(node_list):
+            node_seguent2=node_list[node_list.index(id)+2]
+        else:
+            node_seguent2=node_seguent
+    elif node_list.index(node_destinatari)<node_list.index(node_enviant):
+        #sentit="down"
+        node_anterior=node_list[node_list.index(id)]
+        node_seguent=node_list[node_list.index(id)-1]
+        if node_list.index(id)-2 >= 0:
+            node_seguent2=node_list[node_list.index(id)-2]
+        else:
+            node_seguent2=node_seguent
+    else:
+        return(id,id,id)
+    print("Get_next_node ",node_destinatari,node_enviant," result ",node_anterior,node_seguent,node_seguent2)
+    return(node_anterior,node_seguent,node_seguent2)
 
 def discover(id):
     global Hello_received,End_discover
@@ -102,11 +135,6 @@ def interrupt(lora):
 
     aux=com.reciveData()
     if aux!="error":
-        if mode==CHECK and  "Config" in aux and (stop_config==False):
-            rcv_data=True
-            mode=CONFIG_MODE
-            msg=aux
-
         if mode==LISTEN_MODE:
             rcv_data=True
             msg=aux
@@ -134,6 +162,11 @@ def interrupt(lora):
             rcv_data=True
             mode=CONFIG_MODE
             msg=aux
+
+        if mode==NORMAL_MODE:
+            if ("Token" in aux or "Info" in aux):
+                rcv_data=True
+                return
     else:
         print("Receiving error")
 
@@ -317,7 +350,7 @@ while True:
                     timer_Disc_end.start()
                     time.sleep(1)
                     msg=" "
-                elif isMyACK(int(splitmsg_listen[-1])):    #node_list.index(id)<int(splitmsg[-1]):
+                elif "Discover end" in msg and isMyACK(int(splitmsg[-1])):    #node_list.index(id)<int(splitmsg[-1]):
                     print("Discover Finished")
                     mode=NORMAL_MODE
                     timer_Disc_end.reset()
@@ -335,7 +368,7 @@ while True:
                     token_ack=False
                     info_ack=True
                     info_passed=False
-                    neighbours=com.neighbours_min(neighbours,neighbours_aux)
+                    neighbours=com.neighbours_min(neighbours,neighbours_aux,id)
                     rcv_data=True#Repasar això
 
             if discover_end_ack==False and timer_Disc_end.read()>5:
@@ -374,7 +407,7 @@ while True:
             timer_read_sensors.reset()
             if rcv_data==True:
                 rcv_data=False
-                msg=msg_aux
+                msg=aux
                 print("normal missatge : ",msg)
                 if type(msg)==bytes:
                     msg=bytes.decode(msg)
@@ -417,7 +450,7 @@ while True:
 
             #Trama del token= "Token, node destinatari, node que esta enviant, node a qui ho envia(el node que ho ha de reenviar)"
             #splitmsg[1]=Node destinatari del token
-            #splitmsg[2]=Node enviant
+            #splitmsg[2]=Node enviant (principi o final)
             #splitmsg[3]=Node que ho ha de reenviar
             #Trama info= Info, id de qui es la info,id de a qui va el missatge, informació
             #splitmsg[1]=Node de la info

@@ -1,3 +1,13 @@
+def check_alarms2(T,temp,tempC,H,dry):
+     return False #LLEVAAAAR
+     if (int(T>50)+int(temp>50)+int(tempC>50))>=2:
+         return True
+     if (int(T>30)+int(temp>30)+int(tempC>30))>=2 and H<30 and dry:
+         return True
+     if T>50 or temp>50 or tempC>50:
+        print("Algo malo va a pasar") #mirar els altres :)
+    #Falta qualitat d'aire!!
+     return False
 
 def saveFileMsgs(neighbours,counter,rtc):
         '''
@@ -332,7 +342,7 @@ while True:
             neighbours_aux=com.update_neighbours(pow,id_n,neighbours_aux)
 
         elif "Discover" and "next" in msg_listen:
-            if isMyTurn(int(msg_listen[-1]))==True:#Aqui podriem usar msg_aux directament?
+            if isMyTurn(int(msg_listen[-1]))==True:
                 mode=DISCOVER_MODE
                 msg_listen=" "
 
