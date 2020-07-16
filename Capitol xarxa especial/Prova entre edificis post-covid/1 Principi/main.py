@@ -213,14 +213,14 @@ if reset_cause==machine.DEEPSLEEP_RESET:
     f = open('msg_sent_first.txt', 'a')
     f.write("{}/{}/{} {}:{}:{} start Join\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
     f.close()
-    #com.Switch_to_LoraWan()
+    com.Switch_to_LoraWan()
     f = open('msg_sent_first.txt', 'a')
     f.write("{}/{}/{} {}:{}:{} Acaba Join\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
     f.close()
 
-    # if com.lora.has_joined()==False:
-    #     com.JoinLoraWan()
-    # time.sleep(2)
+    if com.lora.has_joined()==False:
+         com.JoinLoraWan()
+         time.sleep(2)
     com.Switch_to_LoraRaw()
     com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
     counter=pycom.nvs_get("count")
@@ -237,12 +237,12 @@ else:
     f = open('msg_sent_first.txt', 'a')
     f.write("{}/{}/{} {}:{}:{} start Join\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
     f.close()
-    #com.JoinLoraWan()
+    com.JoinLoraWan()
     f = open('msg_sent_first.txt', 'a')
     f.write("{}/{}/{} {}:{}:{} finish Join\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
     f.close()
     time.sleep(2)
-    #com.Switch_to_LoraRaw()
+    com.Switch_to_LoraRaw()
     com.start_LoraRaw()
     com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
     print("All OK, please press the button")
@@ -426,7 +426,7 @@ while(True):
             splitmsg=msg.split( )
             rcv_data=False
             print("Check info ok ", splitmsg[2]==id)
-            if "Info" in msg and splitmsg[2]==id and splitmsg[1]==token:
+            if "Info" in msg and splitmsg[1]==token:
                 com.change_txpower(14) #This msg's important, so it's send to the max_power
                 com.sendData("Info ok "+str(id))
                 f = open('msg_sent_first.txt', 'a')
@@ -451,10 +451,10 @@ while(True):
             print("Enviar a gateway")
             timer_to_send_GTW.reset()
             timer_to_send_GTW.stop()
-            # com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=None)
-            # com.Switch_to_LoraWan()
-            # com.EnviarGateway(data)
-            # com.Switch_to_LoraRaw()
+            com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=None)
+            com.Switch_to_LoraWan()
+            com.EnviarGateway(data)
+            com.Switch_to_LoraRaw()
             com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
             print("LoraRaw Ok")
             EnviatGateway=True
