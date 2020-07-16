@@ -26,6 +26,7 @@ timer_read_sensors.reset()
 discover_end_ack=False
 timer2.reset()
 missatge=False
+nummissatge=1
 period=500
 pycom.wifi_on_boot(False)
 

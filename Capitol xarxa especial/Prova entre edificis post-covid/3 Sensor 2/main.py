@@ -43,7 +43,7 @@ def save_parameters():
         leng=l
     pycom.nvs_set("len_neighbours",leng+1)
     pycom.nvs_set("rtc",rtc)
-    pycom.nvs_set("missatge",missatge)
+    pycom.nvs_set("nummissatge",nummissatge)
     com.savestate()
     return
 
@@ -246,7 +246,7 @@ if reset_cause==machine.DEEPSLEEP_RESET:
     timer_read_sensors.start()
     print("Good morning!")
     counter=1
-    missatge=pycom.nvs_get("missatge")
+    nummissatge=pycom.nvs_get("nummissatge")
     rtc=pycom.nvs_get("rtc")
 
 while True:
@@ -422,17 +422,17 @@ while True:
                 #print("DeepSleep ",counter)
                 #pycom.nvs_set("count",counter)
                 #machine.deepsleep((period*60*1000)+200) #5.2min, machine.deepsleep([time_ms])
-            elif "Token" in msg_listen and id in msg_listen:
-                mode=NORMAL_MODE
-                timer_Disc_end.reset()
-                timer_Disc_end.stop()
-                discover_end_ack=True
-                intent=1
-                token_ack=False
-                info_ack=True
-                info_passed=False
-                neighbours=com.neighbours_min(neighbours,neighbours_aux)
-                rcv_data=True#Repasar això
+        elif "Token" in msg_listen and id in msg_listen:
+            mode=NORMAL_MODE
+            timer_Disc_end.reset()
+            timer_Disc_end.stop()
+            discover_end_ack=True
+            intent=1
+            token_ack=False
+            info_ack=True
+            info_passed=False
+            neighbours=com.neighbours_min(neighbours,neighbours_aux)
+            rcv_data=True#Repasar això
 
         if discover_end_ack==False and timer_Disc_end.read()>5:
             #Resend the msg to ask again an ACK
@@ -465,7 +465,7 @@ while True:
             dry=True
             dhi=1
             alarma=check_alarms2(T,temp,tempC,H,dry)
-            if alarma==True: #or missatge==10
+            if alarma==True or nummissatge==5:
                 print("Hi ha alarma")
                 mode=ALARM_MODE
                 msg_alarm="Alarm "+str(id)+" "+str(id)+" 150 "+str(tempC)+" "+str(T)+" "+str(H)+" "+str(temp)+" "+"0"+" "+"1"
@@ -495,7 +495,7 @@ while True:
                         token_ack=True
                         if info_passed==True:
                             print("Info enviada")
-                            #missatge=missatge+1
+                            nummissatge=nummissatge+1
                             #save_parameters()
                             #machine.deepsleep(get_sleeping_time())
                 elif info_ack==True:

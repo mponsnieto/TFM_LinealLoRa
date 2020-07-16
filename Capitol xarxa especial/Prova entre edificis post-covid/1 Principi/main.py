@@ -467,8 +467,9 @@ while(True):
                 End_normal=True
                 print("Finished")
                 #save_parameters()
-                # com.Switch_to_LoraWan()
+                com.Switch_to_LoraWan()
                 com.savestate()
+                mode=CONFIG_MODE
                 #machine.deepsleep(500)
 
         if timer_token_ack.read()>=60 and token_ack==False:
