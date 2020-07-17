@@ -55,8 +55,8 @@ msg_listen=" "
 neighbours=[[],[]]
 neighbours_aux=[[],[]]
 intent=1
-
-missatge=1
+nummissatge=1
+#missatge=1
 
 period=2
 

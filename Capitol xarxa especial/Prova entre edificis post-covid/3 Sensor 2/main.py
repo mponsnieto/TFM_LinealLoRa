@@ -192,6 +192,9 @@ def interrupt(lora):
             splitmsg_stop=splitmsg[:]
             #Save the node_list
             node_list=splitmsg[2:-1]
+            f = open('process_middle2.txt', 'a')
+            f.write("{}/{}/{} {}:{}:{} Obtencion node_list {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],node_list))
+            f.close()
 
             if mode==LISTEN_MODE and node_list.index(id)+1==int(splitmsg[-1]):
                 power=14
@@ -272,6 +275,27 @@ while True:
                     timer_read_sensors.start()
                     msg_alarm=" "
                     msg_alarm_ok=" "
+                    a=False
+                    config_ACK=False
+                    token_ack=True
+                    stop_ACK=False
+                    config_start=False
+                    power=2
+                    rcv_data=False
+                    stop_start=False
+                    info_ack=True
+                    info_passed=False
+                    readen=False #borrar
+                    msg=" "
+                    msg_listen=" "
+                    neighbours=[[],[]]
+                    neighbours_aux=[[],[]]
+                    intent=1
+                    nummissatge=1
+                    missatge=False
+                    period=2
+                    counter=1
+                    i=0
                 if msg_alarm_ok and node_list.index(splitmsg[2])==node_list.index(id): #Alarm ok from:id to:id
                     #Pass Alarm ok to other
                     if node_list.index(splitmsg[3])>node_list.index(id):
@@ -288,6 +312,27 @@ while True:
                     timer_read_sensors.start()
                     msg_alarm=" "
                     msg_alarm_ok=" "
+                    a=False
+                    config_ACK=False
+                    token_ack=True
+                    stop_ACK=False
+                    config_start=False
+                    power=2
+                    rcv_data=False
+                    stop_start=False
+                    info_ack=True
+                    info_passed=False
+                    readen=False #borrar
+                    msg=" "
+                    msg_listen=" "
+                    neighbours=[[],[]]
+                    neighbours_aux=[[],[]]
+                    intent=1
+                    nummissatge=1
+                    missatge=False
+                    period=2
+                    counter=1
+                    i=0
                     #machine.deepsleep((period*60*1000)+200)
 
         if ("Alarm" in msg_alarm):
@@ -308,6 +353,7 @@ while True:
                 com.change_txpower(power)
                 msg_retry= msg+" "+str(id)
                 print("Enviare: ",msg+" "+str(id))
+                time.sleep(5)
                 com.sendData(msg_retry,rtc,f)
             except Exception as e:
                 print(e)
@@ -465,7 +511,7 @@ while True:
             dry=True
             dhi=1
             alarma=check_alarms2(T,temp,tempC,H,dry)
-            if alarma==True or nummissatge==5:
+            if alarma==True or nummissatge==2:
                 print("Hi ha alarma")
                 mode=ALARM_MODE
                 msg_alarm="Alarm "+str(id)+" "+str(id)+" 150 "+str(tempC)+" "+str(T)+" "+str(H)+" "+str(temp)+" "+"0"+" "+"1"
@@ -496,6 +542,9 @@ while True:
                         if info_passed==True:
                             print("Info enviada")
                             nummissatge=nummissatge+1
+                            f = open('process_middle2.txt', 'a')
+                            f.write("{}/{}/{} {}:{}:{} He recibido ack de info\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+                            f.close()
                             #save_parameters()
                             #machine.deepsleep(get_sleeping_time())
                 elif info_ack==True:
@@ -544,6 +593,9 @@ while True:
                             msg_retry="Info"+" "+ str(id)+" "+str(splitmsg[2])+" "+llista
                             com.sendData(msg_retry,rtc,f)
                             print("he enviat info",msg_retry)
+                            f = open('process_middle2.txt', 'a')
+                            f.write("{}/{}/{} {}:{}:{} He enviado info\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+                            f.close()
                             timer3.reset()
                             timer3.start()
                             info_ack=False
@@ -566,7 +618,7 @@ while True:
                     token_ack=True
 
         if token_ack==False or info_ack==False:
-            if timer3.read()>=3:
+            if timer3.read()>=15:
                 com.sendData(msg_retry,rtc,f)
                 print("He reenviat ", msg_retry)
                 timer3.reset()
