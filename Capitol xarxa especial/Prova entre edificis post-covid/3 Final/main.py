@@ -301,6 +301,7 @@ while True:
                                 node_list2=splitmsg[2:]
                                 node_list=node_list2
                         time.sleep(2)
+                        rcv_data=False
                         com.sendData(msg,rtc,f)
 
                 timer.reset()
