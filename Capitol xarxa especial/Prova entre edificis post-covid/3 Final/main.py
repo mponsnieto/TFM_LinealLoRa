@@ -201,35 +201,66 @@ while True:
 
     if mode==ALARM_MODE:
         if rcv_data:
-            print("Alarm")
             rcv_data=False
-            msg_alarm=aux[:]
-            if "Alarm" in aux and "ok" not in aux:
-                splitmsg_alarm=msg_alarm.split( )
-                msg_alarm_ok="Alarm ok "+str(id)+" "+str(splitmsg_alarm[1]) #Alarm ok from:id to:id
-                com.sendData(msg_alarm_ok,rtc,f)
-                #if timer_to_send_alarm.read()>=30:
-                com.Switch_to_LoraWan()
-                print("Sending alarm to GTW")
-                com.EnviarGateway(com.ApplyFormat(msg_alarm.split( )))
-                timer_to_send_alarm.reset()
-                timer_to_send_alarm.start()
-                com.Switch_to_LoraRaw()
-            if "Alarm ok" in aux:
-                mode=NORMAL_MODE
-                token=get_first_token()
-                com.change_txpower(get_neighbour_power(node_list.index(id)-1))
-                msg_send="Token"+" "+str(token)+" "+str(id)+" "+str(node_list[node_list.index(id)-1])
-                com.sendData(msg_send,rtc,f)
-                token_ack=False
-                print("Sending token: ",msg_send)
-                timer_token_ack.reset()
-                timer_token_ack.start()
-                intent=1
-        else:
-            print("Sending: ",msg_alarm_ok)
-            com.sendData(msg_alarm_ok,rtc,f)
-            time.sleep(2)
+            splitmsg=msg_alarm_ok.split( )
+            msg_alarm=msg_aux
+            if "Alarm" in msg_alarm and "ok" not in msg_alarm:
+                #Resend the alarm msg
+                com.change_txpower(14)
+                com.sendData(msg_alarm,rtc,f)
+            elif "Alarm ok" in msg_alarm_ok:
+                if node_list.index(splitmsg[3])==node_list.index(id): #Alarm ok from:id to:id
+                    #Alarm ok ACK. It's for me
+                    com.sendData("Alarm ok "+str(id)+" "+str(id),rtc,f)
+                    mode=LISTEN_MODE
+                    timer_read_sensors.reset()
+                    timer_read_sensors.start()
+                    config_ACK=False
+                    config_start=True
+                    power=2
+                    rcv_data=False
+                    intent=1
+                    node_list=[]
+                    neighbours=[[],[]]
+                    neighbours_aux=[[],[]]
+                    msg="Config 2"
+                    node_list=""
+                    msg_alarm_ok=" "
+                    error=False
+                    Hello_received=False
+                    End_discover=False
+                    info_passed=False
+                if msg_alarm_ok and node_list.index(splitmsg[2])==node_list.index(id): #Alarm ok from:id to:id
+                    #Pass Alarm ok to other
+                    if node_list.index(splitmsg[3])>node_list.index(id):
+                        splitmsg[2]=node_list[node_list.index(id)+1]
+                    else:
+                        splitmsg[2]=node_list[node_list.index(id)-1]
+                    msg_alarm=" ".join(splitmsg)
+                    com.sendData(str(msg_alarm),rtc,f)
+                    msg_alarm_ok=" "
+                if id in msg_alarm_ok and splitmsg[3] in msg_alarm_ok:
+                    #Alarm ok ACK received, chango to mode LISTEN_MODE
+                    config_ACK=False
+                    config_start=True
+                    power=2
+                    rcv_data=False
+                    intent=1
+                    node_list=[]
+                    neighbours=[[],[]]
+                    neighbours_aux=[[],[]]
+                    msg="Config 2"
+                    node_list=""
+                    msg_alarm_ok=" "
+                    error=False
+                    Hello_received=False
+                    End_discover=False
+                    info_passed=False
+                    #machine.deepsleep((period*60*1000)+200)
+        if ("Alarm" in msg_alarm):
+            #Resend the alarm msg
+            time.sleep(3)
+            com.sendData(msg_alarm,rtc,f)
 
     if mode==CONFIG_MODE:
         if rcv_data and error==False:
