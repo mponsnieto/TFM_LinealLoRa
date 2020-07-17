@@ -195,7 +195,7 @@ com.lora = LoRa(mode=LoRa.LORA, region=LoRa.EU868,tx_power=power)
 while True:
 
     if mode==CHECK:
-        com.sendData("Hay buena cobertura con el final "+str(i))
+        com.sendData("Hay buena cobertura con el final "+str(i),rtc,f)
         i=i+1
         time.sleep(2)
 
@@ -284,8 +284,6 @@ while True:
                 timer.start()
                 while timer.read()<30:
                     if rcv_data==True and id not in msg:
-                        msg=msg+" "+str(id)
-                        com.sendData(msg,rtc,f)
                         if type(msg)==bytes:
                             msg=bytes.decode(msg)
                         splitmsg=msg.split( )
@@ -295,11 +293,22 @@ while True:
                             timer.start()
                             if len(node_list2)>len(node_list):
                                 node_list=node_list2
-                            if len(node_list2)==len(node_list) and node_list2[-1]==id:
+                            elif len(node_list2)==len(node_list) and id not in node_list2:
+                                msg=msg+" "+str(id)
+                                if type(msg)==bytes:
+                                    msg=bytes.decode(msg)
+                                splitmsg=msg.split( )
+                                node_list2=splitmsg[2:]
                                 node_list=node_list2
+                        time.sleep(2)
+                        com.sendData(msg,rtc,f)
 
-
+                timer.reset()
+                timer.stop()
                 com.get_node_list(node_list)
+                f = open('process_final.txt', 'a')
+                f.write("{}/{}/{} {}:{}:{} Tenemos node_list {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],node_list))
+                f.close()
                 msg="stop "+str(power)+" "+str(" ".join(node_list))+" "+str(node_list.index(id))
                 com.sendData(msg,rtc,f)
                 msg_retry=msg
@@ -451,7 +460,7 @@ while True:
             #Per la trama de Info les posicions no són iguals
                 #Trama info= Info, id de qui es la info,id de a qui va el missatge, informació
                 #splitmsg[1]=Node de la info
-                #splitmsg[2]=Node que ho ha de reenviar
+                #splitmsg[2]=Node que ho ha de"{^���r*(�("��[�����r�ޮ۫i�'��^��ߊV��m� reenviar
                 #splitmsg[3]=info
                 #Quan es reenvia l'info la funció ha de ser alreves!
             if "Info" in msg:

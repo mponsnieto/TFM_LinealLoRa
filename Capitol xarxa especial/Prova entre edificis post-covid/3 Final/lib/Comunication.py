@@ -98,7 +98,7 @@ class Comunication:
         self.s.setblocking(True)
         iv = crypto.getrandbits(128) # hardware generated random IV (never reuse it)
         cipher = AES(self.key, AES.MODE_CFB, iv)
-        misg_crc=misg+" "+str(self.calculate_crc(msg))
+        misg_crc=msg+" "+str(self.calculate_crc(msg))
         msg = iv + cipher.encrypt(misg_crc)
         self.s.send(msg)
         #print("missatge amb crc", msg)
