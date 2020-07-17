@@ -107,7 +107,7 @@ class Comunication:
 
 
 
-    def reciveData(self):
+    def reciveData(self,f,rtc):
         self.s.setblocking(False)
         msg=self.s.recv(128)#Get any data recieved
         #If there's any data, decrypt
@@ -120,6 +120,9 @@ class Comunication:
                 if "Config" in original or "stop" in original or "Discover" in original or "Hello" in original or "Info" in original or "Token" in original or "Alarm" in original:
                     crc_OK,msg=self.check_crc(original)
                     if crc_OK:
+                        f=open('msgReceived_first.txt','a')
+                        f.write("{}/{}/{} {}:{}:{} msg {} stats {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],msg,self.lora.stats()))
+                        f.close()
                         return(msg)
                     else:
                         print("CRC not OK")

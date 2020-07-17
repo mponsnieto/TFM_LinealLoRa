@@ -132,10 +132,10 @@ def interrupt(lora):
     global counter
     lora.power_mode(LoRa.ALWAYS_ON)
 
-    msg_aux=com.reciveData()
+    msg_aux=com.reciveData(f,rtc)
     if msg_aux!="error":
 
-        saveFileMsgsReceived(msg_aux,rtc)
+        #saveFileMsgsReceived(msg_aux,rtc)
 
         if "Alarm" in msg_aux:
             rcv_data=True
@@ -268,15 +268,38 @@ while(True):
                 mode=NORMAL_MODE
                 token=get_first_token()
                 com.change_txpower(get_neighbour_power(node_list.index(id)+1))
-                msg_send="Token"+" "+str(token)+" "+str(id)+" "+str(node_list[node_list.index(id)+1])
-                com.sendData(msg_send)
-                token_ack=False
-                print("Sending token: ",msg_send)
-                timer_token_ack.reset()
-                timer_to_send_alarm.reset()
-                timer_token_ack.start()
-                timer_to_send_alarm.stop()
+                #After alarm ok, start again the proocess
                 intent=1
+                mode=CONFIG_MODE
+                EnviatGateway=False
+                neighbours=[[],[]]
+                neighbours_aux=[[],[]]
+                msg="Config 2"
+                msg_aux="Config 2"
+                rcv_data=False
+                node_list=""
+                msg_alarm_ok=" "
+                Hello_received=False
+                period=2
+                counter=1
+                i=0
+                f = open('msg_sent_first.txt', 'a')
+                f.write("{}/{}/{} {}:{}:{} stop alarm\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+                f.close()
+                time.sleep(60) #1min
+
+
+
+
+                # msg_send="Token"+" "+str(token)+" "+str(id)+" "+str(node_list[node_list.index(id)+1])
+                # com.sendData(msg_send)
+                # token_ack=False
+                # print("Sending token: ",msg_send)
+                # timer_token_ack.reset()
+                # timer_to_send_alarm.reset()
+                # timer_token_ack.start()
+                # timer_to_send_alarm.stop()
+                #intent=1
         else:
             print("Sending ",msg_alarm_ok)
             com.sendData(msg_alarm_ok)
@@ -453,7 +476,13 @@ while(True):
             timer_to_send_GTW.stop()
             com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=None)
             com.Switch_to_LoraWan()
+            f = open('msg_sent_first.txt', 'a')
+            f.write("{}/{}/{} {}:{}:{} Start sending to gateway data {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],data))
+            f.close()
             com.EnviarGateway(data)
+            f = open('msg_sent_first.txt', 'a')
+            f.write("{}/{}/{} {}:{}:{} Finish sending to gateway data {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],data))
+            f.close()
             com.Switch_to_LoraRaw()
             com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
             print("LoraRaw Ok")
