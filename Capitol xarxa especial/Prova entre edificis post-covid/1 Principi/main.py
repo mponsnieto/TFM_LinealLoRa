@@ -154,6 +154,9 @@ def interrupt(lora):
                 msg=bytes.decode(msg)
             splitmsg=msg.split()
             node_list=splitmsg[2:-1]
+            f = open('neighbour_first.txt', 'a')
+            f.write("{}/{}/{} {}:{}:{} node_list {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],node_list))
+            f.close()
             if node_list.index(id)+1==int(splitmsg[-1]):
                 mode=LISTEN_MODE
                 power=14
@@ -287,6 +290,8 @@ while(True):
                 period=2
                 counter=1
                 i=0
+                timer_to_send_GTW.reset()
+                timer_to_send_GTW.start()
                 f = open('msg_sent_first.txt', 'a')
                 f.write("{}/{}/{} {}:{}:{} stop alarm\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                 f.close()
@@ -465,7 +470,7 @@ while(True):
                 #token=splitmsg[1]
                 token_ack=True
                 print(data)
-                timer_to_send_GTW.start()
+                #timer_to_send_GTW.start()
             elif "Token" in msg and (splitmsg[2]==token):
                 token_ack=True
                 EnviatGateway=False

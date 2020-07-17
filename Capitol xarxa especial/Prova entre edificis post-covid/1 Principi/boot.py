@@ -47,7 +47,7 @@ timer_to_send_alarm=Timer.Chrono()
 timer_token_ack=Timer.Chrono()
 timer_discover_end=Timer.Chrono()
 button = machine.Pin(Pin.exp_board.G17, mode=Pin.IN, pull=Pin.PULL_UP)
-
+timer_to_send_GTW.start()
 Hello_received=False
 
 period=2
