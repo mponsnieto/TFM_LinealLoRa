@@ -251,7 +251,7 @@ if reset_cause==machine.DEEPSLEEP_RESET:
 
 while True:
     if mode==CHECK:
-        com.sendData("Hay buena cobertura de sensor 1 "+str(i))
+        com.sendData("Hay buena cobertura de sensor 1 "+str(i),rtc,f)
         i=i+1
         time.sleep(2)
     if mode==ALARM_MODE:
@@ -531,7 +531,7 @@ while True:
                 node_anterior,node_seguent,node_seguent2=get_next_node(splitmsg[3],splitmsg[2])
                 # print("Token" in msg and splitmsg[2]==node_anterior)
                 # print(msg,splitmsg,node_anterior)
-                if splitmsg[3]==id:
+                if id in msg:#splitmsg[3]==id:
                     print("Missatge de token per jo")
                     if splitmsg[1]==id:
                         if readen: #LLevar quan funcioni llegir
