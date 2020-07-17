@@ -100,7 +100,7 @@ def get_next_node(node_destinatari,node_enviant):
     return(node_anterior,node_seguent,node_seguent2)
 
 def discover(id):
-    global end_discover
+    global end_discover,rtc,f
     print("Discovering")
     power=2 #min
     com.lora = LoRa(mode=LoRa.LORA, region=LoRa.EU868,tx_power=power)
@@ -110,7 +110,7 @@ def discover(id):
         msg_tx='Discover normal %i %s'%(power,id)
         for i in range(4):
             msg=msg_aux
-            com.sendData(str(msg_tx))
+            com.sendData(str(msg_tx),rtc,f)
             print("Msg sent: ",msg_tx)
 
             #Wait to receive answers
@@ -135,7 +135,7 @@ def discover(id):
         #Wait for ACK
     while end_discover==False:
         com.change_txpower(get_neighbour_power(node_list.index(id)-1))
-        com.sendData(str(msg_retry))
+        com.sendData(str(msg_retry),rtc,f)
         print("he enviat", msg_retry)
         time.sleep(5)
     print("Discover finished: ",neighbours)
@@ -146,9 +146,9 @@ def discover(id):
 def interrupt(lora):
     global rcv_data, rtc
     global msg, splitmsg, msg_aux,msg_alarm_ok
-    global mode,f
+    global mode
     global stop_config, config_start, end_discover
-    global splitmsg_stop
+    global splitmsg_stop,rtc,f
     global node_list
     print("interrupcio")
     lora.power_mode(LoRa.ALWAYS_ON)
@@ -198,7 +198,7 @@ def interrupt(lora):
                 com.change_txpower(power)
                 splitmsg[-1]=str(node_list.index(id))
                 msg=" ".join(splitmsg)
-                com.sendData(str(msg))
+                com.sendData(str(msg),rtc,f)
                 print("Stop msg sent")
             return
 
@@ -262,11 +262,11 @@ while True:
             if "Alarm" in msg_alarm and "ok" not in msg_alarm:
                 #Resend the alarm msg
                 com.change_txpower(14)
-                com.sendData(msg_alarm)
+                com.sendData(msg_alarm,rtc,f)
             elif "Alarm ok" in msg_alarm_ok:
                 if node_list.index(splitmsg[3])==node_list.index(id): #Alarm ok from:id to:id
                     #Alarm ok ACK. It's for me
-                    com.sendData("Alarm ok "+str(id)+" "+str(id))
+                    com.sendData("Alarm ok "+str(id)+" "+str(id),rtc,f)
                     mode=LISTEN_MODE
                     timer_read_sensors.reset()
                     timer_read_sensors.start()
@@ -279,7 +279,7 @@ while True:
                     else:
                         splitmsg[2]=node_list[node_list.index(id)-1]
                     msg_alarm=" ".join(splitmsg)
-                    com.sendData(str(msg_alarm))
+                    com.sendData(str(msg_alarm),rtc,f)
                     msg_alarm_ok=" "
                 if id in msg_alarm_ok and splitmsg[3] in msg_alarm_ok:
                     #Alarm ok ACK received, chango to mode LISTEN_MODE
@@ -293,7 +293,7 @@ while True:
         if ("Alarm" in msg_alarm):
             #Resend the alarm msg
             time.sleep(3)
-            com.sendData(msg_alarm)
+            com.sendData(msg_alarm,rtc,f)
 
     if mode==CONFIG_MODE:
         if rcv_data and id not in msg and stop_start==False and "stop" not in msg:
@@ -308,7 +308,7 @@ while True:
                 com.change_txpower(power)
                 msg_retry= msg+" "+str(id)
                 print("Enviare: ",msg+" "+str(id))
-                com.sendData(msg_retry)
+                com.sendData(msg_retry,rtc,f)
             except Exception as e:
                 print(e)
         if (rcv_data==True) and (id in msg):
@@ -318,7 +318,7 @@ while True:
                 if node_list.index(id)+1==int(splitmsg[-1]):
                     splitmsg[-1]=str(node_list.index(id))
                     msg=" ".join(splitmsg)
-                    com.sendData(str(msg))
+                    com.sendData(str(msg),rtc,f)
                     msg_retry=msg
                     print("Stop msg sent")
                     stop_start=True
@@ -347,7 +347,7 @@ while True:
         if (config_ACK==False and config_start==True) or (stop_start==True and stop_ACK==False):
             if intent<3:
                 #msg stop es el missatge normal de config o el de stop
-                com.sendData(msg_retry)
+                com.sendData(msg_retry,rtc,f)
 
                 #print("Enviare %s intent: "%(intent),msg+" "+str(id))
                 print("Enviare intent: ", msg_retry)
@@ -381,7 +381,7 @@ while True:
             rcv_data=False
             missatge=True
         if "Alarm ok" in msg_listen and splitmsg_listen[3]==str(id):
-            com.sendData("Alarm ok "+str(id)+" "+str(id))
+            com.sendData("Alarm ok "+str(id)+" "+str(id),rtc,f)
 
         if "Discover normal" in msg_listen and missatge==True:
             missatge=False
@@ -390,7 +390,7 @@ while True:
             com.change_txpower(power)
             print("Enviare", "Hello ",pow , " ", id )
             time.sleep(machine.rng()%2)
-            com.sendData("Hello "+ str(pow) + " "+ str(id))
+            com.sendData("Hello "+ str(pow) + " "+ str(id),rtc,f)
             neighbours_aux=com.update_neighbours(pow,id_n,neighbours_aux)
 
         elif "Discover" and "next" in msg_listen:
@@ -404,7 +404,7 @@ while True:
                 turn=int(splitmsg_listen[-1])+1
                 splitmsg_send[-1]=str(turn)
                 msg_send=" ".join(splitmsg_send)
-                com.sendData(str(msg_send))
+                com.sendData(str(msg_send),rtc,f)
                 print("Sending: ",msg_send)
                 timer_Disc_end.start()
                 time.sleep(1)
@@ -436,7 +436,7 @@ while True:
 
         if discover_end_ack==False and timer_Disc_end.read()>5:
             #Resend the msg to ask again an ACK
-            com.sendData(str(msg_send))
+            com.sendData(str(msg_send),rtc,f)
             print("Sending again Discover end")
             timer_Disc_end.reset()
 
@@ -469,7 +469,7 @@ while True:
                 print("Hi ha alarma")
                 mode=ALARM_MODE
                 msg_alarm="Alarm "+str(id)+" "+str(id)+" 150 "+str(tempC)+" "+str(T)+" "+str(H)+" "+str(temp)+" "+"0"+" "+"1"
-                com.sendData(msg_alarm)
+                com.sendData(msg_alarm,rtc,f)
                 f = open('process_middle2.txt', 'a')
                 f.write("{}/{}/{} {}:{}:{} Empieza alarma\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                 f.close()
@@ -511,7 +511,7 @@ while True:
                         splitmsg[2]=node_list[node_list.index(node_seguent)]
                         msg=" ".join(splitmsg)
                         com.change_txpower(get_neighbour_power(node_list.index(node_seguent)))
-                        com.sendData(str(msg))
+                        com.sendData(str(msg),rtc,f)
                         print("he enviat info de un altre", msg)
                         #node_seguent2_aux=node_seguent2
                         msg_retry=msg
@@ -542,7 +542,7 @@ while True:
                             #llista="150"+" "+"23"+" "+"24"+" "+"40"+" "+"25"+" "+"0"+" "+"1"
                             #splitmsg[2] és qui t' està enviant i a qui li has de retornar la info
                             msg_retry="Info"+" "+ str(id)+" "+str(splitmsg[2])+" "+llista
-                            com.sendData(msg_retry)
+                            com.sendData(msg_retry,rtc,f)
                             print("he enviat info",msg_retry)
                             timer3.reset()
                             timer3.start()
@@ -557,7 +557,7 @@ while True:
                         msg_send[3]=str(node_seguent)
                         msg_retry=" ".join(msg_send)
                         com.change_txpower(get_neighbour_power(node_list.index(node_seguent)))
-                        com.sendData(msg_retry)
+                        com.sendData(msg_retry,rtc,f)
                         print("estic enviant", msg_retry)
                         token_ack=False
                         timer3.reset()
@@ -567,7 +567,7 @@ while True:
 
         if token_ack==False or info_ack==False:
             if timer3.read()>=3:
-                com.sendData(msg_retry)
+                com.sendData(msg_retry,rtc,f)
                 print("He reenviat ", msg_retry)
                 timer3.reset()
                 intent=intent+1
