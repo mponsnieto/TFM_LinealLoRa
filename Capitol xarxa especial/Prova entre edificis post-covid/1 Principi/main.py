@@ -6,7 +6,7 @@ def saveFileMsgs(neighbours,counter,rtc):
         f = open('neighbour_first.txt', 'a')
         f.write("{}/{}/{} {}:{}:{} counter {}".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],counter))
         for i in range(len(neighbours[0])):
-            f.write(" id {} pow{}, ".format(neighbours[0][i],neighbours[1][i]))
+            f.write(" id {} pow {}, ".format(neighbours[0][i],neighbours[1][i]))
         f.write("\n")
         f.close()
         return
@@ -126,7 +126,7 @@ def interrupt(lora):
     global mode
     global config_start
     global node_list
-    global Error, rtc
+    global Error, rtc,f
     global Hello_received,End_discover
     global msg_aux, splitmsg_aux
     global counter
@@ -141,6 +141,9 @@ def interrupt(lora):
             rcv_data=True
             mode=ALARM_MODE
             timer_to_send_alarm.start()
+            f = open('msg_sent_first.txt', 'a')
+            f.write("{}/{}/{} {}:{}:{} start alarm\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+            f.close()
             return
 
         if (mode==CONFIG_MODE or mode==LISTEN_MODE) and ("stop" in msg_aux): #Config has finished
@@ -271,6 +274,7 @@ while(True):
                 #After alarm ok, start again the proocess
                 intent=1
                 mode=CONFIG_MODE
+                rcv_data=False
                 EnviatGateway=False
                 neighbours=[[],[]]
                 neighbours_aux=[[],[]]
@@ -417,7 +421,7 @@ while(True):
         mode=NORMAL_MODE
         rcv_data=False
         token=get_first_token()
-        com.change_txpower(neighbours[1][node_list.index(id)+1])
+        com.change_txpower(get_neighbour_power(node_list.index(id)+1))
         msg_send="Token"+" "+str(token)+" "+str(id)+" "+str(node_list[node_list.index(id)+1])
         com.sendData(msg_send)
         token_ack=False
@@ -470,10 +474,10 @@ while(True):
                 intent=1
 
 
-        if timer_to_send_GTW.read()>=400: #5min
+        if timer_to_send_GTW.read()>=250: #4.10 min
             print("Enviar a gateway")
             timer_to_send_GTW.reset()
-            timer_to_send_GTW.stop()
+            #timer_to_send_GTW.stop()
             com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=None)
             com.Switch_to_LoraWan()
             f = open('msg_sent_first.txt', 'a')
@@ -493,12 +497,12 @@ while(True):
             msg_send="Token"+" "+str(token)+" "+str(id)+" "+str(node_list[node_list.index(id)+1])
             token_ack=False
             if token==get_first_token():
-                End_normal=True
+                #End_normal=True
                 print("Finished")
                 #save_parameters()
-                com.Switch_to_LoraWan()
-                com.savestate()
-                mode=CONFIG_MODE
+                #com.Switch_to_LoraWan()
+                #com.savestate()
+                #mode=CONFIG_MODE
                 #machine.deepsleep(500)
 
         if timer_token_ack.read()>=60 and token_ack==False:
