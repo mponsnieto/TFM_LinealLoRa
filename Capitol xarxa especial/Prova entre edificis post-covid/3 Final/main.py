@@ -154,7 +154,7 @@ def interrupt(lora):
             mode=CONFIG_MODE
             msg=aux
             f = open('process_final.txt', 'a')
-            f.write("{}/{}/{} {}:{}:{} Empieza el config".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+            f.write("{}/{}/{} {}:{}:{} Empieza el config\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
             f.close()
 
         if mode==NORMAL_MODE:
