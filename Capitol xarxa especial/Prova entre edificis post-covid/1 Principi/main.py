@@ -286,7 +286,7 @@ while(True):
                 #After alarm ok, start again the proocess
                 intent=1
                 mode=CONFIG_MODE
-                rcv_data=False
+                rcv_data=True
                 EnviatGateway=False
                 neighbours=[[],[]]
                 neighbours_aux=[[],[]]
@@ -479,7 +479,9 @@ while(True):
                 #token=splitmsg[1]
                 token_ack=True
                 print(data)
-                #timer_to_send_GTW.start()
+                timer_to_send_GTW.reset()
+                timer_to_send_GTW.start()
+                intent=1
             elif "Token" in msg and (splitmsg[2]==token):
                 token_ack=True
                 EnviatGateway=False
@@ -492,11 +494,11 @@ while(True):
             print("Enviar a gateway")
             timer_to_send_GTW.reset()
             #timer_to_send_GTW.stop()
-            com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=None)
-            com.Switch_to_LoraWan()
-            #f = open('msg_sent_first.txt', 'a')
+            f = open('msg_sent_first.txt', 'a')
             f.write("{}/{}/{} {}:{}:{} Start sending to gateway data {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],data))
             f.close()
+            #com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=None)
+            #com.Switch_to_LoraWan()
             #com.EnviarGateway(data)
             f = open('msg_sent_first.txt', 'a')
             f.write("{}/{}/{} {}:{}:{} Finish sending to gateway data {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],data))
@@ -508,11 +510,15 @@ while(True):
             token=get_next_token(token)
             timer_token_ack.reset()
             timer_token_ack.start()
-            msg_send="Token"+" "+str(token)+" "+str(id)+" "+str(node_list[node_list.index(id)+1])
+            msg_send="Token"+" "+str(token)+" "+str(id)+" "+str(node_list[node_list.index(token)])
             token_ack=False
+            intent=1
             if token==get_first_token():
                 #End_normal=True
                 print("Finished")
+                f = open('msg_sent_first.txt', 'a')
+                f.write("Sudidos los mensajes de info de todos los nodos\n")
+                f.close()
                 #save_parameters()
                 #com.Switch_to_LoraWan()
                 #com.savestate()
@@ -530,6 +536,7 @@ while(True):
             intent=intent+1
             if intent==10:
                 print("he fet més de 10 intents")
-                com.change_txpower(get_neighbour_power(node_list.index(id)+2))
-                msg_send="Token"+" "+str(token)+" "+str(id)+" "+str(node_list[node_list.index(id)+2])
+                token=get_next_token(token)
+                com.change_txpower(get_neighbour_power(node_list.index(token)))
+                msg_send="Token"+" "+str(token)+" "+str(id)+" "+str(node_list[node_list.index(token)])
                 intent=1

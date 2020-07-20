@@ -51,6 +51,7 @@ readen=False #borrar
 msg=" "
 
 msg_listen=" "
+msg_alarm_ok=" "
 
 neighbours=[[],[]]
 neighbours_aux=[[],[]]
