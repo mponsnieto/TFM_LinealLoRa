@@ -68,7 +68,6 @@ f.close()
 f = open('neighbour_first.txt', 'a')
 f.write("------------------------\n")
 f.close()
-
 f = open('msg_sent_first.txt', 'a')
 f.write("{}/{}/{} {}:{}:{} LoPy ON\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
 f.close()

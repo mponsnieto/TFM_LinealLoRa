@@ -511,7 +511,7 @@ while True:
             dry=True
             dhi=1
             alarma=check_alarms2(T,temp,tempC,H,dry)
-            if alarma==True or nummissatge==10:
+            if alarma==True or intent=1=10:
                 print("Hi ha alarma")
                 mode=ALARM_MODE
                 msg_alarm="Alarm "+str(id)+" "+str(id)+" 150 "+str(tempC)+" "+str(T)+" "+str(H)+" "+str(temp)+" "+"0"+" "+"1"
@@ -519,6 +519,7 @@ while True:
                 f = open('process_middle1.txt', 'a')
                 f.write("{}/{}/{} {}:{}:{} Empieza alarma\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                 f.close()
+                nummissatge=1
             timer_read_sensors.reset()
         if rcv_data==True:
             rcv_data=False
