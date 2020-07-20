@@ -79,7 +79,7 @@ def discover(id):
     power=2 #min
     com.change_txpower(power)
 
-    while ((len(neighbours[0])<2) & (power<14)): #Potencia max =14
+    while ((len(neighbours[0])<3) & (power<14)): #Potencia max =14
         print("I'm in")
         #Enviar missatge inici de descoberta
         msg_tx='Discover normal %i %s'%(power,str(id))
