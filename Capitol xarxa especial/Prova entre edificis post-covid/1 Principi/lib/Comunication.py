@@ -21,10 +21,12 @@ class Comunication:
         self.lora = LoRa(mode=LoRa.LORAWAN,region=LoRa.EU868)
 
         # create an OTA authentication params
-        app_eui = ubinascii.unhexlify('70B3D57ED001C55E')
+        app_eui = ubinascii.unhexlify('70B3D57ED0019255') # these settings can be found from TTN
+        #app_eui = ubinascii.unhexlify('70B3D57ED001C55E')
         dev_eui = ubinascii.unhexlify('0058A97F44896904') # these settings can be found from TTN
-        #app_eui = ubinascii.unhexlify('70B3D57ED0019255') # these settings can be found from TTN
+        #dev_eui = ubinascii.unhexlify('006D2D7767E7BAFE') # these settings can be found from TTN
         app_key = ubinascii.unhexlify('AEAFACB81C594C7B7BE3466241CD38EF') # these settings can be found from TTN
+        #app_key = ubinascii.unhexlify('0A05862CEA15FC56C047FC03FBDF34DB') # these settings can be found from TTN
 
         # set the 3 default channels to the same frequency (must be before sending the OTAA join request)
         self.lora.add_channel(0, frequency=868100000, dr_min=0, dr_max=5)

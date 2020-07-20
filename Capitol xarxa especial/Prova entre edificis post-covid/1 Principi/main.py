@@ -44,7 +44,7 @@ def get_next_token(token):
     return token
 
 def get_neighbour_power(pos):
-    if len(neighbours)>0:
+    if len(neighbours)>0 and node_list[pos] in neighbours[0]:
         power=neighbours[1][neighbours[0].index(node_list[pos])]
         return power
     else:
@@ -62,7 +62,7 @@ def discover(id):
     com.change_txpower(power)
     global Hello_received,msg,counter
     global neighbours, End_discover
-    while ((len(neighbours[0])<2) & (power<14)): #Potencia max =14
+    while ((len(neighbours[0])<3) & (power<14)): #Potencia max =14
         print("I'm in")
         #Enviar missatge inici de descoberta
         msg_tx='Discover normal %i %s'%(power,id)
@@ -109,6 +109,7 @@ def discover(id):
     return
 
 def handler_button(button):
+    pycom.heartbeat(True)
     print("The config is going to start")
     global mode
     global rcv_data
@@ -217,11 +218,11 @@ button.callback(trigger=Pin.IRQ_FALLING, handler=handler_button)
 if reset_cause==machine.DEEPSLEEP_RESET:
     com=comu.Comunication()
     f = open('msg_sent_first.txt', 'a')
-    f.write("{}/{}/{} {}:{}:{} start Join\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+    f.write("{}/{}/{} {}:{}:{} Start Join\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
     f.close()
     com.Switch_to_LoraWan()
     f = open('msg_sent_first.txt', 'a')
-    f.write("{}/{}/{} {}:{}:{} Acaba Join\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+    f.write("{}/{}/{} {}:{}:{} Finish Join\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
     f.close()
 
     if com.lora.has_joined()==False:
@@ -243,18 +244,32 @@ else:
     f = open('msg_sent_first.txt', 'a')
     f.write("{}/{}/{} {}:{}:{} start Join\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
     f.close()
-    com.JoinLoraWan()
+    #com.JoinLoraWan()
+    #com.Switch_to_LoraRaw()
     f = open('msg_sent_first.txt', 'a')
     f.write("{}/{}/{} {}:{}:{} finish Join\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
     f.close()
     time.sleep(2)
-    com.Switch_to_LoraRaw()
+
     com.start_LoraRaw()
     com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
     print("All OK, please press the button")
 
 while(True):
     if mode==ALARM_MODE:
+        if timer_to_send_alarm.read()>=120: #2min
+            #com.Switch_to_LoraWan()
+            print("Sending to GTW")
+            f = open('msg_sent_first.txt', 'a')
+            f.write("{}/{}/{} {}:{}:{} Sending to gateway\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+            f.close()
+            #com.EnviarGateway(com.ApplyFormat(msg_alarm.split( )))
+            f = open('msg_sent_first.txt', 'a')
+            f.write("{}/{}/{} {}:{}:{} Alarm sent\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+            f.close()
+            timer_to_send_alarm.reset()
+            timer_to_send_alarm.start()
+            #com.Switch_to_LoraRaw()
         if rcv_data:
             rcv_data=False
             msg_alarm=msg_aux[:]
@@ -263,17 +278,11 @@ while(True):
                 splitmsg_alarm=msg_alarm.split( )
                 msg_alarm_ok="Alarm ok "+str(id)+" "+str(splitmsg_alarm[1])   #Alarm ok from:id to:id
                 com.sendData(msg_alarm_ok)
-                #if timer_to_send_alarm.read()>=0.5:
-                com.Switch_to_LoraWan()
-                print("Sending to GTW")
-                com.EnviarGateway(com.ApplyFormat(msg_alarm.split( )))
-                timer_to_send_alarm.reset()
-                timer_to_send_alarm.start()
-                com.Switch_to_LoraRaw()
+
             if "Alarm ok" in msg_aux:
                 mode=NORMAL_MODE
                 token=get_first_token()
-                com.change_txpower(get_neighbour_power(node_list.index(id)+1))
+                com.change_txpower(get_neighbour_power(node_list.index(token)))
                 #After alarm ok, start again the proocess
                 intent=1
                 mode=CONFIG_MODE
@@ -426,7 +435,7 @@ while(True):
         mode=NORMAL_MODE
         rcv_data=False
         token=get_first_token()
-        com.change_txpower(get_neighbour_power(node_list.index(id)+1))
+        com.change_txpower(get_neighbour_power(node_list.index(token)))
         msg_send="Token"+" "+str(token)+" "+str(id)+" "+str(node_list[node_list.index(id)+1])
         com.sendData(msg_send)
         token_ack=False
@@ -485,14 +494,14 @@ while(True):
             #timer_to_send_GTW.stop()
             com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=None)
             com.Switch_to_LoraWan()
-            f = open('msg_sent_first.txt', 'a')
+            #f = open('msg_sent_first.txt', 'a')
             f.write("{}/{}/{} {}:{}:{} Start sending to gateway data {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],data))
             f.close()
-            com.EnviarGateway(data)
+            #com.EnviarGateway(data)
             f = open('msg_sent_first.txt', 'a')
             f.write("{}/{}/{} {}:{}:{} Finish sending to gateway data {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],data))
             f.close()
-            com.Switch_to_LoraRaw()
+            #com.Switch_to_LoraRaw()
             com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
             print("LoraRaw Ok")
             EnviatGateway=True

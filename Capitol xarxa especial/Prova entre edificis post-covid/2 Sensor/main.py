@@ -192,7 +192,7 @@ def interrupt(lora):
             splitmsg_stop=splitmsg[:]
             #Save the node_list
             node_list=splitmsg[2:-1]
-            f = open('process_middle1.txt', 'a')
+            f = open('neighbours_middle1.txt', 'a')
             f.write("{}/{}/{} {}:{}:{} Obtencion node_list {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],node_list))
             f.close()
 

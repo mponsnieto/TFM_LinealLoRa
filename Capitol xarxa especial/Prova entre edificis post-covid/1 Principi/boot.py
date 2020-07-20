@@ -15,6 +15,7 @@ NORMAL_MODE=3
 ALARM_MODE=4
 CHECK=5
 pycom.wifi_on_boot(False)
+pycom.heartbeat(False)
 
 # com=comu.Comunication()
 # com.JoinLoraWan()
@@ -57,12 +58,15 @@ i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2020, 07, 15, 0,0))
-f = open('msg_sent_first.txt', 'w')
+rtc.init((2020, 07, 20, 0,0))
+f = open('msg_sent_first.txt', 'a')
+f.write("------------------------\n")
 f.close()
-f = open('msgReceived_first.txt', 'w')
+f = open('msgReceived_first.txt', 'a')
+f.write("------------------------\n")
 f.close()
-f = open('neighbour_first.txt', 'w')
+f = open('neighbour_first.txt', 'a')
+f.write("------------------------\n")
 f.close()
 
 f = open('msg_sent_first.txt', 'a')
