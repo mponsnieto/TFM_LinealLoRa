@@ -254,7 +254,8 @@ if reset_cause==machine.DEEPSLEEP_RESET:
 
 while True:
     if mode==CHECK:
-        com.sendData("Hay buena cobertura de sensor 1 "+str(i),rtc,f)
+        com.sendData("Hay buena cobertura de mateu orfila sensor 1 "+str(i),rtc,f)
+        com.change_txpower(14)
         i=i+1
         time.sleep(2)
     if mode==ALARM_MODE:
@@ -511,7 +512,7 @@ while True:
             dry=True
             dhi=1
             alarma=check_alarms2(T,temp,tempC,H,dry)
-            if alarma==True or intent=1=10:
+            if alarma==True or intent==10:
                 print("Hi ha alarma")
                 mode=ALARM_MODE
                 msg_alarm="Alarm "+str(id)+" "+str(id)+" 150 "+str(tempC)+" "+str(T)+" "+str(H)+" "+str(temp)+" "+"0"+" "+"1"

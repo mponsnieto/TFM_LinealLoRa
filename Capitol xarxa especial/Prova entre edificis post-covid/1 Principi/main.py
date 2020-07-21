@@ -324,7 +324,8 @@ while(True):
             time.sleep(2)
 
     if mode==CHECK:
-        com.sendData("Hay buena cobertura con mateu orfila "+str(i))
+        com.sendData("Hay buena cobertura con ramon llull "+str(i))
+        com.change_txpower(14)
         i=i+1
         time.sleep(4)
     if mode==CONFIG_MODE:
