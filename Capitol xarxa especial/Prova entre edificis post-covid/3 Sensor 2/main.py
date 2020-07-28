@@ -254,9 +254,9 @@ if reset_cause==machine.DEEPSLEEP_RESET:
 
 while True:
     if mode==CHECK:
-        com.sendData("Hay buena cobertura de sensor 2 "+str(i),rtc,f)
+        com.sendData("Hay buena cobertura de sensor 2 parc bit"+str(i),rtc,f)
         i=i+1
-        time.sleep(2)
+        time.sleep(10)
     if mode==ALARM_MODE:
         if rcv_data:
             rcv_data=False

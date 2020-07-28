@@ -257,7 +257,7 @@ while True:
         com.sendData("Hay buena cobertura de mateu orfila sensor 1 "+str(i),rtc,f)
         com.change_txpower(14)
         i=i+1
-        time.sleep(10)
+        time.sleep(2)
     if mode==ALARM_MODE:
         if rcv_data:
             rcv_data=False
@@ -382,7 +382,7 @@ while True:
                 id_n=splitmsg[-1]
                 pow=int(splitmsg[1])
         if stop_ACK==False and stop_start==True:
-            if node_list.index(id)-1>=int(splitmsg_stop[-1]) or "Discover" in msg:
+            if node_list.index(id)-1>=int(splitmsg_stop[-1]):
                 config_start=False
                 print("Stop finished")
                 stop_ACK=True

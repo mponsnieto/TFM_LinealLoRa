@@ -1,0 +1,85 @@
+------------------------
+20/7/2020 0:1:25 node_list ['30aea474bfe8', '30aea474cbcc', '30aea458f354', '3c71bf877510']
+20/7/2020 0:1:26 node_list ['30aea474bfe8', '30aea474cbcc', '30aea458f354', '3c71bf877510']
+20/7/2020 0:1:27 node_list ['30aea474bfe8', '30aea474cbcc', '30aea458f354', '3c71bf877510']
+20/7/2020 0:1:29 node_list ['30aea474bfe8', '30aea474cbcc', '30aea458f354', '3c71bf877510']
+20/7/2020 0:1:30 node_list ['30aea474bfe8', '30aea474cbcc', '30aea458f354', '3c71bf877510']
+20/7/2020 0:1:36 node_list ['30aea474bfe8', '30aea474cbcc', '30aea458f354', '3c71bf877510']
+20/7/2020 0:1:38 node_list ['30aea474bfe8', '30aea474cbcc', '30aea458f354', '3c71bf877510']
+20/7/2020 0:3:35 counter 31 id 30aea474cbcc pow 2,  id 30aea458f354 pow 2, 
+------------------------
+------------------------
+------------------------
+------------------------
+20/7/2020 0:3:6 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:3:7 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:3:9 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:3:10 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:3:11 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:3:12 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:3:13 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:3:17 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:3:18 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:3:21 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:5:39 counter 37 id 30aea474cbcc pow 2,  id 3c71bf877510 pow 2,  id 30aea458f354 pow 2, 
+------------------------
+20/7/2020 0:1:34 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:37 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:39 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:41 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:41 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:43 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:45 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:46 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:51 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:52 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:3:59 counter 35 id 3c71bf877510 pow 2,  id 30aea458f354 pow 2,  id 30aea474cbcc pow 2, 
+------------------------
+------------------------
+------------------------
+20/7/2020 0:1:34 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:37 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:38 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:40 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:42 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:43 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:46 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:48 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:4:7 counter 38 id 30aea474cbcc pow 2,  id 3c71bf877510 pow 2,  id 30aea458f354 pow 2, 
+------------------------
+20/7/2020 0:1:31 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:32 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:33 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:34 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:35 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:36 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:37 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:40 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:42 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:45 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:1:47 node_list ['30aea474bfe8', '30aea458f354', '30aea474cbcc', '3c71bf877510']
+20/7/2020 0:4:0 counter 42 id 3c71bf877510 pow 2,  id 30aea458f354 pow 2,  id 30aea474cbcc pow 2, 
+------------------------
+20/7/2020 0:0:50 node_list ['30aea474bfe8', '3c71bf877510']
+20/7/2020 0:0:54 node_list ['30aea474bfe8', '3c71bf877510']
+20/7/2020 0:1:4 node_list ['30aea474bfe8', '3c71bf877510']
+20/7/2020 0:1:7 node_list ['30aea474bfe8', '3c71bf877510']
+20/7/2020 0:6:28 counter 108 id 3c71bf877510 pow 2, 
+------------------------
+------------------------
+------------------------
+20/7/2020 0:1:34 node_list ['30aea474bfe8', '30aea474cbcc', '30aea458f354', '3c71bf877510']
+20/7/2020 0:1:34 node_list ['30aea474bfe8', '30aea474cbcc', '30aea458f354', '3c71bf877510']
+20/7/2020 0:1:37 node_list ['30aea474bfe8', '30aea474cbcc', '30aea458f354', '3c71bf877510']
+20/7/2020 0:1:39 node_list ['30aea474bfe8', '30aea474cbcc', '30aea458f354', '3c71bf877510']
+20/7/2020 0:1:41 node_list ['30aea474bfe8', '30aea474cbcc', '30aea458f354', '3c71bf877510']
+20/7/2020 0:1:45 node_list ['30aea474bfe8', '30aea474cbcc', '30aea458f354', '3c71bf877510']
+20/7/2020 0:1:46 node_list ['30aea474bfe8', '30aea474cbcc', '30aea458f354', '3c71bf877510']
+20/7/2020 0:1:50 node_list ['30aea474bfe8', '30aea474cbcc', '30aea458f354', '3c71bf877510']
+20/7/2020 0:3:37 counter 30 id 3c71bf877510 pow 2,  id 30aea458f354 pow 2,  id 30aea474cbcc pow 2, 
+------------------------
+------------------------
+------------------------
+------------------------
+------------------------
+------------------------
