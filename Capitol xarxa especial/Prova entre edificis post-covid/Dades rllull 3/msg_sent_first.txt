@@ -1,0 +1,103 @@
+------------------------
+20/7/2020 0:0:1 LoPy ON
+20/7/2020 0:0:2 start Join
+20/7/2020 0:0:2 finish Join
+------------------------
+20/7/2020 0:0:0 LoPy ON
+20/7/2020 0:0:1 start Join
+20/7/2020 0:0:2 finish Join
+22/7/2020 21:47:21 Se ha pulsado el boton
+22/7/2020 21:47:25 config start, sending 1
+22/7/2020 21:47:25 intent config 2, msg sent: Config 2 30aea474cbcc
+22/7/2020 21:47:28 intent config 3, msg sent: Config 2 30aea474cbcc
+22/7/2020 21:47:30 intent config 4, msg sent: Config 3 30aea474cbcc
+22/7/2020 21:47:32 intent config 5, msg sent: Config 3 30aea474cbcc
+22/7/2020 21:47:35 intent config 6, msg sent: Config 4 30aea474cbcc
+22/7/2020 21:47:37 intent config 7, msg sent: Config 4 30aea474cbcc
+22/7/2020 21:47:39 intent config 8, msg sent: Config 5 30aea474cbcc
+22/7/2020 21:47:42 intent config 9, msg sent: Config 5 30aea474cbcc
+22/7/2020 21:47:44 intent config 10, msg sent: Config 6 30aea474cbcc
+22/7/2020 21:47:46 intent config 11, msg sent: Config 6 30aea474cbcc
+22/7/2020 21:47:49 intent config 12, msg sent: Config 7 30aea474cbcc
+22/7/2020 21:47:51 intent config 13, msg sent: Config 7 30aea474cbcc
+22/7/2020 21:47:53 intent config 14, msg sent: Config 8 30aea474cbcc
+22/7/2020 21:47:56 intent config 15, msg sent: Config 8 30aea474cbcc
+22/7/2020 21:47:58 intent config 16, msg sent: Config 9 30aea474cbcc
+22/7/2020 21:48:0 intent config 17, msg sent: Config 9 30aea474cbcc
+22/7/2020 21:48:3 intent config 18, msg sent: Config 10 30aea474cbcc
+22/7/2020 21:48:5 intent config 19, msg sent: Config 10 30aea474cbcc
+22/7/2020 21:48:7 intent config 20, msg sent: Config 11 30aea474cbcc
+22/7/2020 21:48:10 intent config 21, msg sent: Config 11 30aea474cbcc
+22/7/2020 21:48:12 intent config 22, msg sent: Config 12 30aea474cbcc
+22/7/2020 21:48:14 intent config 23, msg sent: Config 12 30aea474cbcc
+22/7/2020 21:48:17 intent config 24, msg sent: Config 13 30aea474cbcc
+22/7/2020 21:48:19 intent config 25, msg sent: Config 13 30aea474cbcc
+22/7/2020 21:48:21 intent config 26, msg sent: Config 14 30aea474cbcc
+22/7/2020 21:48:24 intent config 27, msg sent: Config 14 30aea474cbcc
+22/7/2020 21:48:26 intent config 28, msg sent: Config 14 30aea474cbcc
+22/7/2020 21:48:28 intent config 29, msg sent: Config 14 30aea474cbcc
+22/7/2020 21:48:31 intent config 30, msg sent: Config 3 30aea474cbcc
+22/7/2020 21:48:33 intent config 31, msg sent: Config 3 30aea474cbcc
+22/7/2020 21:48:35 intent config 32, msg sent: Config 4 30aea474cbcc
+22/7/2020 21:48:38 intent config 33, msg sent: Config 4 30aea474cbcc
+22/7/2020 21:48:40 intent config 34, msg sent: Config 5 30aea474cbcc
+22/7/2020 21:48:43 intent config 35, msg sent: Config 5 30aea474cbcc
+22/7/2020 21:48:45 intent config 36, msg sent: Config 6 30aea474cbcc
+22/7/2020 21:48:47 intent config 37, msg sent: Config 6 30aea474cbcc
+22/7/2020 21:48:50 intent config 38, msg sent: Config 7 30aea474cbcc
+22/7/2020 21:48:52 intent config 39, msg sent: Config 7 30aea474cbcc
+22/7/2020 21:48:54 intent config 40, msg sent: Config 8 30aea474cbcc
+22/7/2020 21:48:57 intent config 41, msg sent: Config 8 30aea474cbcc
+22/7/2020 21:48:59 intent config 42, msg sent: Config 9 30aea474cbcc
+22/7/2020 21:49:1 intent config 43, msg sent: Config 9 30aea474cbcc
+22/7/2020 21:49:4 intent config 44, msg sent: Config 10 30aea474cbcc
+22/7/2020 21:49:6 intent config 45, msg sent: Config 10 30aea474cbcc
+22/7/2020 21:49:8 intent config 46, msg sent: Config 11 30aea474cbcc
+22/7/2020 21:49:11 intent config 47, msg sent: Config 11 30aea474cbcc
+22/7/2020 21:49:13 intent config 48, msg sent: Config 12 30aea474cbcc
+22/7/2020 21:49:15 intent config 49, msg sent: Config 12 30aea474cbcc
+22/7/2020 21:49:18 intent config 50, msg sent: Config 13 30aea474cbcc
+22/7/2020 21:49:20 intent config 51, msg sent: Config 13 30aea474cbcc
+22/7/2020 21:49:22 intent config 52, msg sent: Config 14 30aea474cbcc
+22/7/2020 21:49:25 intent config 53, msg sent: Config 14 30aea474cbcc
+22/7/2020 21:49:27 intent config 54, msg sent: Config 14 30aea474cbcc
+22/7/2020 21:49:29 intent config 55, msg sent: Config 14 30aea474cbcc
+22/7/2020 21:49:32 intent config 56, msg sent: Config 3 30aea474cbcc
+22/7/2020 21:49:34 intent config 57, msg sent: Config 3 30aea474cbcc
+22/7/2020 21:49:37 intent config 58, msg sent: Config 4 30aea474cbcc
+22/7/2020 21:49:39 intent config 59, msg sent: Config 4 30aea474cbcc
+22/7/2020 21:49:41 intent config 60, msg sent: Config 5 30aea474cbcc
+22/7/2020 21:49:44 intent config 61, msg sent: Config 5 30aea474cbcc
+22/7/2020 21:49:46 intent config 62, msg sent: Config 6 30aea474cbcc
+22/7/2020 21:49:48 intent config 63, msg sent: Config 6 30aea474cbcc
+22/7/2020 21:49:51 intent config 64, msg sent: Config 7 30aea474cbcc
+22/7/2020 21:49:53 intent config 65, msg sent: Config 7 30aea474cbcc
+22/7/2020 21:49:55 intent config 66, msg sent: Config 8 30aea474cbcc
+22/7/2020 21:49:58 intent config 67, msg sent: Config 8 30aea474cbcc
+22/7/2020 21:50:0 intent config 68, msg sent: Config 9 30aea474cbcc
+22/7/2020 21:50:2 intent config 69, msg sent: Config 9 30aea474cbcc
+22/7/2020 21:50:5 intent config 70, msg sent: Config 10 30aea474cbcc
+22/7/2020 21:50:7 intent config 71, msg sent: Config 10 30aea474cbcc
+22/7/2020 21:50:9 intent config 72, msg sent: Config 11 30aea474cbcc
+22/7/2020 21:50:12 intent config 73, msg sent: Config 11 30aea474cbcc
+22/7/2020 21:50:14 intent config 74, msg sent: Config 12 30aea474cbcc
+22/7/2020 21:50:16 intent config 75, msg sent: Config 12 30aea474cbcc
+22/7/2020 21:50:19 intent config 76, msg sent: Config 13 30aea474cbcc
+22/7/2020 21:50:21 intent config 77, msg sent: Config 13 30aea474cbcc
+22/7/2020 21:50:23 intent config 78, msg sent: Config 14 30aea474cbcc
+22/7/2020 21:50:26 intent config 79, msg sent: Config 14 30aea474cbcc
+22/7/2020 21:50:28 intent config 80, msg sent: Config 14 30aea474cbcc
+22/7/2020 21:50:30 intent config 81, msg sent: Config 14 30aea474cbcc
+22/7/2020 21:50:33 intent config 82, msg sent: Config 3 30aea474cbcc
+22/7/2020 21:50:35 intent config 83, msg sent: Config 3 30aea474cbcc
+22/7/2020 21:50:37 intent config 84, msg sent: Config 4 30aea474cbcc
+22/7/2020 21:50:40 intent config 85, msg sent: Config 4 30aea474cbcc
+22/7/2020 21:50:42 intent config 86, msg sent: Config 5 30aea474cbcc
+22/7/2020 21:50:45 intent config 87, msg sent: Config 5 30aea474cbcc
+22/7/2020 21:50:47 intent config 88, msg sent: Config 6 30aea474cbcc
+22/7/2020 21:50:49 intent config 89, msg sent: Config 6 30aea474cbcc
+22/7/2020 21:50:52 ack config, msg received Config 4 30aea474cbcc 3c71bf877510
+------------------------
+20/7/2020 0:0:0 LoPy ON
+20/7/2020 0:0:2 start Join
+20/7/2020 0:0:2 finish Join

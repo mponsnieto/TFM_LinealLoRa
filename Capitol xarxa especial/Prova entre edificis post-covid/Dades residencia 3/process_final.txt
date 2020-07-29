@@ -1,0 +1,53 @@
+27/7/2020 9:33:0 Nodo sensor en marcha
+------------------------
+27/7/2020 9:33:0 Nodo sensor en marcha
+------------------------
+27/7/2020 11:55:57 Empieza el config
+27/7/2020 11:56:2 Empieza el config
+27/7/2020 11:56:7 Empieza el config
+27/7/2020 11:56:8 Empieza el config
+27/7/2020 11:56:9 Empieza el config
+27/7/2020 11:56:11 Empieza el config
+27/7/2020 11:56:14 Empieza el config
+27/7/2020 11:56:18 Empieza el config
+27/7/2020 11:56:38 Empieza el config
+27/7/2020 11:56:40 Empieza el config
+27/7/2020 11:56:43 Empieza el config
+27/7/2020 11:56:47 Empieza el config
+27/7/2020 11:56:49 Empieza el config
+27/7/2020 11:56:54 Empieza el config
+27/7/2020 11:56:55 Empieza el config
+27/7/2020 11:56:57 Empieza el config
+27/7/2020 11:57:1 Empieza el config
+27/7/2020 11:57:1 Empieza el config
+27/7/2020 11:57:7 Empieza el config
+27/7/2020 11:57:13 Empieza el config
+27/7/2020 11:57:20 Empieza el config
+27/7/2020 11:57:22 Empieza el config
+27/7/2020 11:57:34 Empieza el config
+27/7/2020 11:57:37 Empieza el config
+27/7/2020 11:57:39 Empieza el config
+27/7/2020 11:57:44 Empieza el config
+27/7/2020 11:57:51 Empieza el config
+27/7/2020 11:57:53 Empieza el config
+27/7/2020 11:57:56 Empieza el config
+27/7/2020 11:57:57 Empieza el config
+27/7/2020 11:58:2 Empieza el config
+27/7/2020 11:58:14 Empieza el config
+27/7/2020 11:58:17 Empieza el config
+27/7/2020 11:58:18 Empieza el config
+27/7/2020 11:58:21 Empieza el config
+27/7/2020 11:58:21 Empieza el config
+27/7/2020 11:58:24 Empieza el config
+27/7/2020 11:58:25 Empieza el config
+27/7/2020 11:58:31 Empieza el config
+27/7/2020 11:58:37 Empieza el config
+27/7/2020 11:58:43 Empieza el config
+27/7/2020 11:58:47 Empieza el config
+27/7/2020 11:58:49 Empieza el config
+27/7/2020 11:58:52 Empieza el config
+27/7/2020 11:59:23 Tenemos node_list ['30aea474cbcc', '30aea458f2e4', '3c71bf877510', '30aea458f354']
+27/7/2020 11:59:26 Empieza el config
+27/7/2020 11:59:37 Empieza discover
+27/7/2020 9:33:0 Nodo sensor en marcha
+------------------------
