@@ -1,0 +1,17 @@
+28/7/2020 8:46:0 Nodo sensor en marcha
+------------------------
+28/7/2020 8:46:0 Nodo sensor en marcha
+------------------------
+28/7/2020 9:26:4 Empieza el config
+28/7/2020 9:26:9 Empieza el config
+28/7/2020 9:26:11 Empieza el config
+28/7/2020 9:26:14 Empieza el config
+28/7/2020 9:26:15 Empieza el config
+28/7/2020 9:26:18 Empieza el config
+28/7/2020 9:26:19 Empieza el config
+28/7/2020 9:26:46 Tenemos node_list ['30aea474cbcc', '30aea458f354']
+28/7/2020 9:26:55 Empieza el config
+28/7/2020 9:27:9 Empieza discover
+28/7/2020 9:30:27 Acaba discover
+28/7/2020 8:46:0 Nodo sensor en marcha
+------------------------

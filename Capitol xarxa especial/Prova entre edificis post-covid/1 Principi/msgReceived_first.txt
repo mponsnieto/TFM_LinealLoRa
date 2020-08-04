@@ -1,0 +1,214 @@
+------------------------
+------------------------
+29/7/2020 9:27:3 msg Config 3 30aea474cbcc 3c71bf877510 stats (rx_timestamp=64964137, rssi=-103, snr=4.0, sfrx=7, sftx=7, tx_trials=0, tx_power=5, tx_time_on_air=83, tx_counter=17, tx_frequency=868000000)
+29/7/2020 9:27:5 msg Config 3 30aea474cbcc 3c71bf877510 stats (rx_timestamp=66540586, rssi=-116, snr=-6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=5, tx_time_on_air=83, tx_counter=17, tx_frequency=868000000)
+29/7/2020 9:27:6 msg Config 3 30aea474cbcc 3c71bf877510 stats (rx_timestamp=68292131, rssi=-100, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=5, tx_time_on_air=83, tx_counter=17, tx_frequency=868000000)
+29/7/2020 9:27:7 msg Config 3 30aea474cbcc 3c71bf877510 stats (rx_timestamp=68691122, rssi=-98, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=5, tx_time_on_air=83, tx_counter=17, tx_frequency=868000000)
+29/7/2020 9:27:9 msg Config 5 30aea474cbcc 3c71bf877510 stats (rx_timestamp=71015574, rssi=-117, snr=-4.0, sfrx=7, sftx=7, tx_trials=0, tx_power=5, tx_time_on_air=83, tx_counter=17, tx_frequency=868000000)
+29/7/2020 9:27:36 msg Config 3 30aea474cbcc 3c71bf877510 stats (rx_timestamp=97596520, rssi=-115, snr=-4.0, sfrx=7, sftx=7, tx_trials=0, tx_power=5, tx_time_on_air=83, tx_counter=17, tx_frequency=868000000)
+29/7/2020 9:27:36 msg Config 5 30aea474cbcc 3c71bf877510 stats (rx_timestamp=98248522, rssi=-117, snr=-6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=5, tx_time_on_air=83, tx_counter=17, tx_frequency=868000000)
+29/7/2020 9:27:42 msg stop 2 30aea474cbcc 30aea458f354 1 stats (rx_timestamp=104558555, rssi=-115, snr=-4.0, sfrx=7, sftx=7, tx_trials=0, tx_power=5, tx_time_on_air=83, tx_counter=17, tx_frequency=868000000)
+29/7/2020 9:27:47 msg stop 2 30aea474cbcc 30aea458f354 1 stats (rx_timestamp=108723545, rssi=-113, snr=-3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=103, tx_counter=18, tx_frequency=868000000)
+29/7/2020 9:27:48 msg stop 3 30aea474cbcc 30aea458f354 1 stats (rx_timestamp=109842499, rssi=-108, snr=0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=103, tx_counter=19, tx_frequency=868000000)
+29/7/2020 9:27:50 msg stop 3 30aea474cbcc 30aea458f354 1 stats (rx_timestamp=112311529, rssi=-108, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=103, tx_counter=20, tx_frequency=868000000)
+29/7/2020 9:28:2 msg Discover normal 2 30aea458f354 stats (rx_timestamp=123795373, rssi=-115, snr=-5.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=103, tx_counter=21, tx_frequency=868000000)
+29/7/2020 9:28:5 msg Discover normal 2 30aea458f354 stats (rx_timestamp=127237427, rssi=-103, snr=4.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=83, tx_counter=22, tx_frequency=868000000)
+29/7/2020 9:28:10 msg Discover normal 2 30aea458f354 stats (rx_timestamp=132388482, rssi=-76, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=83, tx_counter=23, tx_frequency=868000000)
+29/7/2020 9:28:15 msg Discover normal 2 30aea458f354 stats (rx_timestamp=137367522, rssi=-74, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=83, tx_counter=24, tx_frequency=868000000)
+29/7/2020 9:28:20 msg Discover normal 3 30aea458f354 stats (rx_timestamp=141756338, rssi=-115, snr=-4.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=83, tx_counter=25, tx_frequency=868000000)
+29/7/2020 9:28:23 msg Discover normal 3 30aea458f354 stats (rx_timestamp=145025509, rssi=-111, snr=-1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=3, tx_time_on_air=83, tx_counter=26, tx_frequency=868000000)
+29/7/2020 9:28:30 msg Discover normal 4 30aea458f354 stats (rx_timestamp=151788279, rssi=-112, snr=-3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=3, tx_time_on_air=83, tx_counter=27, tx_frequency=868000000)
+29/7/2020 9:28:33 msg Discover normal 4 30aea458f354 stats (rx_timestamp=154977487, rssi=-109, snr=0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=4, tx_time_on_air=83, tx_counter=28, tx_frequency=868000000)
+29/7/2020 9:28:37 msg Discover normal 4 30aea458f354 stats (rx_timestamp=159100263, rssi=-114, snr=-4.0, sfrx=7, sftx=7, tx_trials=0, tx_power=4, tx_time_on_air=83, tx_counter=29, tx_frequency=868000000)
+29/7/2020 9:28:40 msg Discover normal 4 30aea458f354 stats (rx_timestamp=162468437, rssi=-109, snr=0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=4, tx_time_on_air=83, tx_counter=30, tx_frequency=868000000)
+29/7/2020 9:28:47 msg Discover normal 5 30aea458f354 stats (rx_timestamp=169360245, rssi=-110, snr=-1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=4, tx_time_on_air=83, tx_counter=31, tx_frequency=868000000)
+29/7/2020 9:28:50 msg Discover normal 5 30aea458f354 stats (rx_timestamp=172517461, rssi=-110, snr=-1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=5, tx_time_on_air=83, tx_counter=32, tx_frequency=868000000)
+29/7/2020 9:28:55 msg Discover normal 5 30aea458f354 stats (rx_timestamp=176844277, rssi=-111, snr=-2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=5, tx_time_on_air=83, tx_counter=33, tx_frequency=868000000)
+29/7/2020 9:28:58 msg Discover normal 6 30aea458f354 stats (rx_timestamp=180246448, rssi=-112, snr=-2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=5, tx_time_on_air=83, tx_counter=34, tx_frequency=868000000)
+29/7/2020 9:29:2 msg Discover normal 6 30aea458f354 stats (rx_timestamp=184188264, rssi=-112, snr=-2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=6, tx_time_on_air=83, tx_counter=35, tx_frequency=868000000)
+29/7/2020 9:29:6 msg Discover normal 6 30aea458f354 stats (rx_timestamp=187808437, rssi=-109, snr=-3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=6, tx_time_on_air=83, tx_counter=36, tx_frequency=868000000)
+29/7/2020 9:29:13 msg Discover normal 7 30aea458f354 stats (rx_timestamp=194642206, rssi=-108, snr=-0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=6, tx_time_on_air=83, tx_counter=37, tx_frequency=868000000)
+29/7/2020 9:29:16 msg Discover normal 7 30aea458f354 stats (rx_timestamp=198286200, rssi=-109, snr=-0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=7, tx_time_on_air=83, tx_counter=38, tx_frequency=868000000)
+29/7/2020 9:29:20 msg Discover normal 7 30aea458f354 stats (rx_timestamp=202145193, rssi=-109, snr=-0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=7, tx_time_on_air=83, tx_counter=39, tx_frequency=868000000)
+29/7/2020 9:29:23 msg Discover normal 7 30aea458f354 stats (rx_timestamp=205419415, rssi=-98, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=7, tx_time_on_air=83, tx_counter=40, tx_frequency=868000000)
+29/7/2020 9:29:34 msg Discover normal 8 30aea458f354 stats (rx_timestamp=215769170, rssi=-108, snr=0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=7, tx_time_on_air=83, tx_counter=41, tx_frequency=868000000)
+29/7/2020 9:29:36 msg Discover normal 8 30aea458f354 stats (rx_timestamp=218521531, rssi=-106, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=8, tx_time_on_air=83, tx_counter=42, tx_frequency=868000000)
+29/7/2020 9:29:38 msg Discover normal 8 30aea458f354 stats (rx_timestamp=220221118, rssi=-108, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=8, tx_time_on_air=83, tx_counter=43, tx_frequency=868000000)
+29/7/2020 9:29:42 msg Discover normal 9 30aea458f354 stats (rx_timestamp=223691580, rssi=-106, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=8, tx_time_on_air=83, tx_counter=44, tx_frequency=868000000)
+29/7/2020 9:29:45 msg Discover normal 9 30aea458f354 stats (rx_timestamp=226998108, rssi=-106, snr=0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=8, tx_time_on_air=83, tx_counter=44, tx_frequency=868000000)
+29/7/2020 9:29:52 msg Discover normal 9 30aea458f354 stats (rx_timestamp=233891178, rssi=-106, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=9, tx_time_on_air=83, tx_counter=45, tx_frequency=868000000)
+29/7/2020 9:29:56 msg Discover normal 9 30aea458f354 stats (rx_timestamp=237728168, rssi=-106, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=9, tx_time_on_air=83, tx_counter=46, tx_frequency=868000000)
+29/7/2020 9:29:59 msg Discover normal 10 30aea458f354 stats (rx_timestamp=241416162, rssi=-106, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=9, tx_time_on_air=83, tx_counter=47, tx_frequency=868000000)
+29/7/2020 9:30:3 msg Discover normal 10 30aea458f354 stats (rx_timestamp=245130160, rssi=-106, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=10, tx_time_on_air=88, tx_counter=48, tx_frequency=868000000)
+29/7/2020 9:30:7 msg Discover normal 10 30aea458f354 stats (rx_timestamp=248773151, rssi=-105, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=10, tx_time_on_air=88, tx_counter=49, tx_frequency=868000000)
+29/7/2020 9:30:10 msg Discover normal 10 30aea458f354 stats (rx_timestamp=252490144, rssi=-105, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=10, tx_time_on_air=88, tx_counter=50, tx_frequency=868000000)
+29/7/2020 9:30:14 msg Discover normal 11 30aea458f354 stats (rx_timestamp=256201135, rssi=-106, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=10, tx_time_on_air=88, tx_counter=51, tx_frequency=868000000)
+29/7/2020 9:30:18 msg Discover normal 11 30aea458f354 stats (rx_timestamp=259913129, rssi=-105, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=11, tx_time_on_air=88, tx_counter=52, tx_frequency=868000000)
+29/7/2020 9:30:22 msg Discover normal 11 30aea458f354 stats (rx_timestamp=263816122, rssi=-104, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=11, tx_time_on_air=88, tx_counter=53, tx_frequency=868000000)
+29/7/2020 9:30:25 msg Discover normal 11 30aea458f354 stats (rx_timestamp=267532123, rssi=-104, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=11, tx_time_on_air=88, tx_counter=54, tx_frequency=868000000)
+29/7/2020 9:30:29 msg Discover normal 12 30aea458f354 stats (rx_timestamp=271244115, rssi=-105, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=11, tx_time_on_air=88, tx_counter=55, tx_frequency=868000000)
+29/7/2020 9:30:33 msg Discover normal 12 30aea458f354 stats (rx_timestamp=275113107, rssi=-104, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=12, tx_time_on_air=88, tx_counter=56, tx_frequency=868000000)
+29/7/2020 9:30:37 msg Discover normal 12 30aea458f354 stats (rx_timestamp=278830098, rssi=-103, snr=4.0, sfrx=7, sftx=7, tx_trials=0, tx_power=12, tx_time_on_air=88, tx_counter=57, tx_frequency=868000000)
+29/7/2020 9:30:40 msg Discover normal 12 30aea458f354 stats (rx_timestamp=282545097, rssi=-105, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=12, tx_time_on_air=88, tx_counter=58, tx_frequency=868000000)
+29/7/2020 9:30:44 msg Discover normal 13 30aea458f354 stats (rx_timestamp=286244087, rssi=-104, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=12, tx_time_on_air=88, tx_counter=59, tx_frequency=868000000)
+29/7/2020 9:30:48 msg Discover normal 13 30aea458f354 stats (rx_timestamp=289940081, rssi=-104, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=13, tx_time_on_air=88, tx_counter=60, tx_frequency=868000000)
+29/7/2020 9:30:57 msg Discover normal 13 30aea458f354 stats (rx_timestamp=299243614, rssi=-105, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=13, tx_time_on_air=88, tx_counter=61, tx_frequency=868000000)
+29/7/2020 9:31:3 msg Discover normal 13 30aea458f354 stats (rx_timestamp=305409602, rssi=-105, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=13, tx_time_on_air=88, tx_counter=62, tx_frequency=868000000)
+29/7/2020 9:31:9 msg Discover next 12 0 stats (rx_timestamp=311568591, rssi=-106, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=13, tx_time_on_air=88, tx_counter=63, tx_frequency=868000000)
+29/7/2020 9:31:19 msg Discover next 12 0 stats (rx_timestamp=321075665, rssi=-115, snr=-6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=98, tx_counter=67, tx_frequency=868000000)
+29/7/2020 9:31:23 msg Discover next 12 0 stats (rx_timestamp=325535650, rssi=-116, snr=-5.0, sfrx=7, sftx=7, tx_trials=0, tx_power=3, tx_time_on_air=98, tx_counter=68, tx_frequency=868000000)
+29/7/2020 9:31:27 msg Hello 2 30aea458f354 stats (rx_timestamp=329409643, rssi=-115, snr=-4.0, sfrx=7, sftx=7, tx_trials=0, tx_power=3, tx_time_on_air=98, tx_counter=69, tx_frequency=868000000)
+29/7/2020 9:31:31 msg Hello 2 30aea458f354 stats (rx_timestamp=332616635, rssi=-115, snr=-4.0, sfrx=7, sftx=7, tx_trials=0, tx_power=3, tx_time_on_air=98, tx_counter=70, tx_frequency=868000000)
+29/7/2020 9:31:31 counter 62 update neighbour, msg received: Hello 2 30aea458f354
+29/7/2020 9:31:33 msg Hello 3 30aea458f354 stats (rx_timestamp=335072636, rssi=-114, snr=-3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=3, tx_time_on_air=98, tx_counter=71, tx_frequency=868000000)
+29/7/2020 9:31:35 counter 63 update neighbour, msg received: Hello 2 30aea458f354
+29/7/2020 9:31:37 msg Hello 3 30aea458f354 stats (rx_timestamp=338607626, rssi=-115, snr=-2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=4, tx_time_on_air=98, tx_counter=72, tx_frequency=868000000)
+29/7/2020 9:31:38 counter 64 update neighbour, msg received: Hello 3 30aea458f354
+29/7/2020 9:31:40 msg Hello 3 30aea458f354 stats (rx_timestamp=341994627, rssi=-112, snr=-1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=4, tx_time_on_air=98, tx_counter=73, tx_frequency=868000000)
+29/7/2020 9:31:42 counter 65 update neighbour, msg received: Hello 3 30aea458f354
+29/7/2020 9:31:44 msg Hello 3 30aea458f354 stats (rx_timestamp=346357621, rssi=-113, snr=-2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=4, tx_time_on_air=98, tx_counter=74, tx_frequency=868000000)
+29/7/2020 9:31:45 counter 66 update neighbour, msg received: Hello 3 30aea458f354
+29/7/2020 9:31:48 msg Hello 4 30aea458f354 stats (rx_timestamp=349902612, rssi=-113, snr=-2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=4, tx_time_on_air=98, tx_counter=75, tx_frequency=868000000)
+29/7/2020 9:31:48 counter 67 update neighbour, msg received: Hello 3 30aea458f354
+29/7/2020 9:31:50 msg Hello 4 30aea458f354 stats (rx_timestamp=352093609, rssi=-112, snr=-2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=5, tx_time_on_air=98, tx_counter=76, tx_frequency=868000000)
+29/7/2020 9:31:52 counter 68 update neighbour, msg received: Hello 4 30aea458f354
+29/7/2020 9:31:54 msg Hello 4 30aea458f354 stats (rx_timestamp=356446605, rssi=-113, snr=-3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=5, tx_time_on_air=98, tx_counter=77, tx_frequency=868000000)
+29/7/2020 9:31:55 counter 69 update neighbour, msg received: Hello 4 30aea458f354
+29/7/2020 9:31:58 msg Hello 4 30aea458f354 stats (rx_timestamp=359809595, rssi=-111, snr=-1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=5, tx_time_on_air=98, tx_counter=78, tx_frequency=868000000)
+29/7/2020 9:31:58 counter 70 update neighbour, msg received: Hello 4 30aea458f354
+29/7/2020 9:32:0 msg Hello 5 30aea458f354 stats (rx_timestamp=362521594, rssi=-112, snr=-2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=5, tx_time_on_air=98, tx_counter=79, tx_frequency=868000000)
+29/7/2020 9:32:2 counter 71 update neighbour, msg received: Hello 4 30aea458f354
+29/7/2020 9:32:5 msg Hello 5 30aea458f354 stats (rx_timestamp=366704587, rssi=-111, snr=-1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=6, tx_time_on_air=98, tx_counter=80, tx_frequency=868000000)
+29/7/2020 9:32:5 counter 72 update neighbour, msg received: Hello 5 30aea458f354
+29/7/2020 9:32:8 msg Hello 5 30aea458f354 stats (rx_timestamp=370060581, rssi=-112, snr=-1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=6, tx_time_on_air=98, tx_counter=81, tx_frequency=868000000)
+29/7/2020 9:32:9 counter 73 update neighbour, msg received: Hello 5 30aea458f354
+29/7/2020 9:32:10 msg Hello 5 30aea458f354 stats (rx_timestamp=372411579, rssi=-110, snr=-1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=6, tx_time_on_air=98, tx_counter=82, tx_frequency=868000000)
+29/7/2020 9:32:12 counter 74 update neighbour, msg received: Hello 5 30aea458f354
+29/7/2020 9:32:14 msg Hello 6 30aea458f354 stats (rx_timestamp=375765579, rssi=-111, snr=-1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=6, tx_time_on_air=98, tx_counter=83, tx_frequency=868000000)
+29/7/2020 9:32:15 counter 75 update neighbour, msg received: Hello 5 30aea458f354
+29/7/2020 9:32:17 msg Hello 6 30aea458f354 stats (rx_timestamp=379131569, rssi=-111, snr=-2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=7, tx_time_on_air=98, tx_counter=84, tx_frequency=868000000)
+29/7/2020 9:32:19 counter 76 update neighbour, msg received: Hello 6 30aea458f354
+29/7/2020 9:32:22 msg Hello 6 30aea458f354 stats (rx_timestamp=383688563, rssi=-111, snr=-2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=7, tx_time_on_air=98, tx_counter=85, tx_frequency=868000000)
+29/7/2020 9:32:22 counter 77 update neighbour, msg received: Hello 6 30aea458f354
+29/7/2020 9:32:25 msg Hello 6 30aea458f354 stats (rx_timestamp=386888563, rssi=-112, snr=-2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=7, tx_time_on_air=98, tx_counter=86, tx_frequency=868000000)
+29/7/2020 9:32:26 counter 78 update neighbour, msg received: Hello 6 30aea458f354
+29/7/2020 9:32:27 msg Hello 7 30aea458f354 stats (rx_timestamp=389420561, rssi=-111, snr=-1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=7, tx_time_on_air=98, tx_counter=87, tx_frequency=868000000)
+29/7/2020 9:32:29 counter 79 update neighbour, msg received: Hello 6 30aea458f354
+29/7/2020 9:32:32 msg Hello 7 30aea458f354 stats (rx_timestamp=393778549, rssi=-110, snr=-1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=8, tx_time_on_air=98, tx_counter=88, tx_frequency=868000000)
+29/7/2020 9:32:32 counter 80 update neighbour, msg received: Hello 7 30aea458f354
+29/7/2020 9:32:34 msg Hello 7 30aea458f354 stats (rx_timestamp=396307547, rssi=-108, snr=-0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=8, tx_time_on_air=98, tx_counter=89, tx_frequency=868000000)
+29/7/2020 9:32:36 counter 81 update neighbour, msg received: Hello 7 30aea458f354
+29/7/2020 9:32:38 msg Hello 7 30aea458f354 stats (rx_timestamp=400493541, rssi=-108, snr=0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=8, tx_time_on_air=98, tx_counter=90, tx_frequency=868000000)
+29/7/2020 9:32:39 counter 82 update neighbour, msg received: Hello 7 30aea458f354
+29/7/2020 9:32:42 msg Hello 8 30aea458f354 stats (rx_timestamp=403843531, rssi=-108, snr=0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=8, tx_time_on_air=98, tx_counter=91, tx_frequency=868000000)
+29/7/2020 9:32:42 counter 83 update neighbour, msg received: Hello 7 30aea458f354
+29/7/2020 9:32:45 msg Hello 8 30aea458f354 stats (rx_timestamp=407216533, rssi=-108, snr=0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=9, tx_time_on_air=98, tx_counter=92, tx_frequency=868000000)
+29/7/2020 9:32:46 counter 84 update neighbour, msg received: Hello 8 30aea458f354
+29/7/2020 9:32:47 msg Hello 8 30aea458f354 stats (rx_timestamp=409584529, rssi=-108, snr=0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=9, tx_time_on_air=98, tx_counter=93, tx_frequency=868000000)
+29/7/2020 9:32:49 counter 85 update neighbour, msg received: Hello 8 30aea458f354
+29/7/2020 9:32:51 msg Hello 8 30aea458f354 stats (rx_timestamp=413117523, rssi=-108, snr=0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=9, tx_time_on_air=98, tx_counter=94, tx_frequency=868000000)
+29/7/2020 9:32:53 counter 86 update neighbour, msg received: Hello 8 30aea458f354
+29/7/2020 9:32:56 msg Hello 9 30aea458f354 stats (rx_timestamp=417651516, rssi=-109, snr=-0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=9, tx_time_on_air=98, tx_counter=95, tx_frequency=868000000)
+29/7/2020 9:32:56 counter 87 update neighbour, msg received: Hello 8 30aea458f354
+29/7/2020 9:32:59 msg Hello 9 30aea458f354 stats (rx_timestamp=420853515, rssi=-106, snr=0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=10, tx_time_on_air=103, tx_counter=96, tx_frequency=868000000)
+29/7/2020 9:32:59 counter 88 update neighbour, msg received: Hello 9 30aea458f354
+29/7/2020 9:33:2 msg Hello 9 30aea458f354 stats (rx_timestamp=424229507, rssi=-106, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=10, tx_time_on_air=103, tx_counter=97, tx_frequency=868000000)
+29/7/2020 9:33:3 counter 89 update neighbour, msg received: Hello 9 30aea458f354
+29/7/2020 9:33:6 msg Hello 9 30aea458f354 stats (rx_timestamp=427606507, rssi=-106, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=10, tx_time_on_air=103, tx_counter=98, tx_frequency=868000000)
+29/7/2020 9:33:6 counter 90 update neighbour, msg received: Hello 9 30aea458f354
+29/7/2020 9:33:8 msg Hello 10 30aea458f354 stats (rx_timestamp=430008505, rssi=-106, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=10, tx_time_on_air=103, tx_counter=99, tx_frequency=868000000)
+29/7/2020 9:33:10 counter 91 update neighbour, msg received: Hello 9 30aea458f354
+29/7/2020 9:33:11 msg Hello 10 30aea458f354 stats (rx_timestamp=433558497, rssi=-106, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=11, tx_time_on_air=103, tx_counter=100, tx_frequency=868000000)
+29/7/2020 9:33:13 counter 92 update neighbour, msg received: Hello 10 30aea458f354
+29/7/2020 9:33:15 msg Hello 10 30aea458f354 stats (rx_timestamp=436970491, rssi=-106, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=11, tx_time_on_air=103, tx_counter=101, tx_frequency=868000000)
+29/7/2020 9:33:17 counter 93 update neighbour, msg received: Hello 10 30aea458f354
+29/7/2020 9:33:19 msg Hello 10 30aea458f354 stats (rx_timestamp=441545483, rssi=-108, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=11, tx_time_on_air=103, tx_counter=102, tx_frequency=868000000)
+29/7/2020 9:33:20 counter 94 update neighbour, msg received: Hello 10 30aea458f354
+29/7/2020 9:33:23 msg Hello 11 30aea458f354 stats (rx_timestamp=444918483, rssi=-105, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=11, tx_time_on_air=103, tx_counter=103, tx_frequency=868000000)
+29/7/2020 9:33:24 counter 95 update neighbour, msg received: Hello 10 30aea458f354
+29/7/2020 9:33:25 msg Hello 11 30aea458f354 stats (rx_timestamp=447301481, rssi=-106, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=12, tx_time_on_air=103, tx_counter=104, tx_frequency=868000000)
+29/7/2020 9:33:27 counter 96 update neighbour, msg received: Hello 11 30aea458f354
+29/7/2020 9:33:29 msg Hello 11 30aea458f354 stats (rx_timestamp=450861474, rssi=-105, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=12, tx_time_on_air=103, tx_counter=105, tx_frequency=868000000)
+29/7/2020 9:33:30 counter 97 update neighbour, msg received: Hello 11 30aea458f354
+29/7/2020 9:33:32 msg Hello 11 30aea458f354 stats (rx_timestamp=454037475, rssi=-105, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=12, tx_time_on_air=103, tx_counter=106, tx_frequency=868000000)
+29/7/2020 9:33:34 counter 98 update neighbour, msg received: Hello 11 30aea458f354
+29/7/2020 9:33:35 msg Hello 12 30aea458f354 stats (rx_timestamp=457371465, rssi=-105, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=12, tx_time_on_air=103, tx_counter=107, tx_frequency=868000000)
+29/7/2020 9:33:37 counter 99 update neighbour, msg received: Hello 11 30aea458f354
+29/7/2020 9:33:40 msg Hello 12 30aea458f354 stats (rx_timestamp=461687459, rssi=-105, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=13, tx_time_on_air=103, tx_counter=108, tx_frequency=868000000)
+29/7/2020 9:33:41 counter 100 update neighbour, msg received: Hello 12 30aea458f354
+29/7/2020 9:33:43 msg Hello 12 30aea458f354 stats (rx_timestamp=465269459, rssi=-104, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=13, tx_time_on_air=103, tx_counter=109, tx_frequency=868000000)
+29/7/2020 9:33:44 counter 101 update neighbour, msg received: Hello 12 30aea458f354
+29/7/2020 9:33:46 msg Hello 12 30aea458f354 stats (rx_timestamp=467825458, rssi=-104, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=13, tx_time_on_air=103, tx_counter=110, tx_frequency=868000000)
+29/7/2020 9:33:47 counter 102 update neighbour, msg received: Hello 12 30aea458f354
+29/7/2020 9:33:50 msg Hello 13 30aea458f354 stats (rx_timestamp=472052451, rssi=-103, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=13, tx_time_on_air=103, tx_counter=111, tx_frequency=868000000)
+29/7/2020 9:33:51 counter 103 update neighbour, msg received: Hello 12 30aea458f354
+29/7/2020 9:33:53 msg Hello 13 30aea458f354 stats (rx_timestamp=475389443, rssi=-104, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=78, tx_counter=112, tx_frequency=868000000)
+29/7/2020 9:33:55 msg Hello 13 30aea458f354 stats (rx_timestamp=476982291, rssi=-104, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=78, tx_counter=113, tx_frequency=868000000)
+29/7/2020 9:33:57 msg Hello 13 30aea458f354 stats (rx_timestamp=479452287, rssi=-105, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=78, tx_counter=114, tx_frequency=868000000)
+29/7/2020 9:34:0 msg Discover end 2 2 stats (rx_timestamp=482266285, rssi=-104, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=78, tx_counter=115, tx_frequency=868000000)
+29/7/2020 9:34:2 msg Discover end 2 2 stats (rx_timestamp=483865288, rssi=-106, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=78, tx_counter=115, tx_frequency=868000000)
+29/7/2020 9:34:7 msg Discover end 2 2 stats (rx_timestamp=489459279, rssi=-104, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=119, tx_counter=116, tx_frequency=868000000)
+29/7/2020 9:34:9 msg Discover end 2 2 stats (rx_timestamp=491104276, rssi=-104, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=119, tx_counter=116, tx_frequency=868000000)
+29/7/2020 9:35:8 msg Discover end 2 2 stats (rx_timestamp=549765453, rssi=-104, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=119, tx_counter=117, tx_frequency=868000000)
+29/7/2020 9:35:12 msg Discover end 2 2 stats (rx_timestamp=553690450, rssi=-104, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=119, tx_counter=117, tx_frequency=868000000)
+29/7/2020 9:35:15 msg Info 30aea458f354 30aea474cbcc 150 52 52 30 51 0 1 stats (rx_timestamp=557388449, rssi=-105, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=119, tx_counter=117, tx_frequency=868000000)
+29/7/2020 9:35:19 msg Info 30aea458f354 30aea474cbcc 150 52 52 30 51 0 1 stats (rx_timestamp=561116443, rssi=-106, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=118, tx_frequency=868000000)
+29/7/2020 9:40:56 msg Info 30aea458f354 30aea474cbcc 150 52 52 30 51 0 1 stats (rx_timestamp=897694241, rssi=-118, snr=-5.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=120, tx_frequency=868000000)
+29/7/2020 9:40:57 msg Info 30aea458f354 30aea458f354 150 52 52 30 51 0 1 stats (rx_timestamp=899503034, rssi=-104, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=121, tx_frequency=868000000)
+29/7/2020 9:41:1 msg Info 30aea458f354 30aea474cbcc 150 50 52 30 50 0 1 stats (rx_timestamp=902669229, rssi=-117, snr=-5.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=122, tx_frequency=868000000)
+29/7/2020 9:47:21 msg Info 30aea458f354 30aea474cbcc 150 50 47 30 47 0 1 stats (rx_timestamp=1283282552, rssi=-106, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=125, tx_frequency=868000000)
+29/7/2020 9:47:25 msg Info 30aea458f354 30aea474cbcc 150 50 47 30 47 0 1 stats (rx_timestamp=1287026543, rssi=-106, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=126, tx_frequency=868000000)
+29/7/2020 9:49:30 msg Info 30aea458f354 30aea458f354 150 50 47 30 47 0 1 stats (rx_timestamp=1412314935, rssi=-110, snr=-1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=127, tx_frequency=868000000)
+29/7/2020 9:49:34 msg Info 30aea458f354 30aea458f354 150 50 47 30 47 0 1 stats (rx_timestamp=1415950924, rssi=-109, snr=-0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=128, tx_frequency=868000000)
+29/7/2020 9:54:54 msg Info 30aea458f354 30aea474cbcc 150 51 48 30 48 0 1 stats (rx_timestamp=1735573950, rssi=-105, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=130, tx_frequency=868000000)
+29/7/2020 9:54:59 msg Info 30aea458f354 30aea474cbcc 150 51 48 30 48 0 1 stats (rx_timestamp=1741207697, rssi=-92, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=131, tx_frequency=868000000)
+29/7/2020 10:0:16 msg Info 30aea458f354 30aea474cbcc 150 48 47 30 50 0 1 stats (rx_timestamp=2058120396, rssi=-106, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=133, tx_frequency=868000000)
+29/7/2020 10:0:22 msg Info 30aea458f354 30aea474cbcc 150 48 47 30 50 0 1 stats (rx_timestamp=2063962387, rssi=-84, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=134, tx_frequency=868000000)
+29/7/2020 10:5:45 msg Info 30aea458f354 30aea474cbcc 150 49 48 30 51 0 1 stats (rx_timestamp=2387427864, rssi=-104, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=136, tx_frequency=868000000)
+29/7/2020 10:5:48 msg Info 30aea458f354 30aea474cbcc 150 49 48 30 51 0 1 stats (rx_timestamp=2389895154, rssi=-86, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=137, tx_frequency=868000000)
+29/7/2020 10:5:50 msg Info 30aea458f354 30aea474cbcc 150 49 48 30 51 0 1 stats (rx_timestamp=2391982862, rssi=-104, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=138, tx_frequency=868000000)
+29/7/2020 10:6:9 msg Info 30aea458f354 30aea458f354 150 49 48 30 51 0 1 stats (rx_timestamp=2411110245, rssi=-88, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=139, tx_frequency=868000000)
+29/7/2020 10:11:31 msg Info 30aea458f354 30aea474cbcc 150 47 47 30 47 0 1 stats (rx_timestamp=2733406247, rssi=-105, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=141, tx_frequency=868000000)
+29/7/2020 10:11:34 msg Info 30aea458f354 30aea474cbcc 150 47 47 30 47 0 1 stats (rx_timestamp=2735754425, rssi=-88, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=142, tx_frequency=868000000)
+29/7/2020 10:11:36 msg Info 30aea458f354 30aea458f354 150 47 47 30 47 0 1 stats (rx_timestamp=2737853236, rssi=-105, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=143, tx_frequency=868000000)
+29/7/2020 10:11:55 msg Info 30aea458f354 30aea458f354 150 47 47 30 47 0 1 stats (rx_timestamp=2757342404, rssi=-88, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=144, tx_frequency=868000000)
+29/7/2020 10:17:17 msg Info 30aea458f354 30aea474cbcc 150 50 48 30 52 0 1 stats (rx_timestamp=3079431661, rssi=-106, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=146, tx_frequency=868000000)
+29/7/2020 10:17:20 msg Info 30aea458f354 30aea474cbcc 150 50 48 30 52 0 1 stats (rx_timestamp=3081784626, rssi=-88, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=147, tx_frequency=868000000)
+29/7/2020 10:17:22 msg Info 30aea458f354 30aea474cbcc 150 50 48 30 52 0 1 stats (rx_timestamp=3083876699, rssi=-106, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=148, tx_frequency=868000000)
+29/7/2020 10:17:41 msg Info 30aea458f354 30aea458f354 150 50 48 30 52 0 1 stats (rx_timestamp=3103307681, rssi=-88, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=149, tx_frequency=868000000)
+29/7/2020 10:23:4 msg Info 30aea458f354 30aea474cbcc 150 52 47 30 50 0 1 stats (rx_timestamp=3425587042, rssi=-105, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=151, tx_frequency=868000000)
+29/7/2020 10:23:6 msg Info 30aea458f354 30aea474cbcc 150 52 47 30 50 0 1 stats (rx_timestamp=3427874888, rssi=-86, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=152, tx_frequency=868000000)
+29/7/2020 10:23:8 msg Info 30aea458f354 30aea458f354 150 52 47 30 50 0 1 stats (rx_timestamp=3430197034, rssi=-104, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=153, tx_frequency=868000000)
+29/7/2020 10:23:27 msg Info 30aea458f354 30aea458f354 150 52 47 30 50 0 1 stats (rx_timestamp=3449467903, rssi=-88, snr=7.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=154, tx_frequency=868000000)
+29/7/2020 10:28:50 msg Info 30aea458f354 30aea474cbcc 150 51 47 30 50 0 1 stats (rx_timestamp=3771634450, rssi=-105, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=156, tx_frequency=868000000)
+29/7/2020 10:28:52 msg Info 30aea458f354 30aea474cbcc 150 51 47 30 50 0 1 stats (rx_timestamp=3773800133, rssi=-88, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=157, tx_frequency=868000000)
+29/7/2020 10:29:2 msg Info 30aea458f354 30aea474cbcc 150 51 47 30 50 0 1 stats (rx_timestamp=3784413185, rssi=-86, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=158, tx_frequency=868000000)
+29/7/2020 10:34:25 msg Info 30aea458f354 30aea474cbcc 150 47 52 30 50 0 1 stats (rx_timestamp=4106759856, rssi=-105, snr=0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=160, tx_frequency=868000000)
+29/7/2020 10:34:27 msg Info 30aea458f354 30aea474cbcc 150 47 52 30 50 0 1 stats (rx_timestamp=4109298427, rssi=-89, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=161, tx_frequency=868000000)
+29/7/2020 10:34:29 msg Info 30aea458f354 30aea474cbcc 150 47 52 30 50 0 1 stats (rx_timestamp=4110613807, rssi=-105, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=162, tx_frequency=868000000)
+29/7/2020 10:34:49 msg Info 30aea458f354 30aea458f354 150 47 52 30 50 0 1 stats (rx_timestamp=4130727433, rssi=-87, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=163, tx_frequency=868000000)
+29/7/2020 10:40:11 msg Info 30aea458f354 30aea474cbcc 150 51 47 30 50 0 1 stats (rx_timestamp=158107919, rssi=-106, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=165, tx_frequency=868000000)
+29/7/2020 10:40:14 msg Info 30aea458f354 30aea474cbcc 150 51 47 30 50 0 1 stats (rx_timestamp=160626402, rssi=-87, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=166, tx_frequency=868000000)
+29/7/2020 10:40:15 msg Info 30aea458f354 30aea458f354 150 51 47 30 50 0 1 stats (rx_timestamp=162540901, rssi=-105, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=167, tx_frequency=868000000)
+29/7/2020 10:40:35 msg Info 30aea458f354 30aea458f354 150 51 47 30 50 0 1 stats (rx_timestamp=182044426, rssi=-88, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=168, tx_frequency=868000000)
+29/7/2020 10:45:57 msg Info 30aea458f354 30aea474cbcc 150 47 50 30 52 0 1 stats (rx_timestamp=504267420, rssi=-104, snr=0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=170, tx_frequency=868000000)
+29/7/2020 10:46:0 msg Info 30aea458f354 30aea474cbcc 150 47 50 30 52 0 1 stats (rx_timestamp=506795715, rssi=-88, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=171, tx_frequency=868000000)
+29/7/2020 10:46:2 msg Info 30aea458f354 30aea474cbcc 150 47 50 30 52 0 1 stats (rx_timestamp=508893364, rssi=-104, snr=1.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=172, tx_frequency=868000000)
+29/7/2020 10:46:21 msg Info 30aea458f354 30aea458f354 150 47 50 30 52 0 1 stats (rx_timestamp=528220781, rssi=-93, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=173, tx_frequency=868000000)
+29/7/2020 10:51:44 msg Info 30aea458f354 30aea474cbcc 150 51 48 30 49 0 1 stats (rx_timestamp=850814571, rssi=-108, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=175, tx_frequency=868000000)
+29/7/2020 10:51:46 msg Info 30aea458f354 30aea474cbcc 150 51 48 30 49 0 1 stats (rx_timestamp=853163868, rssi=-89, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=176, tx_frequency=868000000)
+29/7/2020 10:51:48 msg Info 30aea458f354 30aea458f354 150 51 48 30 49 0 1 stats (rx_timestamp=855060556, rssi=-106, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=177, tx_frequency=868000000)
+29/7/2020 10:52:8 msg Info 30aea458f354 30aea458f354 150 51 48 30 49 0 1 stats (rx_timestamp=874591861, rssi=-88, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=178, tx_frequency=868000000)
+29/7/2020 10:57:30 msg Info 30aea458f354 30aea474cbcc 150 48 47 30 50 0 1 stats (rx_timestamp=1196855818, rssi=-104, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=180, tx_frequency=868000000)
+29/7/2020 10:57:32 msg Info 30aea458f354 30aea474cbcc 150 48 47 30 50 0 1 stats (rx_timestamp=1199327711, rssi=-88, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=181, tx_frequency=868000000)
+29/7/2020 10:57:34 msg Info 30aea458f354 30aea474cbcc 150 48 47 30 50 0 1 stats (rx_timestamp=1201236789, rssi=-108, snr=2.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=182, tx_frequency=868000000)
+29/7/2020 10:57:54 msg Info 30aea458f354 30aea458f354 150 48 47 30 50 0 1 stats (rx_timestamp=1220924730, rssi=-92, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=183, tx_frequency=868000000)
+29/7/2020 11:3:16 msg Info 30aea458f354 30aea474cbcc 150 51 52 30 49 0 1 stats (rx_timestamp=1543235150, rssi=-103, snr=0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=185, tx_frequency=868000000)
+29/7/2020 11:3:19 msg Info 30aea458f354 30aea474cbcc 150 51 52 30 49 0 1 stats (rx_timestamp=1545597368, rssi=-92, snr=5.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=186, tx_frequency=868000000)
+29/7/2020 11:3:21 msg Info 30aea458f354 30aea458f354 150 51 52 30 49 0 1 stats (rx_timestamp=1547887144, rssi=-105, snr=0.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=187, tx_frequency=868000000)
+29/7/2020 11:3:40 msg Info 30aea458f354 30aea458f354 150 51 52 30 49 0 1 stats (rx_timestamp=1567204300, rssi=-91, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=188, tx_frequency=868000000)
+29/7/2020 11:9:2 msg Info 30aea458f354 30aea474cbcc 150 52 47 30 50 0 1 stats (rx_timestamp=1889437234, rssi=-106, snr=4.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=190, tx_frequency=868000000)
+29/7/2020 11:9:5 msg Info 30aea458f354 30aea474cbcc 150 52 47 30 50 0 1 stats (rx_timestamp=1891976936, rssi=-93, snr=5.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=191, tx_frequency=868000000)
+29/7/2020 11:9:7 msg Info 30aea458f354 30aea474cbcc 150 52 47 30 50 0 1 stats (rx_timestamp=1894089212, rssi=-108, snr=3.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=192, tx_frequency=868000000)
+29/7/2020 11:9:26 msg Info 30aea458f354 30aea458f354 150 52 47 30 50 0 1 stats (rx_timestamp=1913573963, rssi=-91, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=83, tx_counter=193, tx_frequency=868000000)
+------------------------

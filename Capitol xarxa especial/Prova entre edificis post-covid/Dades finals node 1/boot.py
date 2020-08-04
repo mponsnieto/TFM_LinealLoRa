@@ -22,22 +22,19 @@ stop_config=False
 
 id=ubinascii.hexlify(machine.unique_id()).decode('utf-8')#'3c71bf8775d4'
 print("id del dispositiu: ",id)
-mode=NORMAL_MODE
+mode=CHECK
 config_ACK=False
 config_start=True
 power=2
 rcv_data=False
-nummissatges=2
 intent=1
 node_list=[]
 neighbours=[[],[]]
 neighbours_aux=[[],[]]
-msg=""
+msg="Config 2"
 node_list=""
 msg_alarm_ok=" "
 error=False
-token_ack=True
-info_ack=True
 Hello_received=False
 End_discover=False
 info_passed=False
@@ -45,7 +42,6 @@ timer=Timer.Chrono()
 timer2=Timer.Chrono()
 timer3=Timer.Chrono()
 timer_read_sensors=Timer.Chrono()
-timer_read_sensors.start()
 timer_Disc_end=Timer.Chrono()
 timer_Disc_end.reset()
 timer.reset()
@@ -61,7 +57,7 @@ i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2020, 07, 29, 11,34,0))
+rtc.init((2020, 07, 28, 8,46,0))
 f = open('process_final.txt', 'a')
 f.write("{}/{}/{} {}:{}:{} Nodo sensor en marcha\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
 f.close()

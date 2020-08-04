@@ -267,6 +267,7 @@ while True:
                 #Resend the alarm msg
                 com.change_txpower(14)
                 com.sendData(msg_alarm,rtc,f)
+                print("Sending alarm 1")
             elif "Alarm ok" in msg_alarm_ok:
                 splitmsg=msg_alarm_ok.split( )
                 if node_list.index(splitmsg[3])==node_list.index(id): #Alarm ok from:id to:id
@@ -341,6 +342,7 @@ while True:
             #Resend the alarm msg
             time.sleep(3)
             com.sendData(msg_alarm,rtc,f)
+            print("Sending alarm")
 
     if mode==CONFIG_MODE:
         if rcv_data and id not in msg and stop_start==False and "stop" not in msg:
@@ -512,7 +514,7 @@ while True:
             dry=True
             dhi=1
             alarma=check_alarms2(T,temp,tempC,H,dry)
-            if alarma==True or nummissatge==10:
+            if alarma==True or intent==10:
                 print("Hi ha alarma")
                 mode=ALARM_MODE
                 msg_alarm="Alarm "+str(id)+" "+str(id)+" 150 "+str(tempC)+" "+str(T)+" "+str(H)+" "+str(temp)+" "+"0"+" "+"1"

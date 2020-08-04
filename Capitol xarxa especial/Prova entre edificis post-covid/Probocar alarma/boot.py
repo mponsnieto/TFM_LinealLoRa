@@ -36,14 +36,15 @@ com.start_LoraRaw()
 
 id=ubinascii.hexlify(machine.unique_id()).decode('utf-8')#'3c71bf8775d4'
 print("id del dispositiu: ",id)
-mode=CHECK#CONFIG_MODE
+mode=ALARM_MODE#CONFIG_MODE
+timer_read_sensors.start()
 a=False
 config_ACK=False
 token_ack=True
 stop_ACK=False
 config_start=False
 power=2
-rcv_data=False
+rcv_data=True
 stop_start=False
 info_ack=True
 info_passed=False
@@ -55,7 +56,8 @@ msg_alarm_ok=" "
 
 neighbours=[[],[]]
 neighbours_aux=[[],[]]
-intent=1
+intent=10
+msg_aux="Alarm "+str(id)+" "+str(id)+" 150 "+" 150 "+" "+" 150 "+" "+" 150 "+" "+" 150 "+" "+"0"+" "+"1"
 nummissatge=1
 #missatge=1
 
@@ -66,7 +68,7 @@ i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2020, 07, 29, 10,05,0))
+rtc.init((2020, 07, 29, 9,50,0))
 f = open('process_middle1.txt', 'a')
 f.write("{}/{}/{} {}:{}:{} Nodo sensor en marcha\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
 f.close()

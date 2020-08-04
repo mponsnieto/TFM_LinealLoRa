@@ -1,0 +1,23 @@
+------------------------
+------------------------
+27/7/2020 11:0:2 msg Hay buena cobertura de sensor 2 parc bit0 stats (rx_timestamp=0, rssi=0, snr=0.0, sfrx=0, sftx=0, tx_trials=0, tx_power=2, tx_time_on_air=0, tx_counter=0, tx_frequency=0)
+27/7/2020 11:0:12 msg Hay buena cobertura de sensor 2 parc bit1 stats (rx_timestamp=0, rssi=0, snr=0.0, sfrx=0, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=113, tx_counter=1, tx_frequency=868000000)
+------------------------
+27/7/2020 11:0:2 msg Hay buena cobertura de sensor 2 parc bit0 stats (rx_timestamp=0, rssi=0, snr=0.0, sfrx=0, sftx=0, tx_trials=0, tx_power=2, tx_time_on_air=0, tx_counter=0, tx_frequency=0)
+27/7/2020 11:0:12 msg Hay buena cobertura de sensor 2 parc bit1 stats (rx_timestamp=0, rssi=0, snr=0.0, sfrx=0, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=113, tx_counter=1, tx_frequency=868000000)
+27/7/2020 11:0:22 msg Hay buena cobertura de sensor 2 parc bit2 stats (rx_timestamp=0, rssi=0, snr=0.0, sfrx=0, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=113, tx_counter=2, tx_frequency=868000000)
+27/7/2020 11:0:33 msg Hay buena cobertura de sensor 2 parc bit3 stats (rx_timestamp=0, rssi=0, snr=0.0, sfrx=0, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=113, tx_counter=3, tx_frequency=868000000)
+27/7/2020 11:0:43 msg Hay buena cobertura de sensor 2 parc bit4 stats (rx_timestamp=0, rssi=0, snr=0.0, sfrx=0, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=113, tx_counter=4, tx_frequency=868000000)
+27/7/2020 11:0:53 msg Hay buena cobertura de sensor 2 parc bit5 stats (rx_timestamp=0, rssi=0, snr=0.0, sfrx=0, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=113, tx_counter=5, tx_frequency=868000000)
+27/7/2020 11:1:4 msg Hay buena cobertura de sensor 2 parc bit6 stats (rx_timestamp=0, rssi=0, snr=0.0, sfrx=0, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=113, tx_counter=6, tx_frequency=868000000)
+------------------------
+27/7/2020 11:0:2 msg Hay buena cobertura de sensor 2 parc bit0 stats (rx_timestamp=10278822, rssi=-59, snr=6.0, sfrx=7, sftx=0, tx_trials=0, tx_power=2, tx_time_on_air=0, tx_counter=0, tx_frequency=0)
+27/7/2020 11:0:12 msg Hay buena cobertura de sensor 2 parc bit1 stats (rx_timestamp=20857850, rssi=-34, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=113, tx_counter=1, tx_frequency=868000000)
+27/7/2020 11:0:23 msg Hay buena cobertura de sensor 2 parc bit2 stats (rx_timestamp=31615832, rssi=-35, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=113, tx_counter=2, tx_frequency=868000000)
+------------------------
+27/7/2020 11:0:2 msg Hay buena cobertura de sensor 2 parc bit0 stats (rx_timestamp=7555133, rssi=-97, snr=6.0, sfrx=7, sftx=0, tx_trials=0, tx_power=2, tx_time_on_air=0, tx_counter=0, tx_frequency=0)
+------------------------
+------------------------
+27/7/2020 11:0:2 msg Hay buena cobertura de sensor 2 parc bit0 stats (rx_timestamp=9382088, rssi=-66, snr=6.0, sfrx=7, sftx=0, tx_trials=0, tx_power=2, tx_time_on_air=0, tx_counter=0, tx_frequency=0)
+27/7/2020 11:0:13 msg Hay buena cobertura de sensor 2 parc bit1 stats (rx_timestamp=21580199, rssi=-69, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=113, tx_counter=1, tx_frequency=868000000)
+27/7/2020 11:0:23 msg Hay buena cobertura de sensor 2 parc bit2 stats (rx_timestamp=29592227, rssi=-69, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=2, tx_time_on_air=113, tx_counter=2, tx_frequency=868000000)

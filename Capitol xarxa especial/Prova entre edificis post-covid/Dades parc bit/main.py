@@ -43,7 +43,7 @@ def save_parameters():
         leng=l
     pycom.nvs_set("len_neighbours",leng+1)
     pycom.nvs_set("rtc",rtc)
-    pycom.nvs_set("missatge",missatge)
+    pycom.nvs_set("nummissatge",nummissatge)
     com.savestate()
     return
 
@@ -146,10 +146,10 @@ def discover(id):
 def interrupt(lora):
     global rcv_data, rtc
     global msg, splitmsg, msg_aux,msg_alarm_ok
-    global mode,f
+    global mode
     global stop_config, config_start, end_discover
-    global splitmsg_stop
-    global node_list,rtc,f
+    global splitmsg_stop,rtc,f
+    global node_list
     print("interrupcio")
     lora.power_mode(LoRa.ALWAYS_ON)
 
@@ -170,7 +170,7 @@ def interrupt(lora):
                 splitmsg=msg.split()
                 rcv_data=True
                 mode=CONFIG_MODE
-                f = open('process_middle1.txt', 'a')
+                f = open('process_middle2.txt', 'a')
                 f.write("{}/{}/{} {}:{}:{} Empieza el config\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                 f.close()
                 return
@@ -192,7 +192,7 @@ def interrupt(lora):
             splitmsg_stop=splitmsg[:]
             #Save the node_list
             node_list=splitmsg[2:-1]
-            f = open('neighbours_middle1.txt', 'a')
+            f = open('process_middle2.txt', 'a')
             f.write("{}/{}/{} {}:{}:{} Obtencion node_list {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],node_list))
             f.close()
 
@@ -249,26 +249,24 @@ if reset_cause==machine.DEEPSLEEP_RESET:
     timer_read_sensors.start()
     print("Good morning!")
     counter=1
-    missatge=pycom.nvs_get("missatge")
+    nummissatge=pycom.nvs_get("nummissatge")
     rtc=pycom.nvs_get("rtc")
 
 while True:
     if mode==CHECK:
-        com.sendData("Hay buena cobertura de mateu orfila sensor 1 "+str(i),rtc,f)
-        com.change_txpower(14)
+        com.sendData("Hay buena cobertura de sensor 2 parc bit"+str(i),rtc,f)
         i=i+1
         time.sleep(10)
     if mode==ALARM_MODE:
         if rcv_data:
             rcv_data=False
-
+            splitmsg=msg_alarm_ok.split( )
             msg_alarm=msg_aux
             if "Alarm" in msg_alarm and "ok" not in msg_alarm:
                 #Resend the alarm msg
                 com.change_txpower(14)
                 com.sendData(msg_alarm,rtc,f)
             elif "Alarm ok" in msg_alarm_ok:
-                splitmsg=msg_alarm_ok.split( )
                 if node_list.index(splitmsg[3])==node_list.index(id): #Alarm ok from:id to:id
                     #Alarm ok ACK. It's for me
                     com.sendData("Alarm ok "+str(id)+" "+str(id),rtc,f)
@@ -293,8 +291,8 @@ while True:
                     neighbours=[[],[]]
                     neighbours_aux=[[],[]]
                     intent=1
-                    missatge=False
                     nummissatge=1
+                    missatge=False
                     period=2
                     counter=1
                     i=0
@@ -330,8 +328,8 @@ while True:
                     neighbours=[[],[]]
                     neighbours_aux=[[],[]]
                     intent=1
-                    missatge=False
                     nummissatge=1
+                    missatge=False
                     period=2
                     counter=1
                     i=0
@@ -355,6 +353,7 @@ while True:
                 com.change_txpower(power)
                 msg_retry= msg+" "+str(id)
                 print("Enviare: ",msg+" "+str(id))
+                time.sleep(5)
                 com.sendData(msg_retry,rtc,f)
             except Exception as e:
                 print(e)
@@ -373,7 +372,7 @@ while True:
                     time.sleep(2)
             elif "Config" in msg:
                 print("Config ACK received")
-                f = open('process_middle1.txt', 'a')
+                f = open('process_middle2.txt', 'a')
                 f.write("{}/{}/{} {}:{}:{} Config ACK recibido\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                 f.close()
                 #ack=True
@@ -382,12 +381,12 @@ while True:
                 id_n=splitmsg[-1]
                 pow=int(splitmsg[1])
         if stop_ACK==False and stop_start==True:
-            if node_list.index(id)-1>=int(splitmsg_stop[-1]) or "Discover" in msg:
+            if node_list.index(id)-1>=int(splitmsg_stop[-1]):
                 config_start=False
                 print("Stop finished")
                 stop_ACK=True
                 mode=LISTEN_MODE
-                f = open('process_middle1.txt', 'a')
+                f = open('process_middle2.txt', 'a')
                 f.write("{}/{}/{} {}:{}:{} Stop finished, modo=LISTEN, obtención de la nodelist\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],str()))
                 f.close()
 
@@ -489,11 +488,11 @@ while True:
 
     if mode==DISCOVER_MODE:
         print("Discover")
-        f = open('process_middle1.txt', 'a')
+        f = open('process_middle2.txt', 'a')
         f.write("{}/{}/{} {}:{}:{} Empieza discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
         f.close()
         discover(id)
-        f = open('process_middle1.txt', 'a')
+        f = open('process_middle2.txt', 'a')
         f.write("{}/{}/{} {}:{}:{} Acaba discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
         f.close()
         missatge=False
@@ -512,15 +511,14 @@ while True:
             dry=True
             dhi=1
             alarma=check_alarms2(T,temp,tempC,H,dry)
-            if alarma==True or nummissatge==10:
+            if alarma==True or nummissatge==8:
                 print("Hi ha alarma")
                 mode=ALARM_MODE
                 msg_alarm="Alarm "+str(id)+" "+str(id)+" 150 "+str(tempC)+" "+str(T)+" "+str(H)+" "+str(temp)+" "+"0"+" "+"1"
                 com.sendData(msg_alarm,rtc,f)
-                f = open('process_middle1.txt', 'a')
+                f = open('process_middle2.txt', 'a')
                 f.write("{}/{}/{} {}:{}:{} Empieza alarma\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                 f.close()
-                nummissatge=1
             timer_read_sensors.reset()
         if rcv_data==True:
             rcv_data=False
@@ -544,12 +542,12 @@ while True:
                         if info_passed==True:
                             print("Info enviada")
                             nummissatge=nummissatge+1
-                            f = open('process_middle1.txt', 'a')
+                            f = open('process_middle2.txt', 'a')
                             f.write("{}/{}/{} {}:{}:{} He recibido ack de info\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                             f.close()
                             #save_parameters()
                             #machine.deepsleep(get_sleeping_time())
-                elif info_ack==False:
+                elif info_ack==True:
                     if splitmsg[2]==id:
                         node_anterior,node_seguent,node_seguent2=get_next_node(splitmsg[2],splitmsg[1])
                         print("Passar info a un altre nodes2: ",node_seguent,node_anterior,node_seguent2)
@@ -582,7 +580,7 @@ while True:
                 node_anterior,node_seguent,node_seguent2=get_next_node(splitmsg[3],splitmsg[2])
                 # print("Token" in msg and splitmsg[2]==node_anterior)
                 # print(msg,splitmsg,node_anterior)
-                if id in msg:#splitmsg[3]==id:
+                if id in msg:  #splitmsg[1]==id
                     print("Missatge de token per jo")
                     if splitmsg[1]==id:
                         if readen: #LLevar quan funcioni llegir
@@ -595,7 +593,7 @@ while True:
                             msg_retry="Info"+" "+ str(id)+" "+str(splitmsg[2])+" "+llista
                             com.sendData(msg_retry,rtc,f)
                             print("he enviat info",msg_retry)
-                            f = open('process_middle1.txt', 'a')
+                            f = open('process_middle2.txt', 'a')
                             f.write("{}/{}/{} {}:{}:{} He enviado info\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                             f.close()
                             timer3.reset()

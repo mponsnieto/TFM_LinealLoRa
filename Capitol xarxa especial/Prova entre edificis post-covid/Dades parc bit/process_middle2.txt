@@ -1,0 +1,68 @@
+27/7/2020 11:0:0 Nodo sensor en marcha
+27/7/2020 11:0:0 Nodo sensor en marcha
+27/7/2020 11:0:0 Nodo sensor en marcha
+27/7/2020 11:26:58 Empieza el config
+27/7/2020 11:27:0 Empieza el config
+27/7/2020 11:27:5 Empieza el config
+27/7/2020 11:27:9 Empieza el config
+27/7/2020 11:27:13 Empieza el config
+27/7/2020 11:27:27 Empieza el config
+27/7/2020 11:27:28 Config ACK recibido
+27/7/2020 11:27:32 Empieza el config
+27/7/2020 11:27:33 Config ACK recibido
+27/7/2020 11:27:36 Empieza el config
+27/7/2020 11:27:37 Config ACK recibido
+27/7/2020 11:27:47 Empieza el config
+27/7/2020 11:27:47 Config ACK recibido
+27/7/2020 11:27:54 Empieza el config
+27/7/2020 11:27:54 Config ACK recibido
+27/7/2020 11:27:57 Empieza el config
+27/7/2020 11:27:59 Empieza el config
+27/7/2020 11:28:1 Empieza el config
+27/7/2020 11:28:3 Empieza el config
+27/7/2020 11:28:8 Empieza el config
+27/7/2020 11:28:11 Empieza el config
+27/7/2020 11:28:14 Empieza el config
+27/7/2020 11:28:19 Empieza el config
+27/7/2020 11:28:25 Empieza el config
+27/7/2020 11:28:27 Config ACK recibido
+27/7/2020 11:28:31 Empieza el config
+27/7/2020 11:28:39 Empieza el config
+27/7/2020 11:28:39 Config ACK recibido
+27/7/2020 11:28:46 Empieza el config
+27/7/2020 11:28:46 Config ACK recibido
+27/7/2020 11:28:53 Empieza el config
+27/7/2020 11:28:53 Config ACK recibido
+27/7/2020 11:28:57 Empieza el config
+27/7/2020 11:29:2 Empieza el config
+27/7/2020 11:29:2 Empieza el config
+27/7/2020 11:29:5 Empieza el config
+27/7/2020 11:29:9 Empieza el config
+27/7/2020 11:29:10 Empieza el config
+27/7/2020 11:29:12 Empieza el config
+27/7/2020 11:29:15 Empieza el config
+27/7/2020 11:29:20 Empieza el config
+27/7/2020 11:29:26 Empieza el config
+27/7/2020 11:29:28 Empieza el config
+27/7/2020 11:29:29 Config ACK recibido
+27/7/2020 11:29:33 Empieza el config
+27/7/2020 11:29:34 Empieza el config
+27/7/2020 11:29:35 Empieza el config
+27/7/2020 11:29:38 Empieza el config
+27/7/2020 11:29:43 Empieza el config
+27/7/2020 11:29:49 Empieza el config
+27/7/2020 11:29:55 Empieza el config
+27/7/2020 11:30:1 Empieza el config
+27/7/2020 11:30:3 Config ACK recibido
+27/7/2020 11:30:6 Empieza el config
+27/7/2020 11:30:6 Config ACK recibido
+27/7/2020 11:30:10 Empieza el config
+27/7/2020 11:30:11 Config ACK recibido
+27/7/2020 11:30:21 Empieza el config
+27/7/2020 11:30:22 Config ACK recibido
+27/7/2020 11:30:39 Empieza el config
+27/7/2020 11:30:39 Config ACK recibido
+27/7/2020 11:30:44 Obtencion node_list ['30aea474cbcc', '30aea458f2e4', '3c71bf877510', '30aea458f354']
+27/7/2020 11:30:53 Obtencion node_list ['30aea474cbcc', '30aea458f2e4', '3c71bf877510', '30aea458f354']
+27/7/2020 11:30:57 Obtencion node_list ['30aea474cbcc', '30aea458f2e4', '3c71bf877510', '30aea458f354']
+27/7/2020 11:0:0 Nodo sensor en marcha

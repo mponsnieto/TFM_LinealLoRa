@@ -199,11 +199,6 @@ while True:
         com.sendData("Hay buena cobertura con la residencia "+str(i),rtc,f)
         i=i+1
         time.sleep(2)
-        if "Config" in msg:
-            mode=CONFIG_MODE
-            f = open('process_final.txt', 'a')
-            f.write("{}/{}/{} {}:{}:{} Empieza el config\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
-            f.close()
 
     if mode==ALARM_MODE:
         if rcv_data:
@@ -451,12 +446,11 @@ while True:
             dry=True
             dhi=1
             alarma=check_alarms2(T,temp,tempC,H,dry)
-            if alarma==True or nummissatges==2:
+            if alarma==True:
                 print("Hi ha alarma")
                 mode=ALARM_MODE
                 msg_alarm="Alarm "+str(id)+" "+str(id)+" 150 "+str(tempC)+" "+str(T)+" "+str(H)+" "+str(temp)+" "+"0"+" "+"1"
                 com.sendData(msg_alarm,rtc,f)
-                nummissatges=0
             timer_read_sensors.reset()
         if rcv_data==True:
             rcv_data=False
@@ -479,7 +473,6 @@ while True:
                         token_ack=True
                         if info_passed==True:
                             print("Info enviada")
-                            nummissatges=nummissatges+1
                             #save_parameters()
                             #machine.deepsleep(get_sleeping_time())
                 elif info_ack==True:
