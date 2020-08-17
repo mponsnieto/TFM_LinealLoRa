@@ -31,7 +31,7 @@ end
 figure();
 plot(1:1:length(counterLoPy)-1,aux);
 ylim([-0.5,1.5]);
-title('Missatges rebuts/perduts. Despatx Tomeu. PSRR=97%');
+title('Missatges rebuts. Prova 20m_{10min}. PRR=97%');
 xlabel('Nombre de missatge');
 ylabel('Rebut = 1, Perdut = 0');
 

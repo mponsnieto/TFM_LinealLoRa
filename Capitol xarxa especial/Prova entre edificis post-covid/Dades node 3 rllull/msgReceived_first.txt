@@ -1,4 +1,4 @@
-GÖˆg&WVVÊ7ì”ÉcÉê£#íÛrÛ##:27:28 msg Config 10 30aea474cbcc 3c71bf875fa8 stats (rx_timestamp=870438883, rssi=-95, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=4, tx_time_on_air=83, tx_counter=9, tx_frequency=868000000)
+29/7/2020 11:27:28 msg Config 10 30aea474cbcc 3c71bf875fa8 stats (rx_timestamp=870438883, rssi=-95, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=4, tx_time_on_air=83, tx_counter=9, tx_frequency=868000000)
 29/7/2020 11:27:32 msg Config 10 30aea474cbcc 3c71bf875fa8 stats (rx_timestamp=873819879, rssi=-94, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=4, tx_time_on_air=83, tx_counter=9, tx_frequency=868000000)
 29/7/2020 11:27:44 msg Config 12 30aea474cbcc 3c71bf875fa8 stats (rx_timestamp=885977883, rssi=-89, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=4, tx_time_on_air=83, tx_counter=9, tx_frequency=868000000)
 29/7/2020 11:27:46 msg Config 12 30aea474cbcc 3c71bf875fa8 stats (rx_timestamp=888358886, rssi=-91, snr=6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=4, tx_time_on_air=83, tx_counter=9, tx_frequency=868000000)

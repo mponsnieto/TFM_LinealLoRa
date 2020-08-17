@@ -11,9 +11,9 @@ rssi_enfora_10=dadesEnfora_10min(:,12);
 rssi_enfora_5=dadesEnfora_5min(1:length(rssi_enfora_10),12);
 rssi_aprop=dadesAprop(1:length(rssi_enfora_10),11);
 rssi_dins=dadesDinsLab(1:length(rssi_enfora_10),11);
-figure; plot(numMsg,rssi_enfora_5,numMsg,rssi_enfora_10,numMsg,rssi_dins,numMsg,rssi_aprop);
+figure; plot(numMsg,rssi_dins,numMsg,rssi_aprop,numMsg,rssi_enfora_5,numMsg,rssi_enfora_10);
 title('Rssi en les diferents proves');
-legend('Lab tomeu_{5min}','Lab tomeu_{10min}','5m','entre labs'); ylabel('rssi'); xlabel('numMsg');
+legend('5m','7m','20m_{5min}','20m_{10min}'); ylabel('rssi [dBm]'); xlabel('numMsg');
 
 %% SNR
 numMsg=dadesEnfora_10min(:,1);
@@ -35,14 +35,14 @@ max_snr=max([max(snr_enfora_10) max(snr_enfora_5) max(snr_aprop) max(snr_dins)])
 num_snr=[[] []]
 k=1
 for i=min_snr:1:max_snr
-    num_snr(k,1)=length(find(snr_enfora_10==i));
-    num_snr(k,2)=length(find(snr_enfora_5==i));
-    num_snr(k,3)=length(find(snr_aprop==i));
-    num_snr(k,4)=length(find(snr_dins==i));
+    num_snr(k,4)=length(find(snr_enfora_10==i));
+    num_snr(k,3)=length(find(snr_enfora_5==i));
+    num_snr(k,2)=length(find(snr_aprop==i));
+    num_snr(k,1)=length(find(snr_dins==i));
     k=k+1;
 end
 j=min_snr:1:max_snr
 figure; bar(j,num_snr);
-figure; bar(num_snr,'stacked');
+%figure; bar(num_snr,'stacked');
 title('SNR en les diferents proves');
-legend('Lab tomeu_{5min}','Lab tomeu_{10min}','5m','entre labs'); ylabel('snr'); xlabel('numMsg');
+legend('5m','7m','20m_{5min}','20m_{10min}'); ylabel('numMsg'); xlabel('SNR[dB]');
