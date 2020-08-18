@@ -22,7 +22,7 @@ stop_config=False
 
 id=ubinascii.hexlify(machine.unique_id()).decode('utf-8')#'3c71bf8775d4'
 print("id del dispositiu: ",id)
-mode=NORMAL_MODE
+mode=CHECK
 config_ACK=False
 config_start=True
 power=2
@@ -61,7 +61,7 @@ i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2020, 08, 18, 11,34,0))
+rtc.init((2020, 08, 18, 14,22,0))
 f = open('process_final.txt', 'a')
 f.write("{}/{}/{} {}:{}:{} Nodo  final en marcha id: {} \n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],id))
 f.close()

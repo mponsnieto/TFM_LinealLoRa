@@ -32,9 +32,10 @@ class Comunication:
         self.lora.nvram_save()
 
     def sendData(self,msg,rtc,f):
-        f=open('msg_sent_middle1.txt','a')
-        f.write("{}/{}/{} {}:{}:{} msg {} stats {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],msg,self.lora.stats()))
-        f.close()
+        if "Hay" not in msg:
+            f=open('msg_sent_middle1.txt','a')
+            f.write("{}/{}/{} {}:{}:{} msg {} stats {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],msg,self.lora.stats()))
+            f.close()
         self.s.setblocking(True)
         iv = crypto.getrandbits(128) # hardware generated random IV (never reuse it)
         cipher = AES(self.key, AES.MODE_CFB, iv)
