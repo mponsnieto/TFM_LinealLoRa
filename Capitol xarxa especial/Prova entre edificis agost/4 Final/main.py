@@ -192,7 +192,7 @@ else:
 com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
 com.lora = LoRa(mode=LoRa.LORA, region=LoRa.EU868,tx_power=power)
 
-while True:
+while rtc.now()[3]<hora+5:
 
     if mode==CHECK:
         com.change_txpower(14)

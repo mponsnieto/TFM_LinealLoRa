@@ -252,7 +252,7 @@ if reset_cause==machine.DEEPSLEEP_RESET:
     missatge=pycom.nvs_get("missatge")
     rtc=pycom.nvs_get("rtc")
 
-while True:
+while rtc.now()[3]<hora+5:
     if mode==CHECK:
         com.sendData("Hay buena cobertura de mateu orfila sensor 1 "+str(i),rtc,f)
         com.change_txpower(14)

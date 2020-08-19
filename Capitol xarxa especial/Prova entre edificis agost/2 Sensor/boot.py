@@ -66,7 +66,8 @@ i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2020, 08, 18, 12,49,30))
+hora=10
+rtc.init((2020, 08, 19, hora,00,00))
 f = open('process_middle1.txt', 'a')
 f.write("-----------------------\n")
 f.close()

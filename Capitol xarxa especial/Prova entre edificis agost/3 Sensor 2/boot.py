@@ -66,7 +66,8 @@ i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2020, 08, 18, 13,28,30))
+hora=10
+rtc.init((2020, 08, 19, hora,45,00))
 f = open('process_middle2.txt', 'a')
 f.write("{}/{}/{} {}:{}:{} Nodo sensor en marcha id {} \n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],id))
 f.close()

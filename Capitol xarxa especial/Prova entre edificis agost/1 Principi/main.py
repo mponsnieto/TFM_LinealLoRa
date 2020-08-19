@@ -253,7 +253,7 @@ else:
     com.lora.callback(trigger=(LoRa.RX_PACKET_EVENT), handler=interrupt)
     print("All OK, please press the button")
 
-while(True):
+while rtc.now()[3]<hora+5:
     if mode==ALARM_MODE:
         if timer_to_send_alarm.read()>=120: #2min
             #com.Switch_to_LoraWan()
