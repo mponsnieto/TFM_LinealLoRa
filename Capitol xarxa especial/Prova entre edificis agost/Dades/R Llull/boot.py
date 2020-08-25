@@ -53,8 +53,7 @@ i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-hora=9
-rtc.init((2020, 08, 20, hora,20))
+rtc.init((2020, 08, 19, 10,11))
 f = open('msg_sent_first.txt', 'a')
 f.write("------------------------\n")
 f.close()

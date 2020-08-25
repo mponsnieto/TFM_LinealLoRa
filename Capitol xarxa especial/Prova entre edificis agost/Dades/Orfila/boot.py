@@ -6,7 +6,7 @@ import ubinascii
 from network import LoRa
 import socket
 import time
-
+pycom.wifi_on_boot(False)
 Hello_received=False
 end_discover=False
 CONFIG_MODE=0
@@ -26,7 +26,6 @@ timer_read_sensors.reset()
 discover_end_ack=False
 timer2.reset()
 missatge=False
-nummissatge=1
 period=500
 pycom.wifi_on_boot(False)
 
@@ -52,12 +51,13 @@ readen=False #borrar
 msg=" "
 
 msg_listen=" "
+msg_alarm_ok=" "
 
 neighbours=[[],[]]
 neighbours_aux=[[],[]]
 intent=1
-
-missatge=1
+nummissatge=1
+#missatge=1
 
 period=2
 
@@ -66,17 +66,19 @@ i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-hora=8
-rtc.init((2020, 08, 20, hora,42,00))
-f = open('process_middle2.txt', 'a')
+rtc.init((2020, 08, 19, 10,00,00))
+f = open('process_middle1.txt', 'a')
+f.write("-----------------------\n")
+f.close()
+f = open('process_middle1.txt', 'a')
 f.write("{}/{}/{} {}:{}:{} Nodo sensor en marcha id {} \n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],id))
 f.close()
-f=open('msg_received_middle.txt','a')
+f=open('msg_received_middle1.txt','a')
 f.write("------------------------\n")
 f.close()
-f=open('msg_sent_middle2.txt','a')
+f=open('msg_sent_middle1.txt','a')
 f.write("------------------------\n")
 f.close()
-f=open('neighbours_middle2.txt','a')
+f=open('neighbours_middle1.txt','a')
 f.write("------------------------\n")
 f.close()

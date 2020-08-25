@@ -6,9 +6,17 @@ from network import LoRa
 import socket
 import time
 import pycom
-from machine import Pin, I2C
+from machine import Pin, I2C, SD
+import os
 from ustruct import unpack as unp
 from machine import Timer
+
+sd = SD()
+os.mount(sd, '/sd')
+
+# check the content
+os.listdir('/sd')
+
 #Inicialitzacions llegir sensors:
 #Inicialitzacions
 CONFIG_MODE=0
@@ -61,20 +69,20 @@ i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-hora=8
-rtc.init((2020, 08, 20, hora,50,0))
-f = open('process_final.txt', 'a')
+hora=11
+rtc.init((2020, 08, 25, hora,00,0))
+f = open('/sd/process_final.txt', 'a')
 f.write("{}/{}/{} {}:{}:{} Nodo  final en marcha id: {} \n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],id))
 f.close()
-f=open('msg_received_final.txt','a')
+f=open('/sd/msg_received_final.txt','a')
 f.write("------------------------\n")
 f.close()
-f=open('msg_sent_final.txt','a')
+f=open('/sd/msg_sent_final.txt','a')
 f.write("------------------------\n")
 f.close()
-f=open('neighbours_final.txt','a')
+f=open('/sd/neighbours_final.txt','a')
 f.write("------------------------\n")
 f.close()
-f=open('process_final.txt','a')
+f=open('/sd/process_final.txt','a')
 f.write("------------------------\n")
 f.close()

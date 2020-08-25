@@ -1,0 +1,3 @@
+20/8/2020 9:36:12 msg Discover next 9 0 stats (rx_timestamp=3259393780, rssi=-118, snr=-8.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=113, tx_counter=320, tx_frequency=868000000)
+20/8/2020 9:41:12 msg Token 30aea458f354 3c71bf875fa8 30aea458f354 stats (rx_timestamp=3558687272, rssi=-117, snr=-8.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=349, tx_frequency=868000000)
+20/8/2020 9:46:18 msg Token 30aea458f354 3c71bf875fa8 30aea458f354 stats (rx_timestamp=3864709864, rssi=-118, snr=-8.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=119, tx_counter=379, tx_frequency=868000000)
