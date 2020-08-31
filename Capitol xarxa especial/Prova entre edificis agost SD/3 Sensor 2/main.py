@@ -263,22 +263,22 @@ while rtc.now()[3]<hora+5:
     if mode==ALARM_MODE:
         if rcv_data:
             rcv_data=False
-            splitmsg=msg_alarm_ok.split( )
             msg_alarm=msg_aux
+            splitmsg=msg_alarm_ok.split( )
             if "Alarm" in msg_alarm and "ok" not in msg_alarm:
                 #Resend the alarm msg
                 com.change_txpower(14)
                 com.sendData(msg_alarm,rtc,f)
             elif "Alarm ok" in msg_alarm_ok:
                 splitmsg=msg_alarm_ok.split( )
-                if node_list.index(splitmsg[2])==node_list.index(id): #Alarm ok from:id to:id
+                if splitmsg[3]==str(node_list.index(id)): #Alarm ok from:id to:id
                     #Pass Alarm ok to other
-                    splitmsg[1]=node_list[node_list.index(id)]
-                    splitmsg[2]=node_list[node_list.index(id)+1]
+                    splitmsg[2]=str(node_list.index(id))
+                    splitmsg[3]=str(node_list.index(id)+1)
                     msg_alarm=" ".join(splitmsg)
                     com.sendData(str(msg_alarm),rtc,f)
                     msg_alarm_ok=" "
-                if node_list.index(splitmsg[2])>node_list.index(id) or node_list.index(splitmsg[2])==node_list.index(splitmsg[1]):
+                if int(splitmsg[2])>node_list.index(id) or int(splitmsg[2])==int(splitmsg[3]):
                     #Alarm ok ACK received, chango to mode LISTEN_MODE
                     mode=CONNFIG_MODE
                     timer_read_sensors.reset()
@@ -399,8 +399,8 @@ while rtc.now()[3]<hora+5:
 
             rcv_data=False
             missatge=True
-        if "Alarm ok" in msg_listen and splitmsg_listen[3]==str(id):
-            com.sendData("Alarm ok "+str(id)+" "+str(id),rtc,f)
+        if "Alarm ok" in msg_listen and splitmsg_listen[3]==str(node_list.index(id)):
+            com.sendData("Alarm ok "+str(node_list.index(id))+" "+str(node_list.index(id)+1),rtc,f)
 
         if "Discover normal" in msg_listen and missatge==True:
             missatge=False

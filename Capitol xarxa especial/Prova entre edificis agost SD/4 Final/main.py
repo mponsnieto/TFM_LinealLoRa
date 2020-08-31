@@ -16,7 +16,7 @@ def saveFileMsgs(neighbours,rtc):
         Example: 15/10/2019 13:21:31 5
                  id2 min_pow, id3 max_pow
         '''
-        f = open('neighbours_final.txt', 'a')
+        f = open('/sd/neighbours_final.txt', 'a')
         f.write("{}/{}/{} {}:{}:{}".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
         for i in range(len(neighbours[0])):
             f.write("id {} pow {} , ".format(neighbours[0][i],neighbours[1][i]))
@@ -159,7 +159,7 @@ def interrupt(lora):
             rcv_data=True
             mode=CONFIG_MODE
             msg=aux
-            f = open('process_final.txt', 'a')
+            f = open('/sd/process_final.txt', 'a')
             f.write("{}/{}/{} {}:{}:{} Empieza el config\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
             f.close()
 
@@ -207,7 +207,7 @@ while rtc.now()[3]<hora+5:
         time.sleep(2)
         if "Config" in msg:
             mode=CONFIG_MODE
-            f = open('process_final.txt', 'a')
+            f = open('/sd/process_final.txt', 'a')
             f.write("{}/{}/{} {}:{}:{} Empieza el config\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
             f.close()
 
@@ -344,11 +344,11 @@ while rtc.now()[3]<hora+5:
                 com.change_txpower(power)
     elif mode==DISCOVER_MODE:
         time.sleep(5)
-        f = open('process_final.txt', 'a')
+        f = open('/sd/process_final.txt', 'a')
         f.write("{}/{}/{} {}:{}:{} Empieza discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
         f.close()
         discover(id)
-        f = open('process_final.txt', 'a')
+        f = open('/sd/process_final.txt', 'a')
         f.write("{}/{}/{} {}:{}:{} Acaba discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
         f.close()
         mode=LISTEN_MODE

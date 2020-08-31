@@ -57,6 +57,7 @@ info_ack=True
 info_passed=False
 readen=False #borrar
 msg=" "
+msg_alarm_ok=" "
 
 msg_listen=" "
 
