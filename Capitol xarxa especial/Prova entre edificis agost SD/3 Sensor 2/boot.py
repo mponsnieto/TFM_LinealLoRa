@@ -1,11 +1,18 @@
 import pycom
 import comunication as comu
 import machine
-from machine import Timer
+from machine import Timer,SD
 import ubinascii
 from network import LoRa
 import socket
 import time
+import os
+
+sd = SD()
+os.mount(sd, '/sd')
+
+# check the content
+os.listdir('/sd')
 
 Hello_received=False
 end_discover=False
@@ -66,17 +73,17 @@ i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-hora=8
-rtc.init((2020, 08, 20, hora,42,00))
-f = open('process_middle2.txt', 'a')
+hora=10
+rtc.init((2020, 08, 31, hora,42,00))
+f = open('/sd/process_middle2.txt', 'a')
 f.write("{}/{}/{} {}:{}:{} Nodo sensor en marcha id {} \n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],id))
 f.close()
-f=open('msg_received_middle.txt','a')
+f=open('/sd/msg_received_middle.txt','a')
 f.write("------------------------\n")
 f.close()
-f=open('msg_sent_middle2.txt','a')
+f=open('/sd/msg_sent_middle2.txt','a')
 f.write("------------------------\n")
 f.close()
-f=open('neighbours_middle2.txt','a')
+f=open('/sd/neighbours_middle2.txt','a')
 f.write("------------------------\n")
 f.close()

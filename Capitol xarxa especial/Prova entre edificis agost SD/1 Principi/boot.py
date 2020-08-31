@@ -1,12 +1,19 @@
 import comunication as comu
 import machine
 from machine import Timer
-from machine import Pin
+from machine import Pin, SD
 import ubinascii
 from network import LoRa
 import socket
 import time
 import pycom
+import os
+
+sd = SD()
+os.mount(sd, '/sd')
+
+# check the content
+os.listdir('/sd')
 
 CONFIG_MODE=0
 DISCOVER_MODE=1
@@ -53,17 +60,17 @@ i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-hora=9
-rtc.init((2020, 08, 25, hora,20))
-f = open('msg_sent_first.txt', 'a')
+hora=10
+rtc.init((2020, 08, 31, hora,20))
+f = open('/sd/msg_sent_first.txt', 'a')
 f.write("------------------------\n")
 f.close()
-f = open('msgReceived_first.txt', 'a')
+f = open('/sd/msgReceived_first.txt', 'a')
 f.write("------------------------\n")
 f.close()
-f = open('neighbour_first.txt', 'a')
+f = open('/sd/neighbour_first.txt', 'a')
 f.write("------------------------\n")
 f.close()
-f = open('msg_sent_first.txt', 'a')
+f = open('/sd/msg_sent_first.txt', 'a')
 f.write("{}/{}/{} {}:{}:{} LoPy ON id {} \n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],id))
 f.close()

@@ -125,6 +125,12 @@ def interrupt(lora):
 
     aux=com.reciveData(rtc,f)
     if aux!="error":
+        if "Alarm" in aux:
+            rcv_data=True
+            mode=ALARM_MODE
+            if "Alarm ok" in aux:
+                msg_alarm_ok=aux
+            return
 
         if mode==LISTEN_MODE:
             rcv_data=True
@@ -208,16 +214,16 @@ while rtc.now()[3]<hora+5:
     if mode==ALARM_MODE:
         if rcv_data:
             rcv_data=False
-            splitmsg=msg_alarm_ok.split( )
-            msg_alarm=msg_aux
+            msg_alarm=aux
+            splitmsg=msg_alarm.split( )
             if "Alarm" in msg_alarm and "ok" not in msg_alarm:
                 #Resend the alarm msg
                 com.change_txpower(14)
                 com.sendData(msg_alarm,rtc,f)
-            elif "Alarm ok" in msg_alarm_ok:
-                if node_list.index(splitmsg[2])==node_list.index(id):
-                    splitmsg[1]=str(node_list.index(id))
+            elif "Alarm ok" in msg_alarm:
+                if splitmsg[3]==str(node_list.index(id)):
                     splitmsg[2]=str(node_list.index(id))
+                    splitmsg[3]=str(node_list.index(id))
                     msg_alarm=" ".join(splitmsg)
                     com.sendData(str(msg_alarm),rtc,f)
                     #Alarm ok ACK received, chango to mode LISTEN_MODE

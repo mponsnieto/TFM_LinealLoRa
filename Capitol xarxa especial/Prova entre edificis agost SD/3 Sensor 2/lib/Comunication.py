@@ -91,7 +91,7 @@ class Comunication:
 
     def sendData(self,msg,rtc,f):
         if "Hay"not in msg:
-            f=open('msg_sent_middle2.txt','a')
+            f=open('/sd/msg_sent_middle2.txt','a')
             f.write("{}/{}/{} {}:{}:{} msg {} stats {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],msg,self.lora.stats()))
             f.close()
         self.s.setblocking(True)
@@ -119,7 +119,7 @@ class Comunication:
                     crc_OK,msg=self.check_crc(original)
                     if crc_OK:
                         if "Hay" not in msg:
-                            f=open('msg_received_middle2.txt','a')
+                            f=open('/sd/msg_received_middle2.txt','a')
                             f.write("{}/{}/{} {}:{}:{} msg {} stats {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],msg,self.lora.stats()))
                             f.close()
                         return(msg)

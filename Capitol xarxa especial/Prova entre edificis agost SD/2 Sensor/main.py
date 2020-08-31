@@ -16,7 +16,7 @@ def saveFileMsgs(neighbours,rtc):
         Example: 15/10/2019 13:21:31 5
                  id2 min_pow, id3 max_pow
         '''
-        f = open('neighbours_middle1.txt', 'a')
+        f = open('/sd/neighbours_middle1.txt', 'a')
         f.write("{}/{}/{} {}:{}:{}".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
         for i in range(len(neighbours[0])):
             f.write(" id {} pow{}, ".format(neighbours[0][i],neighbours[1][i]))
@@ -170,7 +170,7 @@ def interrupt(lora):
                 splitmsg=msg.split()
                 rcv_data=True
                 mode=CONFIG_MODE
-                f = open('process_middle1.txt', 'a')
+                f = open('/sd/process_middle1.txt', 'a')
                 f.write("{}/{}/{} {}:{}:{} Empieza el config\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                 f.close()
                 return
@@ -192,7 +192,7 @@ def interrupt(lora):
             splitmsg_stop=splitmsg[:]
             #Save the node_list
             node_list=splitmsg[2:-1]
-            f = open('neighbours_middle1.txt', 'a')
+            f = open('/sd/neighbours_middle1.txt', 'a')
             f.write("{}/{}/{} {}:{}:{} Obtencion node_list {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],node_list))
             f.close()
 
@@ -344,7 +344,7 @@ while rtc.now()[3]<hora+5:
                     time.sleep(2)
             elif "Config" in msg:
                 print("Config ACK received")
-                f = open('process_middle1.txt', 'a')
+                f = open('/sd/process_middle1.txt', 'a')
                 f.write("{}/{}/{} {}:{}:{} Config ACK recibido\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                 f.close()
                 #ack=True
@@ -358,7 +358,7 @@ while rtc.now()[3]<hora+5:
                 print("Stop finished")
                 stop_ACK=True
                 mode=LISTEN_MODE
-                f = open('process_middle1.txt', 'a')
+                f = open('/sd/process_middle1.txt', 'a')
                 f.write("{}/{}/{} {}:{}:{} Stop finished, modo=LISTEN, obtención de la nodelist\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],str()))
                 f.close()
 
@@ -460,11 +460,11 @@ while rtc.now()[3]<hora+5:
 
     if mode==DISCOVER_MODE:
         print("Discover")
-        f = open('process_middle1.txt', 'a')
+        f = open('/sd/process_middle1.txt', 'a')
         f.write("{}/{}/{} {}:{}:{} Empieza discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
         f.close()
         discover(id)
-        f = open('process_middle1.txt', 'a')
+        f = open('/sd/process_middle1.txt', 'a')
         f.write("{}/{}/{} {}:{}:{} Acaba discover\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
         f.close()
         missatge=False
@@ -488,7 +488,7 @@ while rtc.now()[3]<hora+5:
                 mode=ALARM_MODE
                 msg_alarm="Alarm "+str(id)+" "+str(id)+" 150 "+str(tempC)+" "+str(T)+" "+str(H)+" "+str(temp)+" "+"0"+" "+"1"
                 com.sendData(msg_alarm,rtc,f)
-                f = open('process_middle1.txt', 'a')
+                f = open('/sd/process_middle1.txt', 'a')
                 f.write("{}/{}/{} {}:{}:{} Empieza alarma\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                 f.close()
                 nummissatge=1
@@ -515,7 +515,7 @@ while rtc.now()[3]<hora+5:
                         if info_passed==True:
                             print("Info enviada")
                             nummissatge=nummissatge+1
-                            f = open('process_middle1.txt', 'a')
+                            f = open('/sd/process_middle1.txt', 'a')
                             f.write("{}/{}/{} {}:{}:{} He recibido ack de info\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                             f.close()
                             #save_parameters()
@@ -535,7 +535,7 @@ while rtc.now()[3]<hora+5:
                         com.change_txpower(get_neighbour_power(node_list.index(node_seguent)))
                         com.sendData(str(msg),rtc,f)
                         print("he enviat info de un altre", msg)
-                        f = open('process_middle1.txt', 'a')
+                        f = open('/sd/process_middle1.txt', 'a')
                         f.write("{}/{}/{} {}:{}:{} He enviado info de otro nodo\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                         f.close()
                         #node_seguent2_aux=node_seguent2
@@ -569,7 +569,7 @@ while rtc.now()[3]<hora+5:
                             msg_retry="Info"+" "+ str(id)+" "+str(splitmsg[2])+" "+llista
                             com.sendData(msg_retry,rtc,f)
                             print("he enviat info",msg_retry)
-                            f = open('process_middle1.txt', 'a')
+                            f = open('/sd/process_middle1.txt', 'a')
                             f.write("{}/{}/{} {}:{}:{} He enviado info\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                             f.close()
                             timer3.reset()
@@ -587,7 +587,7 @@ while rtc.now()[3]<hora+5:
                         com.change_txpower(get_neighbour_power(node_list.index(node_seguent)))
                         com.sendData(msg_retry,rtc,f)
                         #print("estic enviant", msg_retry)
-                        f = open('process_middle1.txt', 'a')
+                        f = open('/sd/process_middle1.txt', 'a')
                         f.write("{}/{}/{} {}:{}:{} He depassar token a un altre\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                         f.close()
                         token_ack=False
@@ -609,7 +609,7 @@ while rtc.now()[3]<hora+5:
                         splitmsg[2]=node_list[node_list.index(node_seguent2)]
                         msg_retry=" ".join(splitmsg)
                         print("Canvi de node, msg: ",msg_retry)
-                        f = open('process_middle1.txt', 'a')
+                        f = open('/sd/process_middle1.txt', 'a')
                         f.write("{}/{}/{} {}:{}:{} Canvi de node per enviar info\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                         f.close()
                     elif "Token" in msg_retry:
@@ -618,7 +618,7 @@ while rtc.now()[3]<hora+5:
                         msg_retry=" ".join(msg_send)
                         node_seguent=node_seguent2
                         print("Canvi de node, msg: ",msg_retry)
-                        f = open('process_middle1.txt', 'a')
+                        f = open('/sd/process_middle1.txt', 'a')
                         f.write("{}/{}/{} {}:{}:{} Canvi de node per enviar token\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                         f.close()
                     intent=1

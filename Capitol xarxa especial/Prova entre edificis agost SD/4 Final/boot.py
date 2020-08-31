@@ -42,7 +42,7 @@ neighbours=[[],[]]
 neighbours_aux=[[],[]]
 msg=""
 node_list=""
-msg_alarm_ok=" "
+msg_alarm=" "
 error=False
 token_ack=True
 info_ack=True
@@ -69,8 +69,8 @@ i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-hora=11
-rtc.init((2020, 08, 25, hora,00,0))
+hora=10
+rtc.init((2020, 08, 31, hora,00,0))
 f = open('/sd/process_final.txt', 'a')
 f.write("{}/{}/{} {}:{}:{} Nodo  final en marcha id: {} \n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],id))
 f.close()
