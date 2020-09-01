@@ -58,6 +58,7 @@ info_passed=False
 readen=False #borrar
 msg=" "
 msg_alarm_ok=" "
+msg_alarm=" "
 
 msg_listen=" "
 

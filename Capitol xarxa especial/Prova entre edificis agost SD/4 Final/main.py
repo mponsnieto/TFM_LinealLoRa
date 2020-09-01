@@ -127,7 +127,8 @@ def interrupt(lora):
     if aux!="error":
         if "Alarm" in aux:
             rcv_data=True
-            mode=ALARM_MODE
+            if len(node_list)>0:
+                mode=ALARM_MODE
             if "Alarm ok" in aux:
                 msg_alarm_ok=aux
             return
@@ -204,7 +205,9 @@ while rtc.now()[3]<hora+5:
         com.change_txpower(14)
         com.sendData("Hay buena cobertura con la residencia "+str(i),rtc,f)
         i=i+1
-        time.sleep(2)
+        if i>50:
+            i=0
+        time.sleep(4)
         if "Config" in msg:
             mode=CONFIG_MODE
             f = open('/sd/process_final.txt', 'a')
@@ -222,9 +225,7 @@ while rtc.now()[3]<hora+5:
                 com.sendData(msg_alarm,rtc,f)
             elif "Alarm ok" in msg_alarm:
                 if splitmsg[3]==str(node_list.index(id)):
-                    splitmsg[2]=str(node_list.index(id))
-                    splitmsg[3]=str(node_list.index(id))
-                    msg_alarm=" ".join(splitmsg)
+                    msg_alarm="Alarm ok "+str(node_list.index(id))+" "+str(node_list.index(id))
                     com.sendData(str(msg_alarm),rtc,f)
                     #Alarm ok ACK received, chango to mode LISTEN_MODE
                     config_ACK=False
@@ -248,7 +249,7 @@ while rtc.now()[3]<hora+5:
                     #machine.deepsleep((period*60*1000)+200)
         if ("Alarm" in msg_alarm):
             #Resend the alarm msg
-            time.sleep(3)
+            time.sleep(30)
             com.sendData(msg_alarm,rtc,f)
 
     if mode==CONFIG_MODE:

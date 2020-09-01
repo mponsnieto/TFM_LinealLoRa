@@ -135,11 +135,12 @@ def interrupt(lora):
 
         if "Alarm" in msg_aux and "ok" not in msg_aux:
             rcv_data=True
-            mode=ALARM_MODE
-            timer_to_send_alarm.start()
-            f = open('/sd/msg_sent_first.txt', 'a')
-            f.write("{}/{}/{} {}:{}:{} start alarm\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
-            f.close()
+            if len(node_list)>0:
+                mode=ALARM_MODE
+                timer_to_send_alarm.start()
+                f = open('/sd/msg_sent_first.txt', 'a')
+                f.write("{}/{}/{} {}:{}:{} start alarm\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+                f.close()
             return
         if "Alarm ok" in msg_aux:
             rcv_data=True
@@ -503,6 +504,12 @@ while rtc.now()[3]<hora+5:
                 timer_token_ack.reset()
                 timer_token_ack.stop()
                 intent=1
+            elif "Info" in msg:  #Info ok not received
+                com.change_txpower(14) #This msg's important, so it's send to the max_power
+                com.sendData("Info ok "+str(id))
+                f = open('/sd/msg_sent_first.txt', 'a')
+                f.write("{}/{}/{} {}:{}:{} sending info ok\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
+                f.close()
 
 
         if timer_to_send_GTW.read()>=120: #4.10 min=250
