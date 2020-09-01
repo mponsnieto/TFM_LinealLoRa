@@ -1,0 +1,29 @@
+------------------------
+19/8/2020 10:11:1 LoPy ON id 30aea474cbcc 
+19/8/2020 10:11:2 start Join
+19/8/2020 10:11:3 finish Join
+------------------------
+19/8/2020 10:11:0 LoPy ON id 30aea474cbcc 
+19/8/2020 10:11:2 start Join
+19/8/2020 10:11:2 finish Join
+19/8/2020 10:13:52 Se ha pulsado el boton
+19/8/2020 10:13:53 Se ha pulsado el boton
+19/8/2020 10:13:57 config start, sending 1
+19/8/2020 10:13:57 intent config 2, msg sent: Config 2 30aea474cbcc
+19/8/2020 10:13:59 intent config 3, msg sent: Config 2 30aea474cbcc
+19/8/2020 10:14:2 intent config 4, msg sent: Config 3 30aea474cbcc
+19/8/2020 10:14:4 intent config 5, msg sent: Config 3 30aea474cbcc
+19/8/2020 10:14:7 ack config, msg received Config 3 30aea474cbcc 3c71bf875fa8
+------------------------
+19/8/2020 10:11:0 LoPy ON id 30aea474cbcc 
+19/8/2020 10:11:2 start Join
+19/8/2020 10:11:2 finish Join
+19/8/2020 10:11:4 Se ha pulsado el boton
+19/8/2020 10:11:4 Se ha pulsado el boton
+19/8/2020 10:11:10 config start, sending 1
+19/8/2020 10:11:10 intent config 2, msg sent: Config 2 30aea474cbcc
+19/8/2020 10:11:12 intent config 3, msg sent: Config 2 30aea474cbcc
+19/8/2020 10:11:15 intent config 4, msg sent: Config 3 30aea474cbcc
+19/8/2020 10:11:17 ack config, msg received Config 2 30aea474cbcc 3c71bf875fa8
+------------------------
+19/8/2020 10:11:0 LoPy ON id 30aea474cbcc 

@@ -1,0 +1,633 @@
+a474cbcc 3c71bf877510
+29/7/2020 2:39:42 counter 842 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 2:39:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 2:39:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 2:40:50 counter 843 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 2:41:51 counter 844 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 2:42:51 counter 845 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 2:43:52 counter 846 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 2:44:0 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 2:44:0 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 2:45:0 counter 847 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 2:46:1 counter 848 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 2:47:1 counter 849 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 2:48:2 counter 850 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 2:48:10 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 2:48:10 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 2:49:11 counter 851 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 2:50:11 counter 852 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 2:51:12 counter 853 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 2:52:12 counter 854 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 2:52:20 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 2:52:20 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 2:53:21 counter 855 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 2:54:21 counter 856 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 2:55:21 counter 857 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 2:56:22 counter 858 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 2:56:30 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 2:56:30 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 2:57:31 counter 859 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 2:58:31 counter 860 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 2:59:31 counter 861 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:0:32 counter 862 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:0:40 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:0:40 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:1:41 counter 863 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:2:41 counter 864 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:3:42 counter 865 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:4:42 counter 866 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:4:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:4:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 3:5:51 counter 867 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:6:51 counter 868 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:7:51 counter 869 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:8:52 counter 870 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:9:0 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:9:0 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:10:1 counter 871 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:11:1 counter 872 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:12:1 counter 873 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:13:2 counter 874 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:13:10 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:13:10 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 3:14:11 counter 875 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:15:11 counter 876 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:16:11 counter 877 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:17:12 counter 878 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:17:20 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:17:20 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:18:21 counter 879 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:19:21 counter 880 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:20:22 counter 881 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:21:22 counter 882 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:21:30 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:21:30 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 3:22:31 counter 883 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:23:31 counter 884 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:24:31 counter 885 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:25:32 counter 886 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:25:40 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:25:40 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:26:41 counter 887 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:27:41 counter 888 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:28:41 counter 889 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:29:42 counter 890 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:29:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:29:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 3:30:51 counter 891 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:31:51 counter 892 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:32:52 counter 893 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:33:52 counter 894 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:34:0 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:34:0 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:35:1 counter 895 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:36:1 counter 896 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:37:1 counter 897 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:38:2 counter 898 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:38:10 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:38:10 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 3:39:11 counter 899 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:40:11 counter 900 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:41:11 counter 901 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:42:12 counter 902 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:42:20 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:42:20 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:43:21 counter 903 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:44:21 counter 904 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:45:21 counter 905 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:46:22 counter 906 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:46:30 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:46:30 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 3:47:31 counter 907 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:48:31 counter 908 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:49:32 counter 909 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:50:32 counter 910 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:50:40 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:50:40 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:51:41 counter 911 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:52:41 counter 912 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:53:41 counter 913 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:54:42 counter 914 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 3:54:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:54:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 3:55:51 counter 915 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:56:51 counter 916 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:57:51 counter 917 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:58:52 counter 918 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 3:59:0 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 3:59:0 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:0:1 counter 919 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:1:1 counter 920 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:2:2 counter 921 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:3:2 counter 922 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:3:10 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:3:10 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 4:4:11 counter 923 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:5:11 counter 924 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:6:11 counter 925 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:7:12 counter 926 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:7:20 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:7:20 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:8:21 counter 927 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:9:21 counter 928 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:10:21 counter 929 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:11:22 counter 930 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:11:30 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:11:30 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 4:12:31 counter 931 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:13:31 counter 932 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:14:31 counter 933 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:15:32 counter 934 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:15:40 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:15:40 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:16:41 counter 935 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:17:41 counter 936 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:18:41 counter 937 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:19:42 counter 938 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:19:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:19:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 4:20:51 counter 939 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:21:51 counter 940 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:22:51 counter 941 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:23:52 counter 942 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:24:0 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:24:0 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:25:1 counter 943 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:26:1 counter 944 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:27:1 counter 945 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:28:2 counter 946 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:28:10 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:28:10 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 4:29:11 counter 947 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:30:11 counter 948 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:31:12 counter 949 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:32:12 counter 950 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:32:20 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:32:20 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:33:21 counter 951 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:34:21 counter 952 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:35:21 counter 953 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:36:22 counter 954 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:36:30 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:36:30 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 4:37:31 counter 955 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:38:31 counter 956 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:39:31 counter 957 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:40:32 counter 958 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:40:40 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:40:40 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:41:41 counter 959 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:42:41 counter 960 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:43:41 counter 961 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:44:42 counter 962 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:44:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:44:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 4:45:51 counter 963 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:46:51 counter 964 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:47:51 counter 965 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:48:52 counter 966 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:49:0 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:49:0 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:50:1 counter 967 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:51:1 counter 968 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:52:2 counter 969 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:53:2 counter 970 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:53:10 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:53:10 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 4:54:11 counter 971 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:55:11 counter 972 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:56:11 counter 973 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:57:12 counter 974 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 4:57:20 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:57:20 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 4:58:21 counter 975 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 4:59:21 counter 976 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:0:22 counter 977 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:1:22 counter 978 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:1:30 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:1:30 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 5:2:31 counter 979 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:3:31 counter 980 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:4:31 counter 981 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:5:32 counter 982 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:5:40 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:5:40 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:6:41 counter 983 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:7:41 counter 984 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:8:41 counter 985 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:9:42 counter 986 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:9:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:9:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 5:10:51 counter 987 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:11:51 counter 988 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:12:51 counter 989 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:13:52 counter 990 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:14:0 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:14:0 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:15:1 counter 991 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:16:1 counter 992 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:17:1 counter 993 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:18:2 counter 994 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:18:10 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:18:10 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 5:19:11 counter 995 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:20:11 counter 996 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:21:11 counter 997 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:22:12 counter 998 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:22:20 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:22:20 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:23:21 counter 999 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:24:21 counter 1000 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:25:21 counter 1001 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:26:22 counter 1002 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:26:30 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:26:30 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 5:27:31 counter 1003 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:28:31 counter 1004 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:29:32 counter 1005 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:30:32 counter 1006 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:30:40 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:30:40 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:31:41 counter 1007 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:32:41 counter 1008 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:33:41 counter 1009 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:34:42 counter 1010 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:34:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:34:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 5:35:51 counter 1011 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:36:51 counter 1012 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:37:51 counter 1013 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:38:52 counter 1014 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:39:0 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:39:0 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:40:1 counter 1015 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:41:1 counter 1016 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:42:2 counter 1017 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:43:2 counter 1018 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:43:10 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:43:10 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 5:44:11 counter 1019 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:45:11 counter 1020 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:46:11 counter 1021 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:47:12 counter 1022 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:47:20 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:47:20 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:48:21 counter 1023 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:49:21 counter 1024 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:50:21 counter 1025 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:51:22 counter 1026 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:51:30 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:51:30 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 5:52:31 counter 1027 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:53:31 counter 1028 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:54:31 counter 1029 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:55:32 counter 1030 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 5:55:40 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:55:40 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:56:41 counter 1031 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:57:41 counter 1032 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:58:42 counter 1033 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:59:42 counter 1034 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 5:59:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 5:59:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 6:0:51 counter 1035 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:1:51 counter 1036 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:2:51 counter 1037 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:3:52 counter 1038 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:4:0 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:4:0 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:5:1 counter 1039 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:6:1 counter 1040 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:7:1 counter 1041 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:8:2 counter 1042 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:8:10 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:8:10 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 6:9:11 counter 1043 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:10:11 counter 1044 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:11:12 counter 1045 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:12:12 counter 1046 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:12:20 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:12:20 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:13:21 counter 1047 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:14:21 counter 1048 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:15:21 counter 1049 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:16:22 counter 1050 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:16:30 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:16:30 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 6:17:31 counter 1051 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:18:31 counter 1052 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:19:31 counter 1053 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:20:32 counter 1054 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:20:40 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:20:40 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:21:41 counter 1055 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:22:41 counter 1056 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:23:41 counter 1057 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:24:42 counter 1058 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:24:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:24:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 6:25:51 counter 1059 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:26:51 counter 1060 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:27:52 counter 1061 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:28:52 counter 1062 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:29:0 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:29:0 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:30:1 counter 1063 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:31:1 counter 1064 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:32:1 counter 1065 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:33:2 counter 1066 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:33:10 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:33:10 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 6:34:11 counter 1067 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:35:11 counter 1068 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:36:11 counter 1069 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:37:12 counter 1070 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:37:20 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:37:20 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:38:21 counter 1071 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:39:21 counter 1072 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:40:22 counter 1073 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:41:22 counter 1074 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:41:30 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:41:30 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 6:42:31 counter 1075 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:43:31 counter 1076 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:44:31 counter 1077 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:45:32 counter 1078 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:45:40 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:45:40 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:46:41 counter 1079 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:47:41 counter 1080 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:48:41 counter 1081 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:49:42 counter 1082 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:49:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:49:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 6:50:51 counter 1083 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:51:51 counter 1084 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:52:51 counter 1085 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:53:52 counter 1086 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 6:54:0 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:54:0 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:55:1 counter 1087 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:56:1 counter 1088 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:57:1 counter 1089 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:58:2 counter 1090 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 6:58:10 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 6:58:10 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 6:59:11 counter 1091 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:0:11 counter 1092 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:1:11 counter 1093 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:2:12 counter 1094 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:2:20 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:2:20 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:3:21 counter 1095 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:4:21 counter 1096 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:5:21 counter 1097 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:6:22 counter 1098 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:6:30 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:6:30 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 7:7:31 counter 1099 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:8:31 counter 1100 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:9:31 counter 1101 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:10:32 counter 1102 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:10:40 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:10:40 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:11:41 counter 1103 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:12:41 counter 1104 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:13:41 counter 1105 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:14:42 counter 1106 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:14:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:14:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 7:15:51 counter 1107 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:16:51 counter 1108 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:17:51 counter 1109 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:18:52 counter 1110 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:19:0 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:19:0 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:20:1 counter 1111 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:21:1 counter 1112 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:22:1 counter 1113 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:23:2 counter 1114 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:23:10 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:23:10 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 7:24:11 counter 1115 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:25:11 counter 1116 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:26:11 counter 1117 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:27:12 counter 1118 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:27:20 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:27:20 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:28:21 counter 1119 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:29:21 counter 1120 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:30:21 counter 1121 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:31:22 counter 1122 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:31:30 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:31:30 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 7:32:31 counter 1123 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:33:31 counter 1124 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:34:31 counter 1125 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:35:32 counter 1126 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:35:40 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:35:40 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:36:41 counter 1127 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:37:41 counter 1128 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:38:42 counter 1129 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:39:42 counter 1130 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:39:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:39:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 7:40:51 counter 1131 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:41:51 counter 1132 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:42:51 counter 1133 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:43:52 counter 1134 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:44:0 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:44:0 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:45:1 counter 1135 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:46:1 counter 1136 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:47:1 counter 1137 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:48:2 counter 1138 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:48:10 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:48:10 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 7:49:11 counter 1139 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:50:11 counter 1140 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:51:12 counter 1141 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:52:12 counter 1142 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:52:20 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:52:20 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:53:21 counter 1143 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:54:21 counter 1144 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:55:21 counter 1145 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:56:22 counter 1146 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 7:56:30 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 7:56:30 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 7:57:31 counter 1147 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:58:31 counter 1148 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 7:59:31 counter 1149 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:0:32 counter 1150 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:0:40 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:0:40 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:1:41 counter 1151 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:2:41 counter 1152 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:3:41 counter 1153 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:4:42 counter 1154 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:4:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:4:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 8:5:51 counter 1155 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:6:51 counter 1156 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:7:51 counter 1157 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:8:52 counter 1158 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:9:0 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:9:0 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:10:1 counter 1159 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:11:1 counter 1160 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:12:1 counter 1161 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:13:2 counter 1162 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:13:10 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:13:10 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 8:14:11 counter 1163 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:15:11 counter 1164 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:16:11 counter 1165 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:17:12 counter 1166 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:17:20 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:17:20 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:18:21 counter 1167 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:19:21 counter 1168 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:20:22 counter 1169 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:21:22 counter 1170 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:21:30 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:21:30 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 8:22:31 counter 1171 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:23:31 counter 1172 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:24:31 counter 1173 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:25:32 counter 1174 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:25:40 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:25:40 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:26:41 counter 1175 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:27:41 counter 1176 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:28:41 counter 1177 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:29:42 counter 1178 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:29:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:29:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 8:30:51 counter 1179 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:31:51 counter 1180 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:32:51 counter 1181 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:33:52 counter 1182 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:34:0 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:34:0 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:35:1 counter 1183 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:36:1 counter 1184 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:37:2 counter 1185 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:38:2 counter 1186 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:38:10 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:38:10 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 8:39:11 counter 1187 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:40:11 counter 1188 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:41:11 counter 1189 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:42:12 counter 1190 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:42:20 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:42:20 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:43:21 counter 1191 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:44:21 counter 1192 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:45:21 counter 1193 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:46:22 counter 1194 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:46:30 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:46:30 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 8:47:31 counter 1195 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:48:31 counter 1196 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:49:32 counter 1197 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:50:32 counter 1198 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:50:40 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:50:40 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:51:41 counter 1199 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:52:41 counter 1200 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:53:41 counter 1201 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:54:42 counter 1202 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 8:54:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:54:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 8:55:51 counter 1203 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:56:51 counter 1204 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:57:51 counter 1205 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:58:52 counter 1206 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 8:59:0 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 8:59:0 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 9:0:1 counter 1207 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 9:1:1 counter 1208 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 9:2:1 counter 1209 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 9:3:2 counter 1210 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 9:3:10 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 9:3:10 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 9:4:11 counter 1211 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 9:5:11 counter 1212 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 9:6:11 counter 1213 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 9:7:12 counter 1214 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 9:7:20 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 9:7:20 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 9:8:21 counter 1215 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 9:9:21 counter 1216 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 9:10:21 counter 1217 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 9:11:22 counter 1218 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 9:11:30 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 9:11:30 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 9:12:31 counter 1219 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 9:13:31 counter 1220 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 9:14:31 counter 1221 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 9:15:32 counter 1222 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 9:15:40 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 9:15:40 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 9:16:41 counter 1223 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 9:17:41 counter 1224 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 9:18:42 counter 1225 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 9:19:42 counter 1226 token_ack Token 3c71bf877510 30aea474cbcc 3c71bf877510
+29/7/2020 9:19:50 Start sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+29/7/2020 9:19:50 Finish sending to gateway data b'\x96\x003\x003\x00\xb84\x00\x00\x00\x01\x00\x00<q\xbf\x87u\x10'
+Sudidos los mensajes de info de todos los nodos
+------------------------
+28/7/2020 11:36:0 LoPy ON
+28/7/2020 11:36:2 start Join
+28/7/2020 11:36:2 finish Join

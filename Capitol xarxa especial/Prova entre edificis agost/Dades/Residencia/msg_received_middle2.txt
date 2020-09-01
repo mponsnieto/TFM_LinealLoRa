@@ -1,0 +1,1 @@
+19/8/2020 10:52:28 msg Config 3 30aea474cbcc 3c71bf875fa8 stats (rx_timestamp=455330431, rssi=-123, snr=-6.0, sfrx=7, sftx=7, tx_trials=0, tx_power=14, tx_time_on_air=113, tx_counter=44, tx_frequency=868000000)

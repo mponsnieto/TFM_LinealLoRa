@@ -1,0 +1,249 @@
+------------------------
+29/7/2020 9:26:1 LoPy ON
+29/7/2020 9:26:2 start Join
+29/7/2020 9:26:2 finish Join
+------------------------
+29/7/2020 9:26:0 LoPy ON
+29/7/2020 9:26:2 start Join
+29/7/2020 9:26:2 finish Join
+29/7/2020 9:26:46 Se ha pulsado el boton
+29/7/2020 9:26:47 Se ha pulsado el boton
+29/7/2020 9:26:47 config start, sending 1
+29/7/2020 9:26:48 intent config 2, msg sent: Config 2 30aea474cbcc
+29/7/2020 9:26:50 intent config 3, msg sent: Config 2 30aea474cbcc
+29/7/2020 9:26:52 intent config 4, msg sent: Config 3 30aea474cbcc
+29/7/2020 9:26:55 intent config 5, msg sent: Config 3 30aea474cbcc
+29/7/2020 9:26:57 intent config 6, msg sent: Config 4 30aea474cbcc
+29/7/2020 9:27:0 intent config 7, msg sent: Config 4 30aea474cbcc
+29/7/2020 9:27:2 intent config 8, msg sent: Config 5 30aea474cbcc
+29/7/2020 9:27:4 ack config, msg received Config 3 30aea474cbcc 3c71bf877510
+29/7/2020 9:27:43 counter 9 sending stop 2 30aea474cbcc 30aea458f354 0
+29/7/2020 9:27:47 counter 10 sending stop 2 30aea474cbcc 30aea458f354 0
+29/7/2020 9:27:49 counter 11 sending stop 3 30aea474cbcc 30aea458f354 0
+29/7/2020 9:27:51 counter 12 sending stop 3 30aea474cbcc 30aea458f354 0
+29/7/2020 9:28:2 sending Hello 2 30aea474cbcc  counter 13
+29/7/2020 9:28:6 sending Hello 2 30aea474cbcc  counter 14
+29/7/2020 9:28:11 sending Hello 2 30aea474cbcc  counter 15
+29/7/2020 9:28:17 sending Hello 2 30aea474cbcc  counter 16
+29/7/2020 9:28:20 sending Hello 3 30aea474cbcc  counter 17
+29/7/2020 9:28:23 sending Hello 3 30aea474cbcc  counter 18
+29/7/2020 9:28:31 sending Hello 4 30aea474cbcc  counter 19
+29/7/2020 9:28:34 sending Hello 4 30aea474cbcc  counter 20
+29/7/2020 9:28:38 sending Hello 4 30aea474cbcc  counter 21
+29/7/2020 9:28:41 sending Hello 4 30aea474cbcc  counter 22
+29/7/2020 9:28:48 sending Hello 5 30aea474cbcc  counter 23
+29/7/2020 9:28:51 sending Hello 5 30aea474cbcc  counter 24
+29/7/2020 9:28:56 sending Hello 5 30aea474cbcc  counter 25
+29/7/2020 9:28:59 sending Hello 6 30aea474cbcc  counter 26
+29/7/2020 9:29:2 sending Hello 6 30aea474cbcc  counter 27
+29/7/2020 9:29:6 sending Hello 6 30aea474cbcc  counter 28
+29/7/2020 9:29:13 sending Hello 7 30aea474cbcc  counter 29
+29/7/2020 9:29:17 sending Hello 7 30aea474cbcc  counter 30
+29/7/2020 9:29:22 sending Hello 7 30aea474cbcc  counter 31
+29/7/2020 9:29:25 sending Hello 7 30aea474cbcc  counter 32
+29/7/2020 9:29:35 sending Hello 8 30aea474cbcc  counter 33
+29/7/2020 9:29:37 sending Hello 8 30aea474cbcc  counter 34
+29/7/2020 9:29:40 sending Hello 8 30aea474cbcc  counter 35
+29/7/2020 9:29:45 sending Hello 9 30aea474cbcc  counter 36
+29/7/2020 9:29:53 sending Hello 9 30aea474cbcc  counter 37
+29/7/2020 9:29:57 sending Hello 9 30aea474cbcc  counter 38
+29/7/2020 9:30:1 sending Hello 10 30aea474cbcc  counter 39
+29/7/2020 9:30:5 sending Hello 10 30aea474cbcc  counter 40
+29/7/2020 9:30:8 sending Hello 10 30aea474cbcc  counter 41
+29/7/2020 9:30:12 sending Hello 10 30aea474cbcc  counter 42
+29/7/2020 9:30:14 sending Hello 11 30aea474cbcc  counter 43
+29/7/2020 9:30:19 sending Hello 11 30aea474cbcc  counter 44
+29/7/2020 9:30:22 sending Hello 11 30aea474cbcc  counter 45
+29/7/2020 9:30:26 sending Hello 11 30aea474cbcc  counter 46
+29/7/2020 9:30:31 sending Hello 12 30aea474cbcc  counter 47
+29/7/2020 9:30:33 sending Hello 12 30aea474cbcc  counter 48
+29/7/2020 9:30:37 sending Hello 12 30aea474cbcc  counter 49
+29/7/2020 9:30:42 sending Hello 12 30aea474cbcc  counter 50
+29/7/2020 9:30:45 sending Hello 13 30aea474cbcc  counter 51
+29/7/2020 9:30:49 sending Hello 13 30aea474cbcc  counter 52
+29/7/2020 9:30:59 sending Hello 13 30aea474cbcc  counter 53
+29/7/2020 9:31:5 sending Hello 13 30aea474cbcc  counter 54
+29/7/2020 9:31:10 start discover
+29/7/2020 9:31:10 counter 55 sending Discover normal 2 30aea474cbcc
+29/7/2020 9:31:13 counter 56 sending Discover normal 2 30aea474cbcc
+29/7/2020 9:31:16 counter 57 sending Discover normal 2 30aea474cbcc
+29/7/2020 9:31:19 counter 58 sending Discover normal 2 30aea474cbcc
+29/7/2020 9:31:22 counter 59 sending Discover normal 3 30aea474cbcc
+29/7/2020 9:31:25 counter 60 sending Discover normal 3 30aea474cbcc
+29/7/2020 9:31:28 counter 61 sending Discover normal 3 30aea474cbcc
+29/7/2020 9:31:32 counter 62 sending Discover normal 3 30aea474cbcc
+29/7/2020 9:31:35 counter 63 sending Discover normal 4 30aea474cbcc
+29/7/2020 9:31:39 counter 64 sending Discover normal 4 30aea474cbcc
+29/7/2020 9:31:42 counter 65 sending Discover normal 4 30aea474cbcc
+29/7/2020 9:31:45 counter 66 sending Discover normal 4 30aea474cbcc
+29/7/2020 9:31:49 counter 67 sending Discover normal 5 30aea474cbcc
+29/7/2020 9:31:52 counter 68 sending Discover normal 5 30aea474cbcc
+29/7/2020 9:31:55 counter 69 sending Discover normal 5 30aea474cbcc
+29/7/2020 9:31:59 counter 70 sending Discover normal 5 30aea474cbcc
+29/7/2020 9:32:2 counter 71 sending Discover normal 6 30aea474cbcc
+29/7/2020 9:32:6 counter 72 sending Discover normal 6 30aea474cbcc
+29/7/2020 9:32:9 counter 73 sending Discover normal 6 30aea474cbcc
+29/7/2020 9:32:12 counter 74 sending Discover normal 6 30aea474cbcc
+29/7/2020 9:32:16 counter 75 sending Discover normal 7 30aea474cbcc
+29/7/2020 9:32:19 counter 76 sending Discover normal 7 30aea474cbcc
+29/7/2020 9:32:23 counter 77 sending Discover normal 7 30aea474cbcc
+29/7/2020 9:32:26 counter 78 sending Discover normal 7 30aea474cbcc
+29/7/2020 9:32:29 counter 79 sending Discover normal 8 30aea474cbcc
+29/7/2020 9:32:33 counter 80 sending Discover normal 8 30aea474cbcc
+29/7/2020 9:32:36 counter 81 sending Discover normal 8 30aea474cbcc
+29/7/2020 9:32:39 counter 82 sending Discover normal 8 30aea474cbcc
+29/7/2020 9:32:43 counter 83 sending Discover normal 9 30aea474cbcc
+29/7/2020 9:32:46 counter 84 sending Discover normal 9 30aea474cbcc
+29/7/2020 9:32:50 counter 85 sending Discover normal 9 30aea474cbcc
+29/7/2020 9:32:53 counter 86 sending Discover normal 9 30aea474cbcc
+29/7/2020 9:32:56 counter 87 sending Discover normal 10 30aea474cbcc
+29/7/2020 9:33:0 counter 88 sending Discover normal 10 30aea474cbcc
+29/7/2020 9:33:3 counter 89 sending Discover normal 10 30aea474cbcc
+29/7/2020 9:33:7 counter 90 sending Discover normal 10 30aea474cbcc
+29/7/2020 9:33:10 counter 91 sending Discover normal 11 30aea474cbcc
+29/7/2020 9:33:14 counter 92 sending Discover normal 11 30aea474cbcc
+29/7/2020 9:33:17 counter 93 sending Discover normal 11 30aea474cbcc
+29/7/2020 9:33:21 counter 94 sending Discover normal 11 30aea474cbcc
+29/7/2020 9:33:24 counter 95 sending Discover normal 12 30aea474cbcc
+29/7/2020 9:33:27 counter 96 sending Discover normal 12 30aea474cbcc
+29/7/2020 9:33:31 counter 97 sending Discover normal 12 30aea474cbcc
+29/7/2020 9:33:34 counter 98 sending Discover normal 12 30aea474cbcc
+29/7/2020 9:33:37 counter 99 sending Discover normal 13 30aea474cbcc
+29/7/2020 9:33:41 counter 100 sending Discover normal 13 30aea474cbcc
+29/7/2020 9:33:44 counter 101 sending Discover normal 13 30aea474cbcc
+29/7/2020 9:33:48 counter 102 sending Discover normal 13 30aea474cbcc
+29/7/2020 9:33:51 counter 103 sending Discover end 2 1
+29/7/2020 9:33:54 counter 104 sending Discover end 2 1
+29/7/2020 9:33:56 counter 105 sending Discover end 2 1
+29/7/2020 9:33:59 counter 106 sending Discover end 2 1
+29/7/2020 9:34:1 finish discover
+29/7/2020 9:35:6 counter 107 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 9:35:16 counter Hello 13 30aea474cbcc info ok
+29/7/2020 9:35:19 counter Hello 13 30aea474cbcc info ok
+29/7/2020 9:39:30 Start sending to gateway data b'\x96\x004\x004\x00\xb83\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+29/7/2020 9:39:30 Finish sending to gateway data b'\x96\x004\x004\x00\xb83\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 9:40:30 counter 110 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 9:40:56 counter Hello 13 30aea474cbcc info ok
+29/7/2020 9:40:58 counter Hello 13 30aea474cbcc info ok
+29/7/2020 9:41:1 counter Hello 13 30aea474cbcc info ok
+29/7/2020 9:45:11 Start sending to gateway data b'\x96\x002\x004\x00\xb82\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+29/7/2020 9:45:11 Finish sending to gateway data b'\x96\x002\x004\x00\xb82\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 9:46:12 counter 114 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 9:47:12 counter 115 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 9:47:22 counter Hello 13 30aea474cbcc info ok
+29/7/2020 9:47:26 counter Hello 13 30aea474cbcc info ok
+29/7/2020 9:49:31 counter Hello 13 30aea474cbcc info ok
+29/7/2020 9:49:34 counter Hello 13 30aea474cbcc info ok
+29/7/2020 9:53:45 Start sending to gateway data b'\x96\x002\x00/\x00\xb8/\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+29/7/2020 9:53:45 Finish sending to gateway data b'\x96\x002\x00/\x00\xb8/\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 9:54:45 counter 120 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 9:54:54 counter Hello 13 30aea474cbcc info ok
+29/7/2020 9:55:0 counter Hello 13 30aea474cbcc info ok
+29/7/2020 9:59:10 Start sending to gateway data b'\x96\x003\x000\x00\xb80\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+29/7/2020 9:59:10 Finish sending to gateway data b'\x96\x003\x000\x00\xb80\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 10:0:10 counter 123 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 10:0:16 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:0:22 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:4:33 Start sending to gateway data b'\x96\x000\x00/\x00\xb82\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+29/7/2020 10:4:33 Finish sending to gateway data b'\x96\x000\x00/\x00\xb82\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 10:5:33 counter 126 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 10:5:46 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:5:48 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:5:50 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:6:9 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:10:20 Start sending to gateway data b'\x96\x001\x000\x00\xb83\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+29/7/2020 10:10:20 Finish sending to gateway data b'\x96\x001\x000\x00\xb83\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 10:11:21 counter 131 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 10:11:32 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:11:34 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:11:36 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:11:56 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:16:6 Start sending to gateway data b'\x96\x00/\x00/\x00\xb8/\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+29/7/2020 10:16:6 Finish sending to gateway data b'\x96\x00/\x00/\x00\xb8/\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 10:17:7 counter 136 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 10:17:18 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:17:20 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:17:22 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:17:42 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:21:52 Start sending to gateway data b'\x96\x002\x000\x00\xb84\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+29/7/2020 10:21:52 Finish sending to gateway data b'\x96\x002\x000\x00\xb84\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 10:22:53 counter 141 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 10:23:4 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:23:6 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:23:9 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:23:28 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:27:38 Start sending to gateway data b'\x96\x004\x00/\x00\xb82\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+29/7/2020 10:27:38 Finish sending to gateway data b'\x96\x004\x00/\x00\xb82\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 10:28:39 counter 146 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 10:28:50 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:28:52 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:29:3 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:33:13 Start sending to gateway data b'\x96\x003\x00/\x00\xb82\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+29/7/2020 10:33:13 Finish sending to gateway data b'\x96\x003\x00/\x00\xb82\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 10:34:14 counter 150 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 10:34:25 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:34:28 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:34:29 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:34:49 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:38:59 Start sending to gateway data b'\x96\x00/\x004\x00\xb82\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+29/7/2020 10:39:0 Finish sending to gateway data b'\x96\x00/\x004\x00\xb82\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 10:40:0 counter 155 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 10:40:11 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:40:14 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:40:16 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:40:35 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:44:46 Start sending to gateway data b'\x96\x003\x00/\x00\xb82\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+29/7/2020 10:44:46 Finish sending to gateway data b'\x96\x003\x00/\x00\xb82\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 10:45:46 counter 160 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 10:45:58 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:46:0 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:46:2 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:46:22 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:50:32 Start sending to gateway data b'\x96\x00/\x002\x00\xb84\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+29/7/2020 10:50:32 Finish sending to gateway data b'\x96\x00/\x002\x00\xb84\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 10:51:33 counter 165 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 10:51:44 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:51:46 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:51:48 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:52:8 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:56:18 Start sending to gateway data b'\x96\x003\x000\x00\xb81\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+29/7/2020 10:56:18 Finish sending to gateway data b'\x96\x003\x000\x00\xb81\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 10:57:19 counter 170 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 10:57:30 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:57:33 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:57:35 counter Hello 13 30aea474cbcc info ok
+29/7/2020 10:57:54 counter Hello 13 30aea474cbcc info ok
+29/7/2020 11:2:5 Start sending to gateway data b'\x96\x000\x00/\x00\xb82\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+29/7/2020 11:2:5 Finish sending to gateway data b'\x96\x000\x00/\x00\xb82\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 11:3:5 counter 175 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 11:3:17 counter Hello 13 30aea474cbcc info ok
+29/7/2020 11:3:19 counter Hello 13 30aea474cbcc info ok
+29/7/2020 11:3:21 counter Hello 13 30aea474cbcc info ok
+29/7/2020 11:3:40 counter Hello 13 30aea474cbcc info ok
+29/7/2020 11:7:51 Start sending to gateway data b'\x96\x003\x004\x00\xb81\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+29/7/2020 11:7:51 Finish sending to gateway data b'\x96\x003\x004\x00\xb81\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
+29/7/2020 11:8:51 counter 180 token_ack Token 30aea458f354 30aea474cbcc 30aea458f354
+29/7/2020 11:9:3 counter "{^Æª©r*(Æ("ù©[¨õπÈ⁄rÜﬁÆ€´i◊¶j◊Æ¢∑‚ï´û +◊uÎ§^qËØäxÆ∫+Hello 13 30aea474cbcc info ok
+29/7/2020 11:9:5 counter Hello 13 30aea474cbcc info ok
+29/7/2020 11:9:7 counter Hello 13 30aea474cbcc info ok
+29/7/2020 11:9:27 counter Hello 13 30aea474cbcc info ok
+------------------------
+29/7/2020 9:26:0 LoPy ON
+29/7/2020 9:26:2 start Join
+29/7/2020 9:26:2 finish Join

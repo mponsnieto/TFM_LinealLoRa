@@ -1,0 +1,31 @@
+-----------------------
+20/8/2020 9:4:0 Nodo sensor en marcha id 3c71bf875fa8 
+-----------------------
+20/8/2020 9:7:0 Nodo sensor en marcha id 3c71bf875fa8 
+-----------------------
+20/8/2020 9:7:0 Nodo sensor en marcha id 3c71bf875fa8 
+20/8/2020 9:20:20 Empieza el config
+20/8/2020 9:20:21 Empieza el config
+20/8/2020 9:20:25 Empieza el config
+20/8/2020 9:20:28 Empieza el config
+20/8/2020 9:20:40 Empieza el config
+20/8/2020 9:20:50 Empieza el config
+20/8/2020 9:28:39 Empieza el config
+20/8/2020 9:28:39 Config ACK recibido
+20/8/2020 9:28:59 Empieza el config
+20/8/2020 9:28:59 Config ACK recibido
+20/8/2020 9:29:18 Stop finished, modo=LISTEN, obtención de la nodelist
+20/8/2020 9:32:13 Empieza discover
+20/8/2020 9:33:51 Acaba discover
+20/8/2020 9:36:41 He depassar token a un altre
+20/8/2020 9:37:44 He depassar token a un altre
+20/8/2020 9:38:44 He depassar token a un altre
+20/8/2020 9:39:45 He depassar token a un altre
+20/8/2020 9:40:43 He depassar token a un altre
+20/8/2020 9:41:44 He depassar token a un altre
+20/8/2020 9:42:46 He depassar token a un altre
+20/8/2020 9:43:50 He depassar token a un altre
+20/8/2020 9:44:48 He depassar token a un altre
+20/8/2020 9:45:51 He depassar token a un altre
+-----------------------
+20/8/2020 9:7:0 Nodo sensor en marcha id 3c71bf875fa8 

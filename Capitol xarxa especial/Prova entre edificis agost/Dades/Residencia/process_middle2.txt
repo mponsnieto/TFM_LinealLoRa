@@ -1,0 +1,4 @@
+19/8/2020 10:45:0 Nodo sensor en marcha id 3c71bf877510 
+19/8/2020 10:45:0 Nodo sensor en marcha id 3c71bf877510 
+19/8/2020 10:52:29 Empieza el config
+19/8/2020 10:45:0 Nodo sensor en marcha id 3c71bf877510 

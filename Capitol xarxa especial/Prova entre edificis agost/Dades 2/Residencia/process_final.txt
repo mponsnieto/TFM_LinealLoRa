@@ -1,0 +1,12 @@
+20/8/2020 8:50:0 Nodo  final en marcha id: 30aea458f354 
+------------------------
+20/8/2020 8:50:0 Nodo  final en marcha id: 30aea458f354 
+------------------------
+20/8/2020 9:28:24 Empieza el config
+20/8/2020 9:28:25 Empieza el config
+20/8/2020 9:28:32 Empieza el config
+20/8/2020 9:29:2 Tenemos node_list ['30aea474cbcc', '3c71bf875fa8', '30aea458f354']
+20/8/2020 9:29:15 Empieza discover
+20/8/2020 9:33:12 Acaba discover
+20/8/2020 8:50:0 Nodo  final en marcha id: 30aea458f354 
+------------------------

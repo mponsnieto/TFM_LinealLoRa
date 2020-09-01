@@ -1,0 +1,11 @@
+------------------------
+------------------------
+29/7/2020 9:16:55 Obtencion node_list ['30aea474cbcc', '30aea458f354']
+29/7/2020 9:17:2 Obtencion node_list ['30aea474cbcc', '30aea458f354']
+29/7/2020 9:17:2 Obtencion node_list ['30aea474cbcc', '30aea458f354']
+29/7/2020 9:17:6 Obtencion node_list ['30aea474cbcc', '30aea458f354']
+29/7/2020 9:17:6 Obtencion node_list ['30aea474cbcc', '30aea458f354']
+29/7/2020 9:17:8 Obtencion node_list ['30aea474cbcc', '30aea458f354']
+29/7/2020 9:17:10 Obtencion node_list ['30aea474cbcc', '30aea458f354']
+29/7/2020 9:17:18 Obtencion node_list ['30aea474cbcc', '30aea458f354']
+------------------------

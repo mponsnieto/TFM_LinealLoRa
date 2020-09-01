@@ -1,0 +1,13 @@
+29/7/2020 9:4:0 Nodo sensor en marcha
+29/7/2020 9:4:0 Nodo sensor en marcha
+29/7/2020 9:16:9 Empieza el config
+29/7/2020 9:16:10 Empieza el config
+29/7/2020 9:16:14 Empieza el config
+29/7/2020 9:16:19 Empieza el config
+29/7/2020 9:16:21 Empieza el config
+29/7/2020 9:16:23 Empieza el config
+29/7/2020 9:16:28 Empieza el config
+29/7/2020 9:16:29 Config ACK recibido
+29/7/2020 9:16:55 Empieza el config
+29/7/2020 9:16:55 Config ACK recibido
+29/7/2020 9:4:0 Nodo sensor en marcha

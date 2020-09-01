@@ -192,7 +192,7 @@ def interrupt(lora):
             splitmsg_stop=splitmsg[:]
             #Save the node_list
             node_list=splitmsg[2:-1]
-            f = open('process_middle1.txt', 'a')
+            f = open('neighbours_middle1.txt', 'a')
             f.write("{}/{}/{} {}:{}:{} Obtencion node_list {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],node_list))
             f.close()
 
@@ -254,19 +254,21 @@ if reset_cause==machine.DEEPSLEEP_RESET:
 
 while True:
     if mode==CHECK:
-        com.sendData("Hay buena cobertura de sensor 1 "+str(i),rtc,f)
+        com.sendData("Hay buena cobertura de mateu orfila sensor 1 "+str(i),rtc,f)
+        com.change_txpower(14)
         i=i+1
-        time.sleep(2)
+        time.sleep(10)
     if mode==ALARM_MODE:
         if rcv_data:
             rcv_data=False
-            splitmsg=msg_alarm_ok.split( )
+
             msg_alarm=msg_aux
             if "Alarm" in msg_alarm and "ok" not in msg_alarm:
                 #Resend the alarm msg
                 com.change_txpower(14)
                 com.sendData(msg_alarm,rtc,f)
             elif "Alarm ok" in msg_alarm_ok:
+                splitmsg=msg_alarm_ok.split( )
                 if node_list.index(splitmsg[3])==node_list.index(id): #Alarm ok from:id to:id
                     #Alarm ok ACK. It's for me
                     com.sendData("Alarm ok "+str(id)+" "+str(id),rtc,f)
@@ -380,7 +382,7 @@ while True:
                 id_n=splitmsg[-1]
                 pow=int(splitmsg[1])
         if stop_ACK==False and stop_start==True:
-            if node_list.index(id)-1>=int(splitmsg_stop[-1]):
+            if node_list.index(id)-1>=int(splitmsg_stop[-1]) or "Discover" in msg:
                 config_start=False
                 print("Stop finished")
                 stop_ACK=True
@@ -510,7 +512,7 @@ while True:
             dry=True
             dhi=1
             alarma=check_alarms2(T,temp,tempC,H,dry)
-            if alarma==True or nummissatge==3:
+            if alarma==True or nummissatge==10:
                 print("Hi ha alarma")
                 mode=ALARM_MODE
                 msg_alarm="Alarm "+str(id)+" "+str(id)+" 150 "+str(tempC)+" "+str(T)+" "+str(H)+" "+str(temp)+" "+"0"+" "+"1"
@@ -518,6 +520,7 @@ while True:
                 f = open('process_middle1.txt', 'a')
                 f.write("{}/{}/{} {}:{}:{} Empieza alarma\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                 f.close()
+                nummissatge=1
             timer_read_sensors.reset()
         if rcv_data==True:
             rcv_data=False
