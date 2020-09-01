@@ -158,7 +158,8 @@ def interrupt(lora):
 
         if "Alarm" in msg_aux:
             rcv_data=True
-            mode=ALARM_MODE
+            if len(node_list)>0:
+                mode=ALARM_MODE
             if "Alarm ok" in msg_aux:
                 msg_alarm_ok=msg_aux
             return
@@ -280,7 +281,7 @@ while rtc.now()[3]<hora+5:
                     msg_alarm_ok=" "
                 if int(splitmsg[2])>node_list.index(id) or int(splitmsg[2])==int(splitmsg[3]):
                     #Alarm ok ACK received, chango to mode LISTEN_MODE
-                    mode=CONNFIG_MODE
+                    mode=CONFIG_MODE
                     timer_read_sensors.reset()
                     timer_read_sensors.start()
                     msg_alarm=" "
