@@ -270,7 +270,7 @@ while rtc.now()[3]<hora+5:
                 #Resend the alarm msg
                 com.change_txpower(14)
                 com.sendData(msg_alarm,rtc,f)
-            elif "Alarm ok" in msg_alarm_ok:
+            elif "Alarm ok" in msg_alarm_ok and id in node_list:
                 splitmsg=msg_alarm_ok.split( )
                 if splitmsg[3]==str(node_list.index(id)): #Alarm ok from:id to:id
                     #Pass Alarm ok to other
@@ -281,6 +281,7 @@ while rtc.now()[3]<hora+5:
                     msg_alarm_ok=" "
                 if int(splitmsg[2])>node_list.index(id) or int(splitmsg[2])==int(splitmsg[3]):
                     #Alarm ok ACK received, chango to mode LISTEN_MODE
+                    print("Alarm ok, change to CONFIG")
                     mode=CONFIG_MODE
                     timer_read_sensors.reset()
                     timer_read_sensors.start()
@@ -290,6 +291,7 @@ while rtc.now()[3]<hora+5:
                     config_ACK=False
                     token_ack=True
                     stop_ACK=False
+                    stop_config=False
                     config_start=False
                     power=2
                     rcv_data=False
@@ -297,6 +299,7 @@ while rtc.now()[3]<hora+5:
                     info_ack=True
                     info_passed=False
                     readen=False #borrar
+                    node_list=""
                     msg=" "
                     msg_listen=" "
                     neighbours=[[],[]]
@@ -430,7 +433,7 @@ while rtc.now()[3]<hora+5:
                 time.sleep(1)
                 msg_listen=" "
 
-            elif isMyACK(int(splitmsg_listen[-1])):    #node_list.index(id)<int(splitmsg[-1]):
+            elif isMyACK(int(splitmsg_listen[-1])) or "Token" in msg:    #node_list.index(id)<int(splitmsg[-1]):
                 print("Discover Finished")
                 mode=NORMAL_MODE
                 timer_Disc_end.reset()

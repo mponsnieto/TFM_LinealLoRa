@@ -152,7 +152,7 @@ class Comunication:
             print(neighbours)
             return neighbours
 
-    def neighbours_min(self,neighbours,neighbours_aux,id):
+    def neighbours_min(self,neighbours,neighbours_aux):
         for id in neighbours[0]:
             if id in neighbours_aux[0]:
                 neighbours[1][neighbours[0].index(id)]=min(neighbours[1][neighbours[0].index(id)],neighbours_aux[1][neighbours_aux[0].index(id)])

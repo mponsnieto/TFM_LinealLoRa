@@ -126,8 +126,8 @@ def interrupt(lora):
     aux=com.reciveData(rtc,f)
     if aux!="error":
         if "Alarm" in aux:
-            rcv_data=True
             if len(node_list)>0:
+                rcv_data=True
                 mode=ALARM_MODE
             if "Alarm ok" in aux:
                 msg_alarm_ok=aux
@@ -245,6 +245,7 @@ while rtc.now()[3]<hora+5:
                     Hello_received=False
                     End_discover=False
                     info_passed=False
+                    stop_config=False
                     mode=CONFIG_MODE
                     #machine.deepsleep((period*60*1000)+200)
         if ("Alarm" in msg_alarm):
@@ -262,13 +263,14 @@ while rtc.now()[3]<hora+5:
                 power=int(splitmsg[1])
                 print("power1:",power)
                 com.change_txpower(power)
+                time.sleep(3+machine.rng()%1)
                 msg=msg+" "+str(id)
                 com.sendData(msg,rtc,f)
                 print("Enviare: ",msg)
                 config_start=False
                 if type(msg)==bytes:
                     msg=bytes.decode(msg)
-                if node_list=="":
+                if node_list=="" and "Config" in msg:
                     splitmsg=msg.split( )
                     node_list=splitmsg[2:]
                 timer.start()
@@ -375,7 +377,7 @@ while rtc.now()[3]<hora+5:
                     com.sendData("Hello "+ str(pow) + " "+ str(id),rtc,f)
                     neighbours_aux=com.update_neighbours(pow,id_n,neighbours_aux)
                 elif "Discover end" in msg and isMyTurn(int(msg[-1])): #All discovers finished
-                    neighbours=com.neighbours_min(neighbours,neighbours_aux,id)
+                    neighbours=com.neighbours_min(neighbours,neighbours_aux)
                     rcv_data=False
                     splitmsg_send=msg.split()
                     turn=int(splitmsg_send[-1])+1
@@ -386,14 +388,14 @@ while rtc.now()[3]<hora+5:
                     timer_Disc_end.start()
                     time.sleep(1)
                     msg=" "
-                elif "Discover end" in msg and isMyACK(int(splitmsg[-1])):    #node_list.index(id)<int(splitmsg[-1]):
+                elif "Discover end" in msg and isMyACK(int(splitmsg[-1])) or "Token" in msg:    #node_list.index(id)<int(splitmsg[-1]):
                     print("Discover Finished")
                     mode=NORMAL_MODE
                     timer_Disc_end.reset()
                     timer_Disc_end.stop()
                     discover_end_ack=True
                     neighbours=com.neighbours_min(neighbours,neighbours_aux)
-                    saveFileMsgs(neighbours,counter,rtc)
+                    saveFileMsgs(neighbours,rtc)
 
                 elif "Token" in msg and id in msg:
                     mode=NORMAL_MODE
@@ -404,7 +406,7 @@ while rtc.now()[3]<hora+5:
                     token_ack=False
                     info_ack=True
                     info_passed=False
-                    neighbours=com.neighbours_min(neighbours,neighbours_aux,id)
+                    neighbours=com.neighbours_min(neighbours,neighbours_aux)
                     rcv_data=True#Repasar això
 
             if discover_end_ack==False and timer_Disc_end.read()>5:

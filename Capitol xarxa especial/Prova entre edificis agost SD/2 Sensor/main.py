@@ -428,7 +428,7 @@ while rtc.now()[3]<hora+5:
                 time.sleep(1)
                 msg_listen=" "
 
-            elif isMyACK(int(splitmsg_listen[-1])):    #node_list.index(id)<int(splitmsg[-1]):
+            elif isMyACK(int(splitmsg_listen[-1])) or "Token" in msg:    #node_list.index(id)<int(splitmsg[-1]):
                 print("Discover Finished")
                 mode=NORMAL_MODE
                 timer_Disc_end.reset()
