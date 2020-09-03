@@ -158,6 +158,7 @@ def interrupt(lora):
 
         if "Alarm" in msg_aux:
             rcv_data=True
+            stop_config=False
             if len(node_list)>0:
                 mode=ALARM_MODE
             if "Alarm ok" in msg_aux:
