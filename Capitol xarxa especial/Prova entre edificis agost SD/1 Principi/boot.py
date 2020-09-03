@@ -60,8 +60,8 @@ i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-hora=10
-rtc.init((2020, 08, 31, hora,20))
+hora=00
+rtc.init((2020, 09, 03, hora,00))
 f = open('/sd/msg_sent_first.txt', 'a')
 f.write("------------------------\n")
 f.close()

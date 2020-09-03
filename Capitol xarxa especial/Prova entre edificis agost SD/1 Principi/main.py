@@ -134,13 +134,15 @@ def interrupt(lora):
         #saveFileMsgsReceived(msg_aux,rtc)
 
         if "Alarm" in msg_aux and "ok" not in msg_aux:
-            rcv_data=True
             if len(node_list)>0:
+                rcv_data=True
                 mode=ALARM_MODE
                 timer_to_send_alarm.start()
                 f = open('/sd/msg_sent_first.txt', 'a')
                 f.write("{}/{}/{} {}:{}:{} start alarm\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5]))
                 f.close()
+            if mode==CONFIG_MODE:
+                com.sendData("Alarm ok 0 1")
             return
         if "Alarm ok" in msg_aux:
             rcv_data=True

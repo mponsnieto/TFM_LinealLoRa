@@ -119,7 +119,7 @@ def discover(id):
 def interrupt(lora):
     print("Interrupcio")
     global rcv_data
-    global msg, aux, error
+    global msg, aux, error,msg_alarm_ok
     global mode, rtc,f
     global Hello_received, End_discover, stop_config
 
@@ -131,6 +131,8 @@ def interrupt(lora):
                 mode=ALARM_MODE
             if "Alarm ok" in aux:
                 msg_alarm_ok=aux
+            if mode==CONFIG_MODE:
+                com.sendData(msg_alarm_ok,rtc,f)
             return
 
         if mode==LISTEN_MODE:
@@ -239,7 +241,6 @@ while rtc.now()[3]<hora+5:
                     neighbours_aux=[[],[]]
                     msg="Config 2"
                     node_list=""
-                    msg_alarm_ok=" "
                     msg_alarm=" "
                     error=False
                     Hello_received=False

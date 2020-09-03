@@ -69,8 +69,8 @@ i=0
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-hora=10
-rtc.init((2020, 08, 31, hora,00,0))
+hora=00
+rtc.init((2020, 09, 03, hora,00,0))
 f = open('/sd/process_final.txt', 'a')
 f.write("{}/{}/{} {}:{}:{} Nodo  final en marcha id: {} \n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],id))
 f.close()
