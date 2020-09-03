@@ -173,8 +173,10 @@ def interrupt(lora):
             rcv_data=True
         if "Config" in msg_aux: #Starting config
             rcv_data=True
-            mode=CONFIG_MODE
             msg=msg_aux
+            if mode==CHECK:
+                mode=CONFIG_MODE
+
 
         if mode==NORMAL_MODE and ("Info" in msg_aux or "Token" in msg_aux):
             #msg=msg_aux

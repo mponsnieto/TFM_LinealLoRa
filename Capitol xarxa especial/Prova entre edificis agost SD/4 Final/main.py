@@ -263,7 +263,7 @@ while rtc.now()[3]<hora+5:
                 power=int(splitmsg[1])
                 print("power1:",power)
                 com.change_txpower(power)
-                time.sleep(3+machine.rng()%1)
+                #time.sleep(3+machine.rng()%1)
                 msg=msg+" "+str(id)
                 com.sendData(msg,rtc,f)
                 print("Enviare: ",msg)

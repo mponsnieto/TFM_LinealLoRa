@@ -279,7 +279,7 @@ while rtc.now()[3]<hora+5:
                     msg_alarm=" ".join(splitmsg)
                     com.sendData(str(msg_alarm),rtc,f)
                     msg_alarm_ok=" "
-                if int(splitmsg[2])>node_list.index(id) or int(splitmsg[2])==int(splitmsg[3]):
+                if int(splitmsg[2])>node_list.index(id) or int(splitmsg[2])==int(splitmsg[3]) or "Config" in msg_aux:
                     #Alarm ok ACK received, chango to mode LISTEN_MODE
                     print("Alarm ok, change to CONFIG")
                     mode=CONFIG_MODE
