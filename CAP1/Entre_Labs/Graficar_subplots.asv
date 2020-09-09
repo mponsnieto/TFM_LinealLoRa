@@ -1,4 +1,7 @@
-filename = 'ConsumTomeu27_11';
+%root='C:\Users\Vicenç Salas\Desktop\CAP1\Entre_Labs';
+%% Entre prova 1 i prova 2 no  hi ha cap diferencia de dia o escenari, 
+%  només són dos instants diferents recollits amb l'osciloscopi
+filename = 'Proves consum capitol 1';
 sheet = 1;
 
 dadesC1 = xlsread(filename,1);
@@ -6,16 +9,23 @@ dadesC2 = xlsread(filename,2);
 time=dadesC1(:,1);
 volt_C1=dadesC1(:,2);
 volt_C2=dadesC2(:,2);
+figure(); plot(time,volt_C1,time,volt_C2);
+xlabel('Time(s)')
+ylabel('Voltatge(V)')
+title('Consum de la placa en prova 7m Prova1')
+legend('Consum Lopy','Pin P12')
 
-t=time;
-y1=5-volt_C1;
-y2=volt_C2;
+dadesC1 = xlsread(filename,3);
+dadesC2 = xlsread(filename,4);
+time=dadesC1(:,1);
+volt_C1=dadesC1(:,2);
+volt_C2=dadesC2(:,2);
 figure();
 subplot(2,1,1);
 plot(t,y1)
 ylabel('Consum LoPy (A)');
 xlabel('Temps (s)')
-title('Consums durant la prova 20m')
+title('Consums durant la prova 7m')
 
 subplot(2,1,2); 
 plot(t,y2);
@@ -26,9 +36,9 @@ ylabel('Tensió a P12 (V)')
 
 offset_t=0.5 %s
 %% Localitzar quan envia al GTW
-t_sendGTW=t(find(time>14.2-offset_t & time<19.33+offset_t));
-y1_sendGTW=y1(find(time>14.2-offset_t & time<19.33+offset_t));
-y2_sendGTW=y2(find(time>14.2-offset_t & time<19.33+offset_t));
+t_sendGTW=t(find(time>1.6-offset_t & time<6.6+offset_t));
+y1_sendGTW=y1(find(time>1.6-offset_t & time<6.6+offset_t));
+y2_sendGTW=y2(find(time>1.6-offset_t & time<6.6+offset_t));
 figure();
 subplot(2,1,1);
 plot(t_sendGTW,y1_sendGTW);

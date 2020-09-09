@@ -12,7 +12,7 @@ volt_C2=dadesC2(:,2);
 figure(); plot(time,volt_C1,time,volt_C2);
 xlabel('Time(s)')
 ylabel('Voltatge(V)')
-title('Consum de la placa en prova entre laboratoris Prova1')
+title('Consum de la placa en prova 7m Prova1')
 legend('Consum Lopy','Pin P12')
 
 dadesC1 = xlsread(filename,3);
@@ -23,5 +23,5 @@ volt_C2=dadesC2(:,2);
 figure(); plot(time,volt_C1,time,volt_C2);
 xlabel('Time(s)')
 ylabel('Voltatge(V)')
-title('Consum de la placa en prova entre laboratoris Prova2')
+title('Consum de la placa en prova 7m Prova2')
 legend('Consum Lopy','Pin P12')

@@ -56,4 +56,5 @@ hold(axes2,'all');
 plot(t,y2,'Parent',axes2,'LineWidth',1);
 ylabel(y2string,'Color',color2);
 xlabel(x1string);
-title('Consum del sistema en prova despatx Tomeu 27/11');
+title('Consum del sistema en prova 20m');
+%despatx Tomeu 27/11
