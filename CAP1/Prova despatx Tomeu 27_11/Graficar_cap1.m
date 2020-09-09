@@ -29,7 +29,7 @@ legend('Consum Lopy','Pin P12')
 %dadesC1 = xlsread(filename,3);
 %dadesC2 = xlsread(filename,4);
 %time=dadesC1(:,1);
-volt_C1=dadesC1(:,2);
+volt_C1=5-dadesC1(:,2);
 volt_C2=dadesC2(:,2);
 figure(); plot(time,volt_C1,time,volt_C2);
 xlabel('Time(s)')
