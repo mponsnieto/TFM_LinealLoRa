@@ -254,7 +254,7 @@ if reset_cause==machine.DEEPSLEEP_RESET:
     nummissatge=pycom.nvs_get("nummissatge")
     rtc=pycom.nvs_get("rtc")
 
-while rtc.now()[3]<hora+5:
+while True:#rtc.now()[3]<hora+5:
     if mode==CHECK:
         com.sendData("Hay buena cobertura de sensor 2 parc bit"+str(i),rtc,f)
         com.change_txpower(14)
