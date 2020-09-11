@@ -28,11 +28,12 @@ for i in range(300):
     p_out.value(1)
     time.sleep(0.5)
     p_out.value(0)
+
     #Sensor PT BMP085
     tbmp = bmp.GetTemperature
     packet_tbmp= ustruct.pack('H',int(tbmp))
-    # dataBMP="Temp: %0.2f *C" % (temp)
-    # print(dataBMP)
+    dataBMP="Temp: %0.2f *C" % (tbmp)
+    print(dataBMP)
     bmp.saveFile(tbmp,rtc)
     p_out.value(1)
     time.sleep(0.3)
@@ -41,8 +42,8 @@ for i in range(300):
     # #Sensor T MCP
     tempC = mcp.GetTemperature
     packet_tempC= ustruct.pack('H',int(tempC))
-    #dataMCP='Temperature: {} C '.format(tempC)
-    #print(dataMCP)
+    dataMCP='Temperature: {} C '.format(tempC)
+    print(dataMCP)
     mcp.saveFile(tempC,rtc)
     p_out.value(1)
     time.sleep(0.3)
@@ -60,9 +61,9 @@ for i in range(300):
     #Sensor QAire/ Particules
     pm10, pm25 = pma.read_particules()
     dustDensity=sensorQAire.CalculateDust()
-    # packet_dust= ustruct.pack('H',int(dustDensity))
+    packet_dust= ustruct.pack('H',int(dustDensity))
     packet_dust= ustruct.pack('H',int(pm10))
-    #print("DustDensity: ",dustDensity," ug/m3")
+    print("DustDensity: ",dustDensity," ug/m3")
     saveFileParticulas(rtc,pm25,pm10,dustDensity)
     p_out.value(1)
     time.sleep(0.3)
@@ -71,10 +72,10 @@ for i in range(300):
     #Càmera
     T_cam=cam.readTemp
     packet_T_cam= ustruct.pack('H',int(T_cam))
-    # print("T from thermistor= %0.2f *C" % (Temp))
+    print("T from thermistor= %0.2f *C" % (T_cam))
     Tcam=cam.readPixels
-    # print("Image readen pixel by pixel in *C")
-    # for i in range(8): print(T[i])
+    print("Image readen pixel by pixel in *C")
+    for i in range(8): print(Tcam[i])
     cam.saveFile(Tcam,T_cam,rtc)
     p_out.value(1)
     time.sleep(0.3)

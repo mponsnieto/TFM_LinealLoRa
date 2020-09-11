@@ -14,6 +14,9 @@ import HPMA115S0 as pma
 import ubinascii
 import ustruct
 
+pycom.heartbeat(False)
+pycom.wifi_on_boot(False)
+
 
 i2c = I2C()
 sensorQAire=QA.QAire('P20','P21')
@@ -34,7 +37,7 @@ id_aux=ustruct.pack('>Q',int(id,16)) #long long: 8 bytes
 ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2019, 11, 27, 15,26))
+rtc.init((2020, 09, 11, 14,00))
 
 # initialize `P9` in gpio mode and make it an output
 p_out = Pin('P12', mode=Pin.OUT)
