@@ -10,6 +10,7 @@ import MCP9808 as adafruit_mcp9808
 from bmp085 import BMP085
 import Amphenol as QA2
 import HumedadSuelo as HS
+import HPMA115S0 as pma
 # import Comunication as com
 import QAire as QA
 # from network import LoRa
@@ -27,6 +28,7 @@ SensorHT=sensH.SensorHumT()
 mcp = adafruit_mcp9808.MCP9808(i2c)
 cam = cam.Camera(i2c)
 bmp = BMP085(i2c)
+pma=pma.HPMA1150S0()
 bmp.oversample=2
 bmp.sealevel=1013.25
 

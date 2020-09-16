@@ -26,6 +26,15 @@ while True:
     sensorHSol.saveFile(dhi,val,rtc)
     time.sleep(0.3)
 
+
+    #Sensor QAire/ Particules
+    pm10, pm25 = pma.read_particules()
+    dustDensity=sensorQAire.CalculateDust()
+    # packet_dust= ustruct.pack('H',int(dustDensity))
+    #packet_dust= ustruct.pack('H',int(pm10))
+    print("DustDensity: ",dustDensity," ug/m3")
+    #saveFileParticulas(rtc,pm25,pm10,dustDensity)
+    time.sleep(0.3)
     #Sensor QAire
     dustDensity=sensorQAire.CalculateDust()
     time.sleep(0.3)
