@@ -29,14 +29,15 @@ class HPMA1150S0:
         data = uart.read(32)
         if data is not None:
             print(data)
-            if self.verify(data):
-                pm10 = round(data[8] * 256 + data[9], 1)
+            if data[0]==66 and data[1]==77:
+                pm1 = round(data[4] * 256 + data[5], 1)
                 pm25 = round(data[6] * 256 + data[7], 1)
-                return pm10,pm25
+                pm10 = round(data[8] * 256 + data[9], 1)
+                return pm1,pm25,pm10
             else:
-                return -1,-1
+                return -1,-1,-1
         else:
-            return -1,0
+            return 0,0,0
 
     def verify(self,recv):
             """

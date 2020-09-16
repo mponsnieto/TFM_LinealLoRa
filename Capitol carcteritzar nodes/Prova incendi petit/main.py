@@ -28,11 +28,11 @@ while True:
 
 
     #Sensor QAire/ Particules
-    pm10, pm25 = pma.read_particules()
+    pm1, pm25,pm10 = pma.read_particules()
     dustDensity=sensorQAire.CalculateDust()
     # packet_dust= ustruct.pack('H',int(dustDensity))
     #packet_dust= ustruct.pack('H',int(pm10))
-    print("DustDensity: ",dustDensity," ug/m3")
+    print("DustDensity Amphenol: ",pm25," ug/m3")
     #saveFileParticulas(rtc,pm25,pm10,dustDensity)
     time.sleep(0.3)
     #Sensor QAire
