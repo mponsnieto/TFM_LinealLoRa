@@ -156,10 +156,9 @@ class Comunication:
         packet_tbmp= ustruct.pack('H',int(splitmsg[7]))
         packet_val= ustruct.pack('H',int(splitmsg[8]))
         packet_dhi= ustruct.pack('B',int(splitmsg[9]))
-        #+packet_TCam=ustruct.pack('f',int(splitmsg[10]))
-        #id=splitmsg[1].encode('utf-8')
+        packet_TCam=ustruct.pack('f',int(splitmsg[10]))
         id_aux=ustruct.pack('>Q',int(splitmsg[1],16)) #long long: 8 bytes
-        return(packet_dust+packet_tempC+packet_Tht+packet_Hht+packet_tbmp+packet_val+packet_dhi+id_aux)#+packet_TCam)
+        return(packet_dust+packet_tempC+packet_Tht+packet_Hht+packet_tbmp+packet_val+packet_dhi+id_aux+packet_TCam)
 
     def ApplyFormat_NeighboursTable(self,table,count):
         msg=b''

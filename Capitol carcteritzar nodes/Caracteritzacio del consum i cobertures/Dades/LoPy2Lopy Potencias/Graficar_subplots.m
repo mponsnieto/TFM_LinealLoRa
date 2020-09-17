@@ -7,15 +7,15 @@ dadesC2 = xlsread(filename,2);
 t=dadesC1(:,1);
 volt_C1=dadesC1(:,2);
 volt_C2=dadesC2(:,2);
-figure(); plot(time,volt_C1,time,volt_C2);
+figure(); plot(t,volt_C1,t,volt_C2);
 xlabel('Time(s)')
 ylabel('Voltatge(V)')
 title('Consum de la placa en prova de potencies')
 legend('Consum Lopy','Pin P12')
 
-t=time;
 y1=5-volt_C1;
 y2=volt_C2;
+time=t;
 
 %dadesC1 = xlsread(filename,3);
 %dadesC2 = xlsread(filename,4);
@@ -27,7 +27,7 @@ subplot(2,1,1);
 plot(t,y1)
 ylabel('Consum LoPy (A)');
 xlabel('Temps (s)')
-title('Consums durant la prova 7m')
+title('Consums durant la prova Lopy2Lopy')
 
 subplot(2,1,2); 
 plot(t,y2);
