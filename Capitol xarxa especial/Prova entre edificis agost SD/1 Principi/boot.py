@@ -61,7 +61,7 @@ i=0
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
 hora=00
-rtc.init((2020, 09, 12, hora,00))
+rtc.init((2020, 09, 15, hora,00))
 f = open('/sd/msg_sent_first.txt', 'a')
 f.write("------------------------\n")
 f.close()
