@@ -1,0 +1,90 @@
+15/9/2020 0:0:0 Nodo sensor en marcha id 3c71bf875fa8 
+15/9/2020 0:0:0 Nodo sensor en marcha id 3c71bf875fa8 
+15/9/2020 0:24:58 Empieza el config
+15/9/2020 0:24:59 Empieza el config
+15/9/2020 0:25:3 Empieza el config
+15/9/2020 0:25:7 Empieza el config
+15/9/2020 0:25:9 Empieza el config
+15/9/2020 0:25:11 Empieza el config
+15/9/2020 0:25:17 Empieza el config
+15/9/2020 0:25:24 Empieza el config
+15/9/2020 0:25:29 Empieza el config
+15/9/2020 0:25:29 Config ACK recibido
+15/9/2020 0:25:57 Empieza el config
+15/9/2020 0:25:57 Config ACK recibido
+15/9/2020 0:25:57 Obtencion node_list ['3c71bf877510', '3c71bf875fa8', '30aea458f354']
+15/9/2020 0:25:58 Obtencion node_list ['3c71bf877510', '3c71bf875fa8', '30aea458f354']
+15/9/2020 0:26:0 Obtencion node_list ['3c71bf877510', '3c71bf875fa8', '30aea458f354']
+15/9/2020 0:26:2 Stop finished, modo=LISTEN, obtención de la nodelist
+15/9/2020 0:26:6 Obtencion node_list ['3c71bf877510', '3c71bf875fa8', '30aea458f354']
+15/9/2020 0:28:19 Empieza discover
+15/9/2020 0:28:46 Acaba discover
+15/9/2020 0:32:31 He enviat info de un altre
+15/9/2020 0:35:33 He enviado info
+15/9/2020 0:35:48 He recibido ack de info
+15/9/2020 0:42:6 He enviado info
+15/9/2020 0:42:21 He recibido ack de info
+15/9/2020 0:42:57 Empieza alarma
+15/9/2020 0:52:7 Empieza el config
+15/9/2020 0:52:12 Empieza el config
+15/9/2020 0:52:12 Empieza el config
+15/9/2020 0:52:14 Empieza el config
+15/9/2020 0:52:16 Empieza el config
+15/9/2020 0:52:16 Empieza el config
+15/9/2020 0:52:18 Empieza el config
+15/9/2020 0:52:18 Empieza el config
+15/9/2020 0:52:20 Empieza el config
+15/9/2020 0:52:21 Empieza el config
+15/9/2020 0:52:23 Empieza el config
+15/9/2020 0:52:25 Empieza el config
+15/9/2020 0:52:27 Empieza el config
+15/9/2020 0:52:29 Empieza el config
+15/9/2020 0:52:31 Empieza el config
+15/9/2020 0:52:37 Empieza el config
+15/9/2020 0:52:43 Empieza el config
+15/9/2020 0:52:44 Config ACK recibido
+15/9/2020 0:53:11 Empieza el config
+15/9/2020 0:53:11 Config ACK recibido
+15/9/2020 0:53:11 Obtencion node_list ['3c71bf877510', '3c71bf875fa8', '30aea458f354']
+15/9/2020 0:53:17 Obtencion node_list ['3c71bf877510', '3c71bf875fa8', '30aea458f354']
+15/9/2020 0:53:18 Obtencion node_list ['3c71bf877510', '3c71bf875fa8', '30aea458f354']
+15/9/2020 0:53:20 Stop finished, modo=LISTEN, obtención de la nodelist
+15/9/2020 0:53:21 Obtencion node_list ['3c71bf877510', '3c71bf875fa8', '30aea458f354']
+15/9/2020 0:55:31 Empieza discover
+15/9/2020 0:56:3 Acaba discover
+15/9/2020 1:12:46 Empieza el config
+15/9/2020 1:12:48 Empieza el config
+15/9/2020 1:12:50 Empieza el config
+15/9/2020 1:12:52 Empieza el config
+15/9/2020 1:12:54 Empieza el config
+15/9/2020 1:12:57 Empieza el config
+15/9/2020 1:12:59 Empieza el config
+15/9/2020 1:13:1 Empieza el config
+15/9/2020 1:13:3 Empieza el config
+15/9/2020 1:13:7 Empieza el config
+15/9/2020 1:13:10 Empieza el config
+15/9/2020 1:13:11 Empieza el config
+15/9/2020 1:13:12 Empieza el config
+15/9/2020 1:13:14 Empieza el config
+15/9/2020 1:13:18 Empieza el config
+15/9/2020 1:13:20 Empieza el config
+15/9/2020 1:13:23 Empieza el config
+15/9/2020 1:13:25 Empieza el config
+15/9/2020 1:13:27 Empieza el config
+15/9/2020 1:13:29 Empieza el config
+15/9/2020 1:13:31 Empieza el config
+15/9/2020 1:13:33 Empieza el config
+15/9/2020 1:13:36 Empieza el config
+15/9/2020 1:13:38 Empieza el config
+15/9/2020 1:13:40 Empieza el config
+15/9/2020 1:13:41 Empieza el config
+15/9/2020 1:13:42 Empieza el config
+15/9/2020 1:13:44 Empieza el config
+15/9/2020 1:13:46 Empieza el config
+15/9/2020 1:13:49 Empieza el config
+15/9/2020 1:13:51 Empieza el config
+15/9/2020 1:13:53 Empieza el config
+15/9/2020 1:13:55 Empieza el config
+15/9/2020 1:13:57 Empieza el config
+15/9/2020 1:14:11 Empieza el config
+15/9/2020 1:14:41 Empieza el config

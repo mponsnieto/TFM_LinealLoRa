@@ -1,0 +1,299 @@
+------------------------
+15/9/2020 0:0:0 LoPy ON id 3c71bf877510 
+15/9/2020 0:0:1 start Join
+15/9/2020 0:0:1 finish Join
+15/9/2020 0:1:40 Se ha pulsado el boton
+15/9/2020 0:1:44 config start, sending 1
+15/9/2020 0:1:44 intent config 2, msg sent: Config 2 3c71bf877510
+15/9/2020 0:1:46 intent config 3, msg sent: Config 2 3c71bf877510
+15/9/2020 0:1:49 intent config 4, msg sent: Config 3 3c71bf877510
+15/9/2020 0:1:51 intent config 5, msg sent: Config 3 3c71bf877510
+15/9/2020 0:1:53 intent config 6, msg sent: Config 4 3c71bf877510
+15/9/2020 0:1:55 intent config 7, msg sent: Config 4 3c71bf877510
+15/9/2020 0:1:57 intent config 8, msg sent: Config 5 3c71bf877510
+15/9/2020 0:1:59 intent config 9, msg sent: Config 5 3c71bf877510
+15/9/2020 0:2:1 intent config 10, msg sent: Config 6 3c71bf877510
+15/9/2020 0:2:4 intent config 11, msg sent: Config 6 3c71bf877510
+15/9/2020 0:2:6 intent config 12, msg sent: Config 7 3c71bf877510
+15/9/2020 0:2:8 ack config, msg received Config 4 3c71bf877510 3c71bf875fa8
+15/9/2020 0:2:44 sending stop 2 3c71bf877510 3c71bf875fa8 30aea458f354 0
+15/9/2020 0:2:46 sending stop 2 3c71bf877510 3c71bf875fa8 30aea458f354 0
+15/9/2020 0:5:7 sending Hello 2 3c71bf877510  counter 13
+15/9/2020 0:5:10 sending Hello 2 3c71bf877510  counter 14
+15/9/2020 0:5:11 sending Hello 2 3c71bf877510  counter 15
+15/9/2020 0:5:14 sending Hello 2 3c71bf877510  counter 16
+15/9/2020 0:5:18 sending Hello 3 3c71bf877510  counter 17
+15/9/2020 0:5:19 sending Hello 3 3c71bf877510  counter 18
+15/9/2020 0:5:22 sending Hello 3 3c71bf877510  counter 19
+15/9/2020 0:5:25 sending Hello 3 3c71bf877510  counter 20
+15/9/2020 0:5:27 start discover
+15/9/2020 0:5:27 Start discover
+15/9/2020 0:5:27 sending Discover normal 2 3c71bf877510
+15/9/2020 0:5:30 sending Discover normal 2 3c71bf877510
+15/9/2020 0:5:33 sending Discover normal 2 3c71bf877510
+15/9/2020 0:5:35 sending Discover normal 2 3c71bf877510
+15/9/2020 0:5:38 sending Discover normal 3 3c71bf877510
+15/9/2020 0:5:41 sending Discover normal 3 3c71bf877510
+15/9/2020 0:5:43 sending Discover normal 3 3c71bf877510
+15/9/2020 0:5:46 sending Discover normal 3 3c71bf877510
+15/9/2020 0:5:49 sending Discover normal 4 3c71bf877510
+15/9/2020 0:5:51 sending Discover normal 4 3c71bf877510
+15/9/2020 0:5:54 sending Discover normal 4 3c71bf877510
+15/9/2020 0:5:57 sending Discover normal 4 3c71bf877510
+15/9/2020 0:5:59 sending Discover normal 5 3c71bf877510
+15/9/2020 0:6:2 sending Discover normal 5 3c71bf877510
+15/9/2020 0:6:5 sending Discover normal 5 3c71bf877510
+15/9/2020 0:6:7 sending Discover normal 5 3c71bf877510
+15/9/2020 0:6:10 sending Discover normal 6 3c71bf877510
+15/9/2020 0:6:13 sending Discover normal 6 3c71bf877510
+15/9/2020 0:6:15 sending Discover normal 6 3c71bf877510
+15/9/2020 0:6:18 sending Discover normal 6 3c71bf877510
+15/9/2020 0:6:21 sending Discover normal 7 3c71bf877510
+15/9/2020 0:6:23 sending Discover normal 7 3c71bf877510
+15/9/2020 0:6:26 sending Discover normal 7 3c71bf877510
+15/9/2020 0:6:29 sending Discover normal 7 3c71bf877510
+15/9/2020 0:6:32 sending Discover normal 8 3c71bf877510
+15/9/2020 0:6:34 sending Discover normal 8 3c71bf877510
+15/9/2020 0:6:37 sending Discover normal 8 3c71bf877510
+15/9/2020 0:6:40 sending Discover normal 8 3c71bf877510
+15/9/2020 0:6:42 sending Discover normal 9 3c71bf877510
+15/9/2020 0:6:45 sending Discover normal 9 3c71bf877510
+15/9/2020 0:6:48 sending Discover normal 9 3c71bf877510
+15/9/2020 0:6:50 sending Discover normal 9 3c71bf877510
+15/9/2020 0:6:53 sending Discover normal 10 3c71bf877510
+15/9/2020 0:6:56 sending Discover normal 10 3c71bf877510
+15/9/2020 0:6:58 sending Discover normal 10 3c71bf877510
+15/9/2020 0:7:1 sending Discover normal 10 3c71bf877510
+15/9/2020 0:7:4 sending Discover normal 11 3c71bf877510
+15/9/2020 0:7:6 sending Discover normal 11 3c71bf877510
+15/9/2020 0:7:9 sending Discover normal 11 3c71bf877510
+15/9/2020 0:7:12 sending Discover normal 11 3c71bf877510
+15/9/2020 0:7:14 sending Discover normal 12 3c71bf877510
+15/9/2020 0:7:17 sending Discover normal 12 3c71bf877510
+15/9/2020 0:7:20 sending Discover normal 12 3c71bf877510
+15/9/2020 0:7:22 sending Discover normal 12 3c71bf877510
+15/9/2020 0:7:25 sending Discover normal 13 3c71bf877510
+15/9/2020 0:7:28 sending Discover normal 13 3c71bf877510
+15/9/2020 0:7:31 sending Discover normal 13 3c71bf877510
+15/9/2020 0:7:33 sending Discover normal 13 3c71bf877510
+15/9/2020 0:7:36 sending Discover end 2 1
+15/9/2020 0:7:38 sending Discover end 2 1
+15/9/2020 0:7:38 ACK discover received
+15/9/2020 0:7:40 Discover finished
+15/9/2020 0:7:40 finish discover
+15/9/2020 0:7:46 sending Token 30aea458f354 3c71bf877510 3c71bf875fa8 
+15/9/2020 0:8:46 counter 71 token_ack Token 30aea458f354 3c71bf877510 3c71bf875fa8
+15/9/2020 0:9:18 sending info ok
+15/9/2020 0:11:18 Start sending to gateway data b'\x96\x000\x003\x00\xb84\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+15/9/2020 0:11:18 Finish sending to gateway data b'\x96\x000\x003\x00\xb84\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+15/9/2020 0:12:18 counter 72 token_ack Token 3c71bf875fa8 3c71bf877510 3c71bf875fa8
+15/9/2020 0:12:19 sending info ok
+15/9/2020 0:12:34 sending info ok
+15/9/2020 0:13:50 sending info ok
+15/9/2020 0:15:49 Start sending to gateway data b'\x96\x004\x004\x00\xb83\x00\x00\x00\x01\x00\x00<q\xbf\x87_\xa8'
+15/9/2020 0:15:49 Finish sending to gateway data b'\x96\x004\x004\x00\xb83\x00\x00\x00\x01\x00\x00<q\xbf\x87_\xa8'
+Sudidos los mensajes de info de todos los nodos
+15/9/2020 0:16:50 counter 73 token_ack Token 30aea458f354 3c71bf877510 30aea458f354
+15/9/2020 0:17:49 Start sending to gateway data b'\x96\x004\x004\x00\xb83\x00\x00\x00\x01\x00\x00<q\xbf\x87_\xa8'
+15/9/2020 0:17:49 Finish sending to gateway data b'\x96\x004\x004\x00\xb83\x00\x00\x00\x01\x00\x00<q\xbf\x87_\xa8'
+15/9/2020 0:18:50 counter 74 token_ack Token 3c71bf875fa8 3c71bf877510 3c71bf875fa8
+15/9/2020 0:18:52 sending info ok
+15/9/2020 0:19:7 sending info ok
+15/9/2020 0:19:44 start alarm
+15/9/2020 0:19:44 sending Alarm ok 0 1 
+15/9/2020 0:19:47 start alarm
+15/9/2020 0:19:50 start alarm
+15/9/2020 0:19:54 start alarm
+15/9/2020 0:19:54 sending Alarm ok 0 1 
+15/9/2020 0:19:57 start alarm
+15/9/2020 0:20:4 config start, sending 75
+15/9/2020 0:20:5 stop alarm
+15/9/2020 0:21:5 config start, sending 1
+------------------------
+15/9/2020 0:0:0 LoPy ON id 3c71bf877510 
+15/9/2020 0:0:1 start Join
+15/9/2020 0:0:1 finish Join
+15/9/2020 0:0:24 Se ha pulsado el boton
+15/9/2020 0:0:25 config start, sending 1
+15/9/2020 0:0:25 intent config 2, msg sent: Config 2 3c71bf877510
+15/9/2020 0:0:27 intent config 3, msg sent: Config 2 3c71bf877510
+15/9/2020 0:0:29 intent config 4, msg sent: Config 3 3c71bf877510
+15/9/2020 0:0:31 intent config 5, msg sent: Config 3 3c71bf877510
+15/9/2020 0:0:33 intent config 6, msg sent: Config 4 3c71bf877510
+15/9/2020 0:0:36 intent config 7, msg sent: Config 4 3c71bf877510
+15/9/2020 0:0:38 intent config 8, msg sent: Config 5 3c71bf877510
+15/9/2020 0:0:40 intent config 9, msg sent: Config 5 3c71bf877510
+15/9/2020 0:0:42 intent config 10, msg sent: Config 6 3c71bf877510
+15/9/2020 0:0:44 intent config 11, msg sent: Config 6 3c71bf877510
+15/9/2020 0:0:46 intent config 12, msg sent: Config 7 3c71bf877510
+15/9/2020 0:0:49 intent config 13, msg sent: Config 7 3c71bf877510
+15/9/2020 0:0:51 intent config 14, msg sent: Config 8 3c71bf877510
+15/9/2020 0:0:53 intent config 15, msg sent: Config 8 3c71bf877510
+15/9/2020 0:0:55 intent config 16, msg sent: Config 9 3c71bf877510
+15/9/2020 0:0:57 ack config, msg received Config 2 3c71bf877510 3c71bf875fa8
+15/9/2020 0:1:35 sending stop 4 3c71bf877510 3c71bf875fa8 30aea458f354 0
+15/9/2020 0:1:39 sending stop 4 3c71bf877510 3c71bf875fa8 30aea458f354 0
+15/9/2020 0:1:40 sending stop 4 3c71bf877510 3c71bf875fa8 30aea458f354 0
+15/9/2020 0:1:44 sending Hello 2 3c71bf877510  counter 17
+15/9/2020 0:1:45 sending Hello 2 3c71bf877510  counter 18
+15/9/2020 0:1:52 sending Hello 2 3c71bf877510  counter 19
+15/9/2020 0:1:56 sending Hello 3 3c71bf877510  counter 20
+15/9/2020 0:1:58 sending Hello 3 3c71bf877510  counter 21
+15/9/2020 0:2:1 sending Hello 3 3c71bf877510  counter 22
+15/9/2020 0:2:3 sending Hello 4 3c71bf877510  counter 23
+15/9/2020 0:2:9 sending Hello 4 3c71bf877510  counter 24
+15/9/2020 0:2:13 sending Hello 5 3c71bf877510  counter 25
+15/9/2020 0:2:20 sending Hello 5 3c71bf877510  counter 26
+15/9/2020 0:2:24 sending Hello 5 3c71bf877510  counter 27
+15/9/2020 0:2:29 sending Hello 6 3c71bf877510  counter 28
+15/9/2020 0:2:32 sending Hello 6 3c71bf877510  counter 29
+15/9/2020 0:2:34 sending Hello 6 3c71bf877510  counter 30
+15/9/2020 0:2:37 sending Hello 7 3c71bf877510  counter 31
+15/9/2020 0:2:39 sending Hello 7 3c71bf877510  counter 32
+15/9/2020 0:2:42 sending Hello 7 3c71bf877510  counter 33
+15/9/2020 0:2:44 sending Hello 7 3c71bf877510  counter 34
+15/9/2020 0:2:46 sending Hello 8 3c71bf877510  counter 35
+15/9/2020 0:2:50 sending Hello 8 3c71bf877510  counter 36
+15/9/2020 0:2:55 sending Hello 8 3c71bf877510  counter 37
+15/9/2020 0:2:57 sending Hello 9 3c71bf877510  counter 38
+15/9/2020 0:3:0 sending Hello 9 3c71bf877510  counter 39
+15/9/2020 0:3:3 sending Hello 9 3c71bf877510  counter 40
+15/9/2020 0:3:4 sending Hello 9 3c71bf877510  counter 41
+15/9/2020 0:3:12 sending Hello 10 3c71bf877510  counter 42
+15/9/2020 0:3:19 sending Hello 11 3c71bf877510  counter 43
+15/9/2020 0:3:20 sending Hello 11 3c71bf877510  counter 44
+15/9/2020 0:3:24 sending Hello 11 3c71bf877510  counter 45
+15/9/2020 0:3:30 sending Hello 12 3c71bf877510  counter 46
+15/9/2020 0:3:44 sending Hello 13 3c71bf877510  counter 47
+15/9/2020 0:3:57 sending Hello 2 3c71bf877510  counter 48
+15/9/2020 0:3:59 sending Hello 2 3c71bf877510  counter 49
+15/9/2020 0:4:1 sending Hello 2 3c71bf877510  counter 50
+15/9/2020 0:4:5 sending Hello 2 3c71bf877510  counter 51
+15/9/2020 0:4:10 sending Hello 3 3c71bf877510  counter 52
+15/9/2020 0:4:11 sending Hello 3 3c71bf877510  counter 53
+15/9/2020 0:4:15 sending Hello 3 3c71bf877510  counter 54
+15/9/2020 0:4:20 start discover
+15/9/2020 0:4:20 Start discover
+15/9/2020 0:4:20 sending Discover normal 2 3c71bf877510
+15/9/2020 0:4:23 sending Discover normal 2 3c71bf877510
+15/9/2020 0:4:25 sending Discover normal 2 3c71bf877510
+15/9/2020 0:4:28 sending Discover normal 2 3c71bf877510
+15/9/2020 0:4:31 sending Discover normal 3 3c71bf877510
+15/9/2020 0:4:33 sending Discover normal 3 3c71bf877510
+15/9/2020 0:4:36 sending Discover normal 3 3c71bf877510
+15/9/2020 0:4:39 sending Discover normal 3 3c71bf877510
+15/9/2020 0:4:41 sending Discover normal 4 3c71bf877510
+15/9/2020 0:4:44 sending Discover normal 4 3c71bf877510
+15/9/2020 0:4:47 sending Discover normal 4 3c71bf877510
+15/9/2020 0:4:49 sending Discover normal 4 3c71bf877510
+15/9/2020 0:4:52 sending Discover normal 5 3c71bf877510
+15/9/2020 0:4:55 sending Discover normal 5 3c71bf877510
+15/9/2020 0:4:58 sending Discover normal 5 3c71bf877510
+15/9/2020 0:5:0 sending Discover normal 5 3c71bf877510
+15/9/2020 0:5:3 sending Discover normal 6 3c71bf877510
+15/9/2020 0:5:6 sending Discover normal 6 3c71bf877510
+15/9/2020 0:5:8 sending Discover normal 6 3c71bf877510
+15/9/2020 0:5:11 sending Discover normal 6 3c71bf877510
+15/9/2020 0:5:14 sending Discover normal 7 3c71bf877510
+15/9/2020 0:5:16 sending Discover normal 7 3c71bf877510
+15/9/2020 0:5:19 sending Discover normal 7 3c71bf877510
+15/9/2020 0:5:22 sending Discover normal 7 3c71bf877510
+15/9/2020 0:5:24 sending Discover normal 8 3c71bf877510
+15/9/2020 0:5:27 sending Discover normal 8 3c71bf877510
+15/9/2020 0:5:30 sending Discover normal 8 3c71bf877510
+15/9/2020 0:5:32 sending Discover normal 8 3c71bf877510
+15/9/2020 0:5:35 sending Discover normal 9 3c71bf877510
+15/9/2020 0:5:38 sending Discover normal 9 3c71bf877510
+15/9/2020 0:5:40 sending Discover normal 9 3c71bf877510
+15/9/2020 0:5:43 sending Discover normal 9 3c71bf877510
+15/9/2020 0:5:46 sending Discover normal 10 3c71bf877510
+15/9/2020 0:5:48 sending Discover normal 10 3c71bf877510
+15/9/2020 0:5:51 sending Discover normal 10 3c71bf877510
+15/9/2020 0:5:54 sending Discover normal 10 3c71bf877510
+15/9/2020 0:5:56 sending Discover normal 11 3c71bf877510
+15/9/2020 0:5:59 sending Discover normal 11 3c71bf877510
+15/9/2020 0:6:2 sending Discover normal 11 3c71bf877510
+15/9/2020 0:6:4 sending Discover normal 11 3c71bf877510
+15/9/2020 0:6:7 sending Discover normal 12 3c71bf877510
+15/9/2020 0:6:10 sending Discover normal 12 3c71bf877510
+15/9/2020 0:6:12 sending Discover normal 12 3c71bf877510
+15/9/2020 0:6:15 sending Discover normal 12 3c71bf877510
+15/9/2020 0:6:18 sending Discover normal 13 3c71bf877510
+15/9/2020 0:6:20 sending Discover normal 13 3c71bf877510
+15/9/2020 0:6:23 sending Discover normal 13 3c71bf877510
+15/9/2020 0:6:26 sending Discover normal 13 3c71bf877510
+15/9/2020 0:6:28 sending Discover end 2 1
+15/9/2020 0:6:31 sending Discover end 2 1
+15/9/2020 0:6:31 ACK discover received
+15/9/2020 0:6:33 Discover finished
+15/9/2020 0:6:33 finish discover
+15/9/2020 0:6:39 sending Token 30aea458f354 3c71bf877510 3c71bf875fa8 
+15/9/2020 0:7:39 counter 105 token_ack Token 30aea458f354 3c71bf877510 3c71bf875fa8
+15/9/2020 0:8:39 counter 106 token_ack Token 30aea458f354 3c71bf877510 3c71bf875fa8
+15/9/2020 0:9:39 counter 107 token_ack Token 30aea458f354 3c71bf877510 3c71bf875fa8
+15/9/2020 0:10:40 counter 108 token_ack Token 30aea458f354 3c71bf877510 3c71bf875fa8
+15/9/2020 0:11:40 counter 109 token_ack Token 30aea458f354 3c71bf877510 3c71bf875fa8
+------------------------
+15/9/2020 0:0:0 LoPy ON id 3c71bf877510 
+15/9/2020 0:0:1 start Join
+15/9/2020 0:0:1 finish Join
+15/9/2020 0:0:20 Se ha pulsado el boton
+15/9/2020 0:0:21 config start, sending 1
+15/9/2020 0:0:21 intent config 2, msg sent: Config 2 3c71bf877510
+15/9/2020 0:0:23 intent config 3, msg sent: Config 2 3c71bf877510
+15/9/2020 0:0:25 intent config 4, msg sent: Config 3 3c71bf877510
+15/9/2020 0:0:27 intent config 5, msg sent: Config 3 3c71bf877510
+15/9/2020 0:0:29 intent config 6, msg sent: Config 4 3c71bf877510
+15/9/2020 0:0:31 intent config 7, msg sent: Config 4 3c71bf877510
+15/9/2020 0:0:34 intent config 8, msg sent: Config 5 3c71bf877510
+15/9/2020 0:0:36 intent config 9, msg sent: Config 5 3c71bf877510
+15/9/2020 0:0:38 intent config 10, msg sent: Config 6 3c71bf877510
+15/9/2020 0:0:40 intent config 11, msg sent: Config 6 3c71bf877510
+15/9/2020 0:0:42 intent config 12, msg sent: Config 7 3c71bf877510
+15/9/2020 0:6:3 start alarm
+15/9/2020 0:6:33 start alarm
+15/9/2020 0:6:33 start alarm
+15/9/2020 0:7:3 start alarm
+------------------------
+15/9/2020 0:0:0 LoPy ON id 3c71bf877510 
+15/9/2020 0:0:1 start Join
+15/9/2020 0:0:1 finish Join
+15/9/2020 0:0:14 Se ha pulsado el boton
+15/9/2020 0:0:16 config start, sending 1
+15/9/2020 0:0:16 intent config 2, msg sent: Config 2 3c71bf877510
+15/9/2020 0:0:19 intent config 3, msg sent: Config 2 3c71bf877510
+15/9/2020 0:0:21 intent config 4, msg sent: Config 3 3c71bf877510
+15/9/2020 0:0:23 intent config 5, msg sent: Config 3 3c71bf877510
+15/9/2020 0:0:25 intent config 6, msg sent: Config 4 3c71bf877510
+15/9/2020 0:0:27 intent config 7, msg sent: Config 4 3c71bf877510
+15/9/2020 0:0:29 intent config 8, msg sent: Config 5 3c71bf877510
+15/9/2020 0:0:32 intent config 9, msg sent: Config 5 3c71bf877510
+15/9/2020 0:0:34 intent config 10, msg sent: Config 6 3c71bf877510
+15/9/2020 0:0:36 intent config 11, msg sent: Config 6 3c71bf877510
+15/9/2020 0:0:38 intent config 12, msg sent: Config 7 3c71bf877510
+15/9/2020 0:0:40 intent config 13, msg sent: Config 7 3c71bf877510
+15/9/2020 0:0:42 intent config 14, msg sent: Config 8 3c71bf877510
+15/9/2020 0:0:44 config start, sending 15
+15/9/2020 0:0:45 intent config 16, msg sent: Config 8 3c71bf877510
+15/9/2020 0:0:47 intent config 17, msg sent: Config 9 3c71bf877510
+15/9/2020 0:0:49 intent config 18, msg sent: Config 9 3c71bf877510
+15/9/2020 0:0:51 intent config 19, msg sent: Config 10 3c71bf877510
+15/9/2020 0:0:53 intent config 20, msg sent: Config 10 3c71bf877510
+15/9/2020 0:0:55 intent config 21, msg sent: Config 11 3c71bf877510
+15/9/2020 0:0:58 intent config 22, msg sent: Config 11 3c71bf877510
+15/9/2020 0:1:0 intent config 23, msg sent: Config 12 3c71bf877510
+15/9/2020 0:1:2 intent config 24, msg sent: Config 12 3c71bf877510
+15/9/2020 0:1:4 intent config 25, msg sent: Config 13 3c71bf877510
+15/9/2020 0:1:6 intent config 26, msg sent: Config 13 3c71bf877510
+15/9/2020 0:1:8 intent config 27, msg sent: Config 14 3c71bf877510
+15/9/2020 0:1:10 intent config 28, msg sent: Config 14 3c71bf877510
+15/9/2020 0:1:13 intent config 29, msg sent: Config 14 3c71bf877510
+15/9/2020 0:1:15 config start, sending 30
+15/9/2020 0:1:15 intent config 31, msg sent: Config 14 3c71bf877510
+15/9/2020 0:1:17 intent config 32, msg sent: Config 3 3c71bf877510
+15/9/2020 0:1:19 intent config 33, msg sent: Config 3 3c71bf877510
+15/9/2020 0:1:21 intent config 34, msg sent: Config 4 3c71bf877510
+15/9/2020 0:1:24 intent config 35, msg sent: Config 4 3c71bf877510
+15/9/2020 0:1:26 intent config 36, msg sent: Config 5 3c71bf877510
+15/9/2020 0:1:28 intent config 37, msg sent: Config 5 3c71bf877510
+15/9/2020 0:1:30 intent config 38, msg sent: Config 6 3c71bf877510

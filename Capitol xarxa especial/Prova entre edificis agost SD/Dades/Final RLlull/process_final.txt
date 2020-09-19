@@ -1,0 +1,29 @@
+------------------------
+15/9/2020 0:0:0 Nodo  final en marcha id: 30aea458f354 
+------------------------
+15/9/2020 0:12:56 Empieza el config
+15/9/2020 0:12:56 Empieza el config
+15/9/2020 0:12:59 Empieza el config
+15/9/2020 0:13:5 Empieza el config
+15/9/2020 0:13:5 Empieza el config
+15/9/2020 0:13:14 Empieza el config
+15/9/2020 0:13:19 Empieza el config
+15/9/2020 0:13:19 Empieza el config
+15/9/2020 0:13:49 Tenemos node_list ['3c71bf877510', '3c71bf875fa8', '30aea458f354']
+15/9/2020 0:13:58 Empieza discover
+15/9/2020 0:16:16 Acaba discover
+15/9/2020 0:40:4 Empieza el config
+15/9/2020 0:40:6 Empieza el config
+15/9/2020 0:40:8 Empieza el config
+15/9/2020 0:40:11 Empieza el config
+15/9/2020 0:40:11 Empieza el config
+15/9/2020 0:40:20 Empieza el config
+15/9/2020 0:40:20 Empieza el config
+15/9/2020 0:40:21 Empieza el config
+15/9/2020 0:40:23 Empieza el config
+15/9/2020 0:40:27 Empieza el config
+15/9/2020 0:40:33 Empieza el config
+15/9/2020 0:40:33 Empieza el config
+15/9/2020 0:41:3 Tenemos node_list ['3c71bf877510', '3c71bf875fa8', '30aea458f354']
+15/9/2020 0:41:10 Empieza discover
+15/9/2020 0:43:29 Acaba discover
