@@ -14,8 +14,7 @@ class MCP9808:
         self.buf = bytearray(2)
         self._mcp_i2c.readfrom_mem_into(self.MCP_ADDRESS, self.TA_Register, self.buf,addrsize=8)
         #Delete data's contents
-        f = open('data_mcp.txt', 'w')
-        f.close()
+
 
 
     def gotosleep(self):

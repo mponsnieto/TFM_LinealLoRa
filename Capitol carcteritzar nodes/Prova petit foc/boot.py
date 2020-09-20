@@ -2,6 +2,7 @@ import time
 from machine import Pin, I2C
 import pycom
 import machine
+from machine import SD
 from ustruct import unpack as unp
 import math
 import Camera as cam
@@ -20,6 +21,7 @@ import QAire as QA
 # from crypto import AES
 # import crypto
 
+
 i2c = I2C()
 sensorAmphenol=QA2.Amphenol()
 sensorQAire=QA.QAire('P20','P21')
@@ -35,4 +37,4 @@ bmp.sealevel=1013.25
 # ## Initialize time
 rtc = machine.RTC()
 #(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
-rtc.init((2020, 09, 09, 0, 0))
+rtc.init((2020, 09, 19, 0, 0))

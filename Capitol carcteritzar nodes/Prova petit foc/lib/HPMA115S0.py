@@ -23,7 +23,7 @@ class HPMA1150S0:
         time.sleep(0.5)
         return
 
-    def read_particules(self):
+    def read_particules(self,rtc):
         # if self.Fan==False:
         #     startFan()
         data = uart.read(32)
@@ -33,6 +33,9 @@ class HPMA1150S0:
                 pm1 = round(data[4] * 256 + data[5], 1)
                 pm25 = round(data[6] * 256 + data[7], 1)
                 pm10 = round(data[8] * 256 + data[9], 1)
+                f = open('data_QAire.txt', 'a')
+                f.write("{}/{}/{} {}:{}:{} {} {} {}\n".format(rtc.now()[2],rtc.now()[1],rtc.now()[0],rtc.now()[3],rtc.now()[4],rtc.now()[5],pm1,pm25,pm10))
+                f.close()
                 return pm1,pm25,pm10
             else:
                 return -1,-1,-1

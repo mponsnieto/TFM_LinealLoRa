@@ -1,5 +1,5 @@
 
-periode=0.5*60  #2min
+periode=10  #2min
 print("Start")
 while True:
     #sensor sensorQAire
@@ -28,7 +28,7 @@ while True:
 
 
     #Sensor QAire/ Particules
-    pm1, pm25,pm10 = pma.read_particules()
+    pm1, pm25,pm10 = pma.read_particules(rtc)
     dustDensity=sensorQAire.CalculateDust()
     # packet_dust= ustruct.pack('H',int(dustDensity))
     #packet_dust= ustruct.pack('H',int(pm10))
