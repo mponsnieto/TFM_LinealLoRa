@@ -52,39 +52,3 @@
 15/9/2020 0:53:21 Obtencion node_list ['3c71bf877510', '3c71bf875fa8', '30aea458f354']
 15/9/2020 0:55:31 Empieza discover
 15/9/2020 0:56:3 Acaba discover
-15/9/2020 1:12:46 Empieza el config
-15/9/2020 1:12:48 Empieza el config
-15/9/2020 1:12:50 Empieza el config
-15/9/2020 1:12:52 Empieza el config
-15/9/2020 1:12:54 Empieza el config
-15/9/2020 1:12:57 Empieza el config
-15/9/2020 1:12:59 Empieza el config
-15/9/2020 1:13:1 Empieza el config
-15/9/2020 1:13:3 Empieza el config
-15/9/2020 1:13:7 Empieza el config
-15/9/2020 1:13:10 Empieza el config
-15/9/2020 1:13:11 Empieza el config
-15/9/2020 1:13:12 Empieza el config
-15/9/2020 1:13:14 Empieza el config
-15/9/2020 1:13:18 Empieza el config
-15/9/2020 1:13:20 Empieza el config
-15/9/2020 1:13:23 Empieza el config
-15/9/2020 1:13:25 Empieza el config
-15/9/2020 1:13:27 Empieza el config
-15/9/2020 1:13:29 Empieza el config
-15/9/2020 1:13:31 Empieza el config
-15/9/2020 1:13:33 Empieza el config
-15/9/2020 1:13:36 Empieza el config
-15/9/2020 1:13:38 Empieza el config
-15/9/2020 1:13:40 Empieza el config
-15/9/2020 1:13:41 Empieza el config
-15/9/2020 1:13:42 Empieza el config
-15/9/2020 1:13:44 Empieza el config
-15/9/2020 1:13:46 Empieza el config
-15/9/2020 1:13:49 Empieza el config
-15/9/2020 1:13:51 Empieza el config
-15/9/2020 1:13:53 Empieza el config
-15/9/2020 1:13:55 Empieza el config
-15/9/2020 1:13:57 Empieza el config
-15/9/2020 1:14:11 Empieza el config
-15/9/2020 1:14:41 Empieza el config

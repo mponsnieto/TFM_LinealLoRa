@@ -36,9 +36,9 @@ xlabel('Relative time [hh:mm:ss]');
 legend('BMP','CAM','HTU','MCP','AMB');
 hold off
 %% Grafic qualitat aire
-figure(); hold on;plot(time_QAire,pm1);
-plot(time_QAire,pm25);
-plot(time_QAire,pm10);
+figure(); hold on;plot(time_QAire,pm1,'-x');
+plot(time_QAire,pm25,'-x');
+plot(time_QAire,pm10,'-x');
 title('Evolució de les particules en suspensió');
 ylabel('Particules [ug/m3]');
 xlabel('Relative time [hh:mm:ss]');

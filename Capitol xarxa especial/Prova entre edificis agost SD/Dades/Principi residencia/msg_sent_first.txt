@@ -229,71 +229,11 @@ Sudidos los mensajes de info de todos los nodos
 15/9/2020 0:6:33 finish discover
 15/9/2020 0:6:39 sending Token 30aea458f354 3c71bf877510 3c71bf875fa8 
 15/9/2020 0:7:39 counter 105 token_ack Token 30aea458f354 3c71bf877510 3c71bf875fa8
-15/9/2020 0:8:39 counter 106 token_ack Token 30aea458f354 3c71bf877510 3c71bf875fa8
-15/9/2020 0:9:39 counter 107 token_ack Token 30aea458f354 3c71bf877510 3c71bf875fa8
-15/9/2020 0:10:40 counter 108 token_ack Token 30aea458f354 3c71bf877510 3c71bf875fa8
-15/9/2020 0:11:40 counter 109 token_ack Token 30aea458f354 3c71bf877510 3c71bf875fa8
-------------------------
-15/9/2020 0:0:0 LoPy ON id 3c71bf877510 
-15/9/2020 0:0:1 start Join
-15/9/2020 0:0:1 finish Join
-15/9/2020 0:0:20 Se ha pulsado el boton
-15/9/2020 0:0:21 config start, sending 1
-15/9/2020 0:0:21 intent config 2, msg sent: Config 2 3c71bf877510
-15/9/2020 0:0:23 intent config 3, msg sent: Config 2 3c71bf877510
-15/9/2020 0:0:25 intent config 4, msg sent: Config 3 3c71bf877510
-15/9/2020 0:0:27 intent config 5, msg sent: Config 3 3c71bf877510
-15/9/2020 0:0:29 intent config 6, msg sent: Config 4 3c71bf877510
-15/9/2020 0:0:31 intent config 7, msg sent: Config 4 3c71bf877510
-15/9/2020 0:0:34 intent config 8, msg sent: Config 5 3c71bf877510
-15/9/2020 0:0:36 intent config 9, msg sent: Config 5 3c71bf877510
-15/9/2020 0:0:38 intent config 10, msg sent: Config 6 3c71bf877510
-15/9/2020 0:0:40 intent config 11, msg sent: Config 6 3c71bf877510
-15/9/2020 0:0:42 intent config 12, msg sent: Config 7 3c71bf877510
-15/9/2020 0:6:3 start alarm
-15/9/2020 0:6:33 start alarm
-15/9/2020 0:6:33 start alarm
-15/9/2020 0:7:3 start alarm
-------------------------
-15/9/2020 0:0:0 LoPy ON id 3c71bf877510 
-15/9/2020 0:0:1 start Join
-15/9/2020 0:0:1 finish Join
-15/9/2020 0:0:14 Se ha pulsado el boton
-15/9/2020 0:0:16 config start, sending 1
-15/9/2020 0:0:16 intent config 2, msg sent: Config 2 3c71bf877510
-15/9/2020 0:0:19 intent config 3, msg sent: Config 2 3c71bf877510
-15/9/2020 0:0:21 intent config 4, msg sent: Config 3 3c71bf877510
-15/9/2020 0:0:23 intent config 5, msg sent: Config 3 3c71bf877510
-15/9/2020 0:0:25 intent config 6, msg sent: Config 4 3c71bf877510
-15/9/2020 0:0:27 intent config 7, msg sent: Config 4 3c71bf877510
-15/9/2020 0:0:29 intent config 8, msg sent: Config 5 3c71bf877510
-15/9/2020 0:0:32 intent config 9, msg sent: Config 5 3c71bf877510
-15/9/2020 0:0:34 intent config 10, msg sent: Config 6 3c71bf877510
-15/9/2020 0:0:36 intent config 11, msg sent: Config 6 3c71bf877510
-15/9/2020 0:0:38 intent config 12, msg sent: Config 7 3c71bf877510
-15/9/2020 0:0:40 intent config 13, msg sent: Config 7 3c71bf877510
-15/9/2020 0:0:42 intent config 14, msg sent: Config 8 3c71bf877510
-15/9/2020 0:0:44 config start, sending 15
-15/9/2020 0:0:45 intent config 16, msg sent: Config 8 3c71bf877510
-15/9/2020 0:0:47 intent config 17, msg sent: Config 9 3c71bf877510
-15/9/2020 0:0:49 intent config 18, msg sent: Config 9 3c71bf877510
-15/9/2020 0:0:51 intent config 19, msg sent: Config 10 3c71bf877510
-15/9/2020 0:0:53 intent config 20, msg sent: Config 10 3c71bf877510
-15/9/2020 0:0:55 intent config 21, msg sent: Config 11 3c71bf877510
-15/9/2020 0:0:58 intent config 22, msg sent: Config 11 3c71bf877510
-15/9/2020 0:1:0 intent config 23, msg sent: Config 12 3c71bf877510
-15/9/2020 0:1:2 intent config 24, msg sent: Config 12 3c71bf877510
-15/9/2020 0:1:4 intent config 25, msg sent: Config 13 3c71bf877510
-15/9/2020 0:1:6 intent config 26, msg sent: Config 13 3c71bf877510
-15/9/2020 0:1:8 intent config 27, msg sent: Config 14 3c71bf877510
-15/9/2020 0:1:10 intent config 28, msg sent: Config 14 3c71bf877510
-15/9/2020 0:1:13 intent config 29, msg sent: Config 14 3c71bf877510
-15/9/2020 0:1:15 config start, sending 30
-15/9/2020 0:1:15 intent config 31, msg sent: Config 14 3c71bf877510
-15/9/2020 0:1:17 intent config 32, msg sent: Config 3 3c71bf877510
-15/9/2020 0:1:19 intent config 33, msg sent: Config 3 3c71bf877510
-15/9/2020 0:1:21 intent config 34, msg sent: Config 4 3c71bf877510
-15/9/2020 0:1:24 intent config 35, msg sent: Config 4 3c71bf877510
-15/9/2020 0:1:26 intent config 36, msg sent: Config 5 3c71bf877510
-15/9/2020 0:1:28 intent config 37, msg sent: Config 5 3c71bf877510
-15/9/2020 0:1:30 intent config 38, msg sent: Config 6 3c71bf877510
+15/9/2020 0:7:39 sending info ok
+15/9/2020 0:7:40 Start sending to gateway data b'\x96\x000\x003\x00\xb84\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+15/9/2020 0:7:40 Finish sending to gateway data b'\x96\x000\x003\x00\xb84\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+15/9/2020 0:8:39 counter 106 token_ack Token 3c71bf875fa8 3c71bf877510 3c71bf875fa8
+15/9/2020 0:8:56 Sending info ok
+15/9/2020 0:8:56 Start sending to gateway data b'\x96\x000\x003\x00\xb84\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+15/9/2020 0:8:57 Finish sending to gateway data b'\x96\x000\x003\x00\xb84\x00\x00\x00\x01\x00\x000\xae\xa4X\xf3T'
+Sudidos los mensajes de info de todos los nodos
